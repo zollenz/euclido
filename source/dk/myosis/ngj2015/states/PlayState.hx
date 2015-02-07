@@ -1,4 +1,4 @@
-package;
+package dk.myosis.ngj2015.states;
 
 import flixel.FlxG;
 import flixel.FlxSprite;

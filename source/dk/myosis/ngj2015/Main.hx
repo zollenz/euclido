@@ -1,4 +1,4 @@
-package;
+package dk.myosis.ngj2015;
 
 import flash.display.Sprite;
 import flash.display.StageAlign;
@@ -7,6 +7,8 @@ import flash.events.Event;
 import flash.Lib;
 import flixel.FlxGame;
 import flixel.FlxState;
+
+import dk.myosis.ngj2015.states.PlayState;
 
 class Main extends Sprite 
 {
