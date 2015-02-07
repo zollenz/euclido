@@ -63,19 +63,19 @@ class PlayState extends FlxState
 	{
 		// trace("Delta time: " + FlxG.elapsed);
 
-		if (counter % 50 == 0 || counter % 45 == 0) {
+		if (counter % 60 == 0 || counter % 45 == 0) {
 			_sound1.play(true);	
 		}
 		
-		if (counter % 100 == 0) {
+		if (counter % 120 == 0) {
 			_sound2.play(true);	
 		}
 
-		if (counter % 43 == 0) {
+		if (counter % 15 == 0) {
 			_sound3.play(true);	
 		}
 
-		if (counter % 72 == 0) {
+		if (counter % 120 == 0) {
 			_sound4.play(true);	
 		}
 
