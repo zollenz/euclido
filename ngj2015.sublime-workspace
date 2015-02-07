@@ -1,0 +1,371 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"wr",
+				"writeShort( value : Int )	Void"
+			],
+			[
+				"Byte",
+				"ByteArray	lime.utils"
+			],
+			[
+				"ByteAray",
+				"ByteArray	lime.utils"
+			],
+			[
+				"FlxSpi",
+				"FlxSpriteUtil	flixel.util"
+			],
+			[
+				"Text",
+				"TexturePackerData	flixel.util.loaders"
+			],
+			[
+				"bl",
+				"Block"
+			],
+			[
+				"enti",
+				"entities	package"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "source/MenuState.hx",
+			"settings":
+			{
+				"buffer_size": 2652,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"packa",
+				"Package Control: Disable Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read()) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/dejean/Developer/projects/haxe/ngj2015",
+		"/Users/dejean/Developer/projects/haxe/ngj2015/source"
+	],
+	"file_history":
+	[
+		"/Users/dejean/Downloads/openal-soft-1.16.0/examples/alreverb.c",
+		"/Users/dejean/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/usr/lib/haxe/lib/flixel-addons/1,0,1/flixel/addons/editors/tiled/TiledMap.hx",
+		"/usr/lib/haxe/lib/flixel/3,0,4/flixel/tile/FlxTilemap.hx",
+		"/Users/dejean/Developer/libraries/fleen/fleen-hg/theory notes",
+		"/Users/dejean/Developer/projects/haxe/Anon1/source/myosis/anon1/CustomEvent.hx",
+		"/Users/dejean/Developer/projects/haxe/Anon1/source/myosis/anon1/utilities/AudioManager",
+		"/usr/lib/haxe/lib/flixel-addons/1,0,1/build.hxml",
+		"/Users/dejean/Developer/projects/haxe/Anon1/source/myosis/anon1/TiledLevel.hx",
+		"/Users/dejean/Developer/projects/haxe/Anon1/assets/sounds/sounds-go-here.txt",
+		"/Users/dejean/Downloads/Rush.2013.Bluray.x264-Sparks.srt",
+		"/usr/lib/haxe/lib/flixel/3,0,4/flixel/FlxSprite.hx",
+		"/Users/dejean/Developer/projects/haxe/Anon1/source/myosis/anon1/entities/Curve.hx",
+		"/Users/dejean/.hxcpp_config.xml",
+		"/usr/lib/haxe/lib/flixel/3,0,4/LICENSE.md",
+		"/usr/lib/haxe/std/cpp/vm/Lock.hx",
+		"/Users/dejean/Developer/projects/haxe/Anon1/source/myosis/anon1/entities/Circle.hx",
+		"/Users/dejean/Developer/projects/haxe/Anon1/source/myosis/anon1/Main.hx",
+		"/Users/dejean/Developer/projects/haxe/Anon1/source/myosis/anon1/states/TitleState.hx",
+		"/Users/dejean/Developer/libraries/wxwidgets/wx_build_debug/Makefile",
+		"/Users/dejean/Developer/libraries/wxwidgets/wx_build_debug/build_wx.sh",
+		"/Users/dejean/Developer/libraries/wxwidgets/wx_build_debug/#!:bin:bash",
+		"/Users/dejean/Downloads/HelloWorld/HelloWorld/hello.cpp",
+		"/Users/dejean/Developer/projects/haxe/Anon1/source/myosis/anon1/utilities/CustomDrawUtilities.hx",
+		"/usr/lib/haxe/lib/flixel/3,0,4/flixel/util/FlxSpriteUtil.hx",
+		"/Users/dejean/Developer/projects/haxe/Anon1/source/myosis/anon1/entities/Triangle.hx",
+		"/Users/dejean/Developer/projects/haxe/Anon1/source/myosis/anon1/Anon1.hx",
+		"/Users/dejean/Developer/projects/haxe/Anon1/Project.xml",
+		"/Users/dejean/Developer/libraries/wxwidgets/wxWidgets-3.0.0/samples/menu/menu.cpp",
+		"/Users/dejean/Developer/libraries/gtk+/gtk+-git/README.in",
+		"/Users/dejean/Developer/projects/haxe/Anon1/source/myosis/anon1/states/PlayState.hx",
+		"/Users/dejean/Developer/projects/haxe/Anon1/source/myosis/anon1/states/MenuState.hx",
+		"/Users/dejean/Developer/projects/haxe/Anon1/source/myosis/anon1/Reg.hx",
+		"/Users/dejean/Developer/projects/haxe/Anon1/Anon1.sublime-project",
+		"/Users/dejean/Developer/projects/haxe/Anon1/source/Sphinct.hx",
+		"/Users/dejean/Developer/projects/haxe/Anon1/source/states/MenuState.hx",
+		"/Users/dejean/Developer/projects/haxe/Anon1/source/states/TitleState.hx",
+		"/Users/dejean/Developer/projects/haxe/Anon1/source/states/PlayState.hx",
+		"/Users/dejean/Developer/projects/haxe/Anon1/source/TitleState.hx",
+		"/Users/dejean/Developer/projects/haxe/Anon1/source/anon1/Sphinct.hx",
+		"/Users/dejean/Developer/projects/haxe/Anon1/source/anon1/Reg.hx",
+		"/Users/dejean/Developer/projects/haxe/Anon1/source/anon1/Main.hx",
+		"/Users/dejean/Downloads/sunvox_dll/headers/sunvox.pixi",
+		"/Users/dejean/Developer/projects/haxe/haxepunk_test/src/Main.hx",
+		"/Users/dejean/Developer/projects/haxe/haxepunk_test/src/scenes/GameScene.hx",
+		"/Users/dejean/Developer/projects/haxe/haxepunk_test/src/entities/Block.hx",
+		"/Users/dejean/Developer/projects/haxe/haxepunk_test/src/GameScene.hx",
+		"/Users/dejean/Developer/projects/haxe/haxepunk_test/src/Block.hx",
+		"/Users/dejean/Developer/libraries/csound/csound6-git/CMakeLists.txt",
+		"/Users/dejean/Developer/libraries/libsndfile/build_libsndfile_universal.sh"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"flixel",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"rror opening sound file, unsupported type",
+			"sound",
+			"openfl",
+			"get_width",
+			"loadmap",
+			"play",
+			"destroy",
+			"log",
+			"</i>",
+			"<i>",
+			"spotlightFrames",
+			"eyeBackFrames",
+			"eyeFrontFrames",
+			"spotlightTexture",
+			"eyeFrontTexture",
+			"eyeBackTexture",
+			"spotlightSprite",
+			"eyeFrontSprite",
+			"eyeBackSprite",
+			"eyeFrames",
+			"finished",
+			"event",
+			"load",
+			"loadtext",
+			"loadgraphics",
+			"loadgraphicsfrom",
+			"texturepacker",
+			"play",
+			"shake",
+			"loadgraph",
+			"10.9",
+			"gcc",
+			"BitmapFrontEnd",
+			"bitmap",
+			"updateSpriteGraphic",
+			"loadgraphic",
+			"resetframebitmap",
+			"resetbit",
+			"curve",
+			"draw",
+			"trian",
+			"flashGfx",
+			"drawline",
+			"FlxG",
+			"onUpdate",
+			"loop",
+			"play",
+			"onResize",
+			"GameFramerate",
+			"int_handler",
+			"LINK_INTERFACE_LIBRARIES",
+			"boost"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"_spotlightFrames",
+			"_eyeBackFrames",
+			"_eyeFrontFrames",
+			"_spotlightTexture",
+			"_eyeFrontTexture",
+			"_eyeBackTexture",
+			"_spotlightSprite",
+			"_eyeFrontSprite",
+			"_eyeBackSprite",
+			"eyeFrontFrames"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "source/MenuState.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2652,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								266,
+								266
+							]
+						],
+						"settings":
+						{
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "ngj2015.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"Flixel/flixel/FlxSprite.hx"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 317.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
