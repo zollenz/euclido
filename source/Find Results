@@ -1,0 +1,3545 @@
+Searching 0 files for "lime_audio_load"
+
+0 matches across 0 files
+
+
+Searching 0 files for "AL.BufferData"
+
+0 matches across 0 files
+
+
+Searching 833 files for "AL.BufferData"
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/ALAudioContext.hx:
+   82  	public function bufferData (buffer:Int, format:Int, data:ByteArray, size:Int, freq:Int):Void {
+   83  		
+   84: 		AL.bufferData (buffer, format, data, size, freq);
+   85  		
+   86  	}
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/AudioSource.hx:
+   80  					}
+   81  					
+   82: 					al.bufferData (buffer.id, format, buffer.data, buffer.data.length, buffer.sampleRate);
+   83  					
+   84  				}
+
+2 matches across 2 files
+
+
+Searching 833 files for "bufferData"
+
+/usr/lib/haxe/lib/lime/2,0,6/svg.n:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/dependencies/webgl-debug.js:
+   61  
+   62    'bindBuffer': { 0:true },
+   63:   'bufferData': { 0:true, 2:true },
+   64    'bufferSubData': { 0:true },
+   65    'getBufferParameter': { 0:true, 1:true },
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/ndll/Linux/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/ndll/Linux64/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/ndll/Mac/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/ndll/Mac64/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/ndll/Windows/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/include/SDL12/SDL_opengl.h:
+ 3439  GLAPI void APIENTRY glGenBuffers (GLsizei, GLuint *);
+ 3440  GLAPI GLboolean APIENTRY glIsBuffer (GLuint);
+ 3441: GLAPI void APIENTRY glBufferData (GLenum, GLsizeiptr, const GLvoid *, GLenum);
+ 3442  GLAPI void APIENTRY glBufferSubData (GLenum, GLintptr, GLsizeiptr, const GLvoid *);
+ 3443  GLAPI void APIENTRY glGetBufferSubData (GLenum, GLintptr, GLsizeiptr, GLvoid *);
+ ....
+ 3459  typedef void (APIENTRYP PFNGLGENBUFFERSPROC) (GLsizei n, GLuint *buffers);
+ 3460  typedef GLboolean (APIENTRYP PFNGLISBUFFERPROC) (GLuint buffer);
+ 3461: typedef void (APIENTRYP PFNGLBUFFERDATAPROC) (GLenum target, GLsizeiptr size, const GLvoid *data, GLenum usage);
+ 3462  typedef void (APIENTRYP PFNGLBUFFERSUBDATAPROC) (GLenum target, GLintptr offset, GLsizeiptr size, const GLvoid *data);
+ 3463  typedef void (APIENTRYP PFNGLGETBUFFERSUBDATAPROC) (GLenum target, GLintptr offset, GLsizeiptr size, GLvoid *data);
+ ....
+ 4048  GLAPI void APIENTRY glGenBuffersARB (GLsizei, GLuint *);
+ 4049  GLAPI GLboolean APIENTRY glIsBufferARB (GLuint);
+ 4050: GLAPI void APIENTRY glBufferDataARB (GLenum, GLsizeiptrARB, const GLvoid *, GLenum);
+ 4051  GLAPI void APIENTRY glBufferSubDataARB (GLenum, GLintptrARB, GLsizeiptrARB, const GLvoid *);
+ 4052  GLAPI void APIENTRY glGetBufferSubDataARB (GLenum, GLintptrARB, GLsizeiptrARB, GLvoid *);
+ ....
+ 4060  typedef void (APIENTRYP PFNGLGENBUFFERSARBPROC) (GLsizei n, GLuint *buffers);
+ 4061  typedef GLboolean (APIENTRYP PFNGLISBUFFERARBPROC) (GLuint buffer);
+ 4062: typedef void (APIENTRYP PFNGLBUFFERDATAARBPROC) (GLenum target, GLsizeiptrARB size, const GLvoid *data, GLenum usage);
+ 4063  typedef void (APIENTRYP PFNGLBUFFERSUBDATAARBPROC) (GLenum target, GLintptrARB offset, GLsizeiptrARB size, const GLvoid *data);
+ 4064  typedef void (APIENTRYP PFNGLGETBUFFERSUBDATAARBPROC) (GLenum target, GLintptrARB offset, GLsizeiptrARB size, GLvoid *data);
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/include/xcompile/GL/gl.h:
+ 2293  typedef void (* glGenBuffersProcPtr) (GLsizei n, GLuint *buffers);
+ 2294  typedef GLboolean (* glIsBufferProcPtr) (GLuint buffer);
+ 2295: typedef void (* glBufferDataProcPtr) (GLenum target, GLsizeiptr size, const GLvoid *data, GLenum usage);
+ 2296  typedef void (* glBufferSubDataProcPtr) (GLenum target, GLintptr offset, GLsizeiptr size, const GLvoid *data);
+ 2297  typedef void (* glGetBufferSubDataProcPtr) (GLenum target, GLintptr offset, GLsizeiptr size, GLvoid *data);
+ ....
+ 2893  extern void glGenBuffers (GLsizei n, GLuint *buffers);
+ 2894  extern GLboolean glIsBuffer (GLuint buffer);
+ 2895: extern void glBufferData (GLenum target, GLsizeiptr size, const GLvoid *data, GLenum usage);
+ 2896  extern void glBufferSubData (GLenum target, GLintptr offset, GLsizeiptr size, const GLvoid *data);
+ 2897  extern void glGetBufferSubData (GLenum target, GLintptr offset, GLsizeiptr size, GLvoid *data);
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/include/xcompile/GL/glext.h:
+ 2520  typedef void (* glGenBuffersARBProcPtr) (GLsizei n, GLuint *buffers);
+ 2521  typedef GLboolean (* glIsBufferARBProcPtr) (GLuint buffer);
+ 2522: typedef void (* glBufferDataARBProcPtr) (GLenum target, GLsizeiptrARB size, const GLvoid *data, GLenum usage);
+ 2523  typedef void (* glBufferSubDataARBProcPtr) (GLenum target, GLintptrARB offset, GLsizeiptrARB size, const GLvoid *data);
+ 2524  typedef void (* glGetBufferSubDataARBProcPtr) (GLenum target, GLintptrARB offset, GLsizeiptrARB size, GLvoid *data);
+ ....
+ 2532  extern void glGenBuffersARB(GLsizei n, GLuint *buffers);
+ 2533  extern GLboolean glIsBufferARB(GLuint buffer);
+ 2534: extern void glBufferDataARB(GLenum target, GLsizeiptrARB size, const GLvoid *data, GLenum usage);
+ 2535  extern void glBufferSubDataARB(GLenum target, GLintptrARB offset, GLsizeiptrARB size, const GLvoid *data);
+ 2536  extern void glGetBufferSubDataARB(GLenum target, GLintptrARB offset, GLsizeiptrARB size, GLvoid *data);
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/include/xcompile/GLES/gl.h:
+  636  GL_API void GL_APIENTRY glBindTexture (GLenum target, GLuint texture);
+  637  GL_API void GL_APIENTRY glBlendFunc (GLenum sfactor, GLenum dfactor);
+  638: GL_API void GL_APIENTRY glBufferData (GLenum target, GLsizeiptr size, const GLvoid *data, GLenum usage);
+  639  GL_API void GL_APIENTRY glBufferSubData (GLenum target, GLintptr offset, GLsizeiptr size, const GLvoid *data);
+  640  GL_API void GL_APIENTRY glClear (GLbitfield mask);
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/include/xcompile/GLES2/gl2.h:
+  484  GL_APICALL void         GL_APIENTRY glBlendFunc (GLenum sfactor, GLenum dfactor);
+  485  GL_APICALL void         GL_APIENTRY glBlendFuncSeparate (GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha);
+  486: GL_APICALL void         GL_APIENTRY glBufferData (GLenum target, GLsizeiptr size, const GLvoid* data, GLenum usage);
+  487  GL_APICALL void         GL_APIENTRY glBufferSubData (GLenum target, GLintptr offset, GLsizeiptr size, const GLvoid* data);
+  488  GL_APICALL GLenum       GL_APIENTRY glCheckFramebufferStatus (GLenum target);
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/openal/OpenALSound.cpp:
+  167        mDynamicDone = time_samples < 1024;
+  168        
+  169:       alBufferData(inBuffer, AL_FORMAT_STEREO16, mSampleBuffer, time_samples*STEREO_SAMPLES*sizeof(short), 44100 );
+  170        
+  171        //LOG_SOUND("Dynamic queue buffer %d (%d)", inBuffer, time_samples );
+  ...
+  592              
+  593                 // load the awaiting data blob into the openAL buffer.
+  594:             alBufferData(mBufferID,format,&buffer[0],buffer.size(),freq); 
+  595  
+  596                 // once we have all our information loaded, get some extra flags
+  ...
+  659           
+  660              // load the awaiting data blob into the openAL buffer.
+  661:          alBufferData(mBufferID,format,&buffer[0],buffer.size(),freq); 
+  662  
+  663              // once we have all our information loaded, get some extra flags
+  ...
+ 1180        }
+ 1181        
+ 1182:        alBufferData(buffer, format, pcm, size, vorbisInfo->rate);
+ 1183         check();
+ 1184         return true;
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/opengl/OGLExport.cpp:
+ 1402  value nme_gl_buffer_data(value inTarget, value inByteBuffer, value inStart, value inLen, value inUsage)
+ 1403  {
+ 1404:    DBGFUNC("bufferData");
+ 1405     int len = val_int(inLen);
+ 1406     int start = val_int(inStart);
+ ....
+ 1413        val_throw(alloc_string("Invalid byte length"));
+ 1414  
+ 1415:    glBufferData(val_int(inTarget), len, data + start, val_int(inUsage) );
+ 1416  
+ 1417     return alloc_null();
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/opengl/OGLExtensions.h:
+   47  OGL_EXT(glDeleteBuffers,void,(GLsizei,const GLuint *))
+   48  OGL_EXT(glGenBuffers,void,(GLsizei,GLuint*))
+   49: OGL_EXT(glBufferData,void,(GLenum,GLuint,const void *, GLenum))
+   50  OGL_EXT(glCreateShader,GLuint,(GLenum))
+   51  OGL_EXT(glGetUniformLocation,GLint,(GLuint,const char *))
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/opengl/OpenGLContext.cpp:
+  423              glBindBuffer(GL_ARRAY_BUFFER, inData.mVertexBo);
+  424              // printf("VBO DATA %d\n", inData.mArray.size());
+  425:             glBufferData(GL_ARRAY_BUFFER, inData.mArray.size(), data, GL_STATIC_DRAW);
+  426              data = 0;
+  427           }
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/opengl/OpenGLS3D.cpp:
+  114     
+  115     glBindBuffer(GL_ARRAY_BUFFER, mS3DVertexBuffer);
+  116:    glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * 12, verts, GL_STATIC_DRAW);
+  117     glVertexAttribPointer(mS3DProgram->vertexSlot, 3, GL_FLOAT, false, 0, 0);
+  118  
+  119     glBindBuffer(GL_ARRAY_BUFFER, mS3DTextureBuffer);
+  120:    glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * 8, textureCoords, GL_STATIC_DRAW);
+  121     glVertexAttribPointer(mS3DProgram->textureSlot, 2, GL_FLOAT, false, 0, 0);
+  122  
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/winrt/WinRTStage.cpp:
+  153        };
+  154  
+  155:       D3D11_SUBRESOURCE_DATA vertexBufferData = {0};
+  156:       vertexBufferData.pSysMem = cubeVertices;
+  157:       vertexBufferData.SysMemPitch = 0;
+  158:       vertexBufferData.SysMemSlicePitch = 0;
+  159        CD3D11_BUFFER_DESC vertexBufferDesc(sizeof(cubeVertices), D3D11_BIND_VERTEX_BUFFER);
+  160        DX::ThrowIfFailed(
+  161           device->CreateBuffer(
+  162              &vertexBufferDesc,
+  163:             &vertexBufferData,
+  164              &m_vertexBuffer
+  165              )
+  ...
+  189        m_indexCount = ARRAYSIZE(cubeIndices);
+  190  
+  191:       D3D11_SUBRESOURCE_DATA indexBufferData = {0};
+  192:       indexBufferData.pSysMem = cubeIndices;
+  193:       indexBufferData.SysMemPitch = 0;
+  194:       indexBufferData.SysMemSlicePitch = 0;
+  195        CD3D11_BUFFER_DESC indexBufferDesc(sizeof(cubeIndices), D3D11_BIND_INDEX_BUFFER);
+  196        DX::ThrowIfFailed(
+  197           device->CreateBuffer(
+  198              &indexBufferDesc,
+  199:             &indexBufferData,
+  200              &m_indexBuffer
+  201              )
+  ...
+  216        // this transform should not be applied.
+  217        XMStoreFloat4x4(
+  218:          &m_constantBufferData.projection,
+  219           XMMatrixTranspose(
+  220              XMMatrixMultiply(
+  ...
+  237        XMVECTOR up = XMVectorSet(0.0f, 1.0f, 0.0f, 0.0f);
+  238  
+  239:       XMStoreFloat4x4(&m_constantBufferData.view, XMMatrixTranspose(XMMatrixLookAtRH(eye, at, up)));
+  240:       XMStoreFloat4x4(&m_constantBufferData.model, XMMatrixTranspose(XMMatrixRotationY(timeTotal * XM_PIDIV4)));
+  241     }
+  242  
+  243     void Render(HardwareContext *dx, Surface *inSurface)
+  244     {
+  245:       context->UpdateSubresource( m_constantBuffer.Get(), 0, NULL, &m_constantBufferData, 0, 0);
+  246  
+  247        UINT stride = sizeof(VertexPositionTex);
+  ...
+  271     uint32 m_indexCount;
+  272     bool   valid;
+  273:    ModelViewProjectionConstantBuffer m_constantBufferData;
+  274  };
+  275  
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/templates/emscripten/template/webgl-debug.js:
+   61  
+   62    'bindBuffer': { 0:true },
+   63:   'bufferData': { 0:true, 2:true },
+   64    'bufferSubData': { 0:true },
+   65    'getBufferParameter': { 0:true, 1:true },
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/ALAudioContext.hx:
+   80  	
+   81  	
+   82: 	public function bufferData (buffer:Int, format:Int, data:ByteArray, size:Int, freq:Int):Void {
+   83  		
+   84: 		AL.bufferData (buffer, format, data, size, freq);
+   85  		
+   86  	}
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/AudioSource.hx:
+   80  					}
+   81  					
+   82: 					al.bufferData (buffer.id, format, buffer.data, buffer.data.length, buffer.sampleRate);
+   83  					
+   84  				}
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/openal/AL.hx:
+   73  	
+   74  	
+   75: 	public static function bufferData (buffer:Int, format:Int, data:ByteArray, size:Int, freq:Int):Void {
+   76  		
+   77  		#if ((cpp || neko) && lime_openal)
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/graphics/GLRenderContext.hx:
+  454  	
+  455  	
+  456: 	public inline function bufferData (target:Int, data:ArrayBufferView, usage:Int):Void {
+  457  		
+  458: 		GL.bufferData (target, data, usage);
+  459  		
+  460  	}
+  ...
+ 1668  	@:overload(function(target:Int, data:lime.utils.ArrayBuffer, usage:Int):Void {})
+ 1669  	@:overload(function(target:Int, data:lime.utils.ArrayBufferView, usage:Int):Void {})
+ 1670: 	function bufferData (target:Int, size:Int, usage:Int):Void;
+ 1671  	/** Throws DOMException. */
+ 1672  	@:overload(function(target:Int, offset:Int, data:lime.utils.ArrayBuffer):Void {})
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/graphics/opengl/GL.hx:
+  539  	
+  540  	
+  541: 	public static inline function bufferData (target:Int, data:ArrayBufferView, usage:Int):Void {
+  542  		
+  543  		#if (js && html5)
+  544: 		context.bufferData (target, data, usage);
+  545  		#elseif ((cpp || neko) && lime_opengl)
+  546  		lime_gl_buffer_data (target, data.getByteBuffer (), data.getStart (), data.getLength (), usage);
+  ...
+  548  		lime_gl_buffer_data (target, data, data.byteOffset, data.byteLength, usage);
+  549  		#elseif java
+  550: 		//GL15.glBufferData (target, data.getByteBuffer (), data.getStart (), data.getLength (), usage);
+  551  		#end
+  552  		
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Linux/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Linux64/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Mac/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Mac64/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Windows/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/samples/HerokuShaders/Source/Main.hx:
+  131  				buffer = gl.createBuffer ();
+  132  				gl.bindBuffer (gl.ARRAY_BUFFER, buffer);
+  133: 				gl.bufferData (gl.ARRAY_BUFFER, new Float32Array ([ -1.0, -1.0, 1.0, -1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0 ]), gl.STATIC_DRAW);
+  134  				gl.bindBuffer (gl.ARRAY_BUFFER, null);
+  135  				
+
+/usr/lib/haxe/lib/lime/2,0,6/samples/SimpleImage/Source/Main.hx:
+  108  				buffer = gl.createBuffer ();
+  109  				gl.bindBuffer (gl.ARRAY_BUFFER, buffer);
+  110: 				gl.bufferData (gl.ARRAY_BUFFER, new Float32Array (cast data), gl.STATIC_DRAW);
+  111  				gl.bindBuffer (gl.ARRAY_BUFFER, null);
+  112  				
+
+/usr/lib/haxe/lib/lime/2,0,6/samples/TextRendering/Source/Main.hx:
+  132  				vertexBuffer = gl.createBuffer ();
+  133  				gl.bindBuffer (gl.ARRAY_BUFFER, vertexBuffer);
+  134: 				gl.bufferData (gl.ARRAY_BUFFER, new Float32Array (cast vertices), gl.STATIC_DRAW);
+  135  
+  136  				indexBuffer = gl.createBuffer ();
+  137  				gl.bindBuffer (gl.ELEMENT_ARRAY_BUFFER, indexBuffer);
+  138: 				gl.bufferData (gl.ELEMENT_ARRAY_BUFFER, new UInt8Array (cast indices), gl.STATIC_DRAW);
+  139  
+  140  				var format = image.bitsPerPixel == 1 ? GL.ALPHA : GL.RGBA;
+
+/usr/lib/haxe/lib/lime/2,0,6/templates/emscripten/template/webgl-debug.js:
+   61  
+   62    'bindBuffer': { 0:true },
+   63:   'bufferData': { 0:true, 2:true },
+   64    'bufferSubData': { 0:true },
+   65    'getBufferParameter': { 0:true, 1:true },
+
+/usr/lib/haxe/lib/lime/2,0,6/tools/tools.n:
+    <binary>
+
+99 matches across 34 files
+
+
+Searching 833 files for ".bufferData"
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/ALAudioContext.hx:
+   82  	public function bufferData (buffer:Int, format:Int, data:ByteArray, size:Int, freq:Int):Void {
+   83  		
+   84: 		AL.bufferData (buffer, format, data, size, freq);
+   85  		
+   86  	}
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/AudioSource.hx:
+   80  					}
+   81  					
+   82: 					al.bufferData (buffer.id, format, buffer.data, buffer.data.length, buffer.sampleRate);
+   83  					
+   84  				}
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/graphics/GLRenderContext.hx:
+  456  	public inline function bufferData (target:Int, data:ArrayBufferView, usage:Int):Void {
+  457  		
+  458: 		GL.bufferData (target, data, usage);
+  459  		
+  460  	}
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/graphics/opengl/GL.hx:
+  542  		
+  543  		#if (js && html5)
+  544: 		context.bufferData (target, data, usage);
+  545  		#elseif ((cpp || neko) && lime_opengl)
+  546  		lime_gl_buffer_data (target, data.getByteBuffer (), data.getStart (), data.getLength (), usage);
+
+/usr/lib/haxe/lib/lime/2,0,6/samples/HerokuShaders/Source/Main.hx:
+  131  				buffer = gl.createBuffer ();
+  132  				gl.bindBuffer (gl.ARRAY_BUFFER, buffer);
+  133: 				gl.bufferData (gl.ARRAY_BUFFER, new Float32Array ([ -1.0, -1.0, 1.0, -1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0 ]), gl.STATIC_DRAW);
+  134  				gl.bindBuffer (gl.ARRAY_BUFFER, null);
+  135  				
+
+/usr/lib/haxe/lib/lime/2,0,6/samples/SimpleImage/Source/Main.hx:
+  108  				buffer = gl.createBuffer ();
+  109  				gl.bindBuffer (gl.ARRAY_BUFFER, buffer);
+  110: 				gl.bufferData (gl.ARRAY_BUFFER, new Float32Array (cast data), gl.STATIC_DRAW);
+  111  				gl.bindBuffer (gl.ARRAY_BUFFER, null);
+  112  				
+
+/usr/lib/haxe/lib/lime/2,0,6/samples/TextRendering/Source/Main.hx:
+  132  				vertexBuffer = gl.createBuffer ();
+  133  				gl.bindBuffer (gl.ARRAY_BUFFER, vertexBuffer);
+  134: 				gl.bufferData (gl.ARRAY_BUFFER, new Float32Array (cast vertices), gl.STATIC_DRAW);
+  135  
+  136  				indexBuffer = gl.createBuffer ();
+  137  				gl.bindBuffer (gl.ELEMENT_ARRAY_BUFFER, indexBuffer);
+  138: 				gl.bufferData (gl.ELEMENT_ARRAY_BUFFER, new UInt8Array (cast indices), gl.STATIC_DRAW);
+  139  
+  140  				var format = image.bitsPerPixel == 1 ? GL.ALPHA : GL.RGBA;
+
+8 matches across 7 files
+
+
+Searching 833 files for "bufferData("
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/openal/OpenALSound.cpp:
+  167        mDynamicDone = time_samples < 1024;
+  168        
+  169:       alBufferData(inBuffer, AL_FORMAT_STEREO16, mSampleBuffer, time_samples*STEREO_SAMPLES*sizeof(short), 44100 );
+  170        
+  171        //LOG_SOUND("Dynamic queue buffer %d (%d)", inBuffer, time_samples );
+  ...
+  592              
+  593                 // load the awaiting data blob into the openAL buffer.
+  594:             alBufferData(mBufferID,format,&buffer[0],buffer.size(),freq); 
+  595  
+  596                 // once we have all our information loaded, get some extra flags
+  ...
+  659           
+  660              // load the awaiting data blob into the openAL buffer.
+  661:          alBufferData(mBufferID,format,&buffer[0],buffer.size(),freq); 
+  662  
+  663              // once we have all our information loaded, get some extra flags
+  ...
+ 1180        }
+ 1181        
+ 1182:        alBufferData(buffer, format, pcm, size, vorbisInfo->rate);
+ 1183         check();
+ 1184         return true;
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/opengl/OGLExport.cpp:
+ 1413        val_throw(alloc_string("Invalid byte length"));
+ 1414  
+ 1415:    glBufferData(val_int(inTarget), len, data + start, val_int(inUsage) );
+ 1416  
+ 1417     return alloc_null();
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/opengl/OpenGLContext.cpp:
+  423              glBindBuffer(GL_ARRAY_BUFFER, inData.mVertexBo);
+  424              // printf("VBO DATA %d\n", inData.mArray.size());
+  425:             glBufferData(GL_ARRAY_BUFFER, inData.mArray.size(), data, GL_STATIC_DRAW);
+  426              data = 0;
+  427           }
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/opengl/OpenGLS3D.cpp:
+  114     
+  115     glBindBuffer(GL_ARRAY_BUFFER, mS3DVertexBuffer);
+  116:    glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * 12, verts, GL_STATIC_DRAW);
+  117     glVertexAttribPointer(mS3DProgram->vertexSlot, 3, GL_FLOAT, false, 0, 0);
+  118  
+  119     glBindBuffer(GL_ARRAY_BUFFER, mS3DTextureBuffer);
+  120:    glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * 8, textureCoords, GL_STATIC_DRAW);
+  121     glVertexAttribPointer(mS3DProgram->textureSlot, 2, GL_FLOAT, false, 0, 0);
+  122  
+
+8 matches across 4 files
+
+
+Searching 833 files for "AL_FORMAT_STEREO16"
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/ndll/Linux/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/ndll/Linux64/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/ndll/Mac/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/ndll/Mac64/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/ndll/Windows/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/common/Audio.cpp:
+  384  				{
+  385  					mlSamples = size / 4;
+  386: 					mFormat = AL_FORMAT_STEREO16;
+  387  				}
+  388  			} else //if (mlChannels == 1)
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/openal/OpenALSound.cpp:
+  167        mDynamicDone = time_samples < 1024;
+  168        
+  169:       alBufferData(inBuffer, AL_FORMAT_STEREO16, mSampleBuffer, time_samples*STEREO_SAMPLES*sizeof(short), 44100 );
+  170        
+  171        //LOG_SOUND("Dynamic queue buffer %d (%d)", inBuffer, time_samples );
+  ...
+  576                 format = (int)AL_FORMAT_STEREO8;
+  577              } else if (_bitsPerSample == 16) {
+  578:                format = (int)AL_FORMAT_STEREO16;
+  579              }
+  580           } //channels = 2
+  ...
+  643              format = (int)AL_FORMAT_STEREO8;
+  644           } else if (_bitsPerSample == 16) {
+  645:             format = (int)AL_FORMAT_STEREO16;
+  646           }
+  647        } //channels = 2
+  ...
+ 1009              format = AL_FORMAT_MONO16;
+ 1010          } else {
+ 1011:             format = AL_FORMAT_STEREO16;
+ 1012          }
+ 1013          
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Linux/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Linux64/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Windows/lime.ndll:
+    <binary>
+
+21 matches across 10 files
+
+
+Searching 833 files for "AL.BufferData"
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/ALAudioContext.hx:
+   82  	public function bufferData (buffer:Int, format:Int, data:ByteArray, size:Int, freq:Int):Void {
+   83  		
+   84: 		AL.bufferData (buffer, format, data, size, freq);
+   85  		
+   86  	}
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/AudioSource.hx:
+   80  					}
+   81  					
+   82: 					al.bufferData (buffer.id, format, buffer.data, buffer.data.length, buffer.sampleRate);
+   83  					
+   84  				}
+
+2 matches across 2 files
+
+
+Searching 833 files for "AL.Source"
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/ALAudioContext.hx:
+  509  	public function source3f (source:Int, param:Int, value1:Float, value2:Float, value3:Float):Void {
+  510  		
+  511: 		AL.source3f (source, param, value1, value2, value3);
+  512  		
+  513  	}
+  ...
+  516  	public function source3i (source:Int, param:Int, value1:Int, value2:Int, value3:Int):Void {
+  517  		
+  518: 		AL.source3i (source, param, value1, value2, value3);
+  519  		
+  520  	}
+  ...
+  523  	public function sourcef (source:Int, param:Int, value:Float):Void {
+  524  		
+  525: 		AL.sourcef (source, param, value);
+  526  		
+  527  	}
+  ...
+  530  	public function sourcefv (source:Int, param:Int, values:Array<Float>):Void {
+  531  		
+  532: 		AL.sourcefv (source, param, values);
+  533  		
+  534  	}
+  ...
+  537  	public function sourcei (source:Int, param:Int, value:Int):Void {
+  538  		
+  539: 		AL.sourcei (source, param, value);
+  540  		
+  541  	}
+  ...
+  544  	public function sourceiv (source:Int, param:Int, values:Array<Int>):Void {
+  545  		
+  546: 		AL.sourceiv (source, param, values);
+  547  		
+  548  	}
+  ...
+  551  	public function sourcePlay (source:Int):Void {
+  552  		
+  553: 		AL.sourcePlay (source);
+  554  		
+  555  	}
+  ...
+  558  	public function sourcePlayv (sources:Array<Int>):Void {
+  559  		
+  560: 		AL.sourcePlayv (sources);
+  561  		
+  562  	}
+  ...
+  565  	public function sourceStop (source:Int):Void {
+  566  		
+  567: 		AL.sourceStop (source);
+  568  		
+  569  	}
+  ...
+  572  	public function sourceStopv (sources:Array<Int>):Void {
+  573  		
+  574: 		AL.sourceStopv (sources);
+  575  		
+  576  	}
+  ...
+  579  	public function sourceRewind (source:Int):Void {
+  580  		
+  581: 		AL.sourceRewind (source);
+  582  		
+  583  	}
+  ...
+  586  	public function sourceRewindv (sources:Array<Int>):Void {
+  587  		
+  588: 		AL.sourceRewindv (sources);
+  589  		
+  590  	}
+  ...
+  593  	public function sourcePause (source:Int):Void {
+  594  		
+  595: 		AL.sourcePause (source);
+  596  		
+  597  	}
+  ...
+  600  	public function sourcePausev (sources:Array<Int>):Void {
+  601  		
+  602: 		AL.sourcePausev (sources);
+  603  		
+  604  	}
+  ...
+  607  	public function sourceQueueBuffer (source:Int, buffer:Int):Void {
+  608  		
+  609: 		AL.sourceQueueBuffer (source, buffer);
+  610  		
+  611  	}
+  ...
+  614  	public function sourceQueueBuffers (source:Int, nb:Int, buffers:Array<Int>):Void {
+  615  		
+  616: 		AL.sourceQueueBuffers (source, nb, buffers);
+  617  		
+  618  	}
+  ...
+  621  	public function sourceUnqueueBuffer (source:Int):Int {
+  622  		
+  623: 		return AL.sourceUnqueueBuffer (source);
+  624  		
+  625  	}
+  ...
+  628  	public function sourceUnqueueBuffers (source:Int, nb:Int):Array<Int> {
+  629  		
+  630: 		return AL.sourceUnqueueBuffers (source, nb);
+  631  		
+  632  	}
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/AudioSource.hx:
+   85  				
+   86  				id = al.genSource ();
+   87: 				al.sourcei (id, al.BUFFER, buffer.id);
+   88  			
+   89  			default:
+   ..
+  104  		#else
+  105  			
+  106: 			AL.sourcePlay (id);
+  107  			
+  108  		#end
+  ...
+  125  		#else
+  126  			
+  127: 			AL.sourcePause (id);
+  128  			
+  129  		#end
+  ...
+  142  		#else
+  143  			
+  144: 			AL.sourceStop (id);
+  145  			
+  146  		#end
+
+22 matches across 2 files
+
+
+Searching 833 files for "AL.Source" (case sensitive)
+
+0 matches across 0 files
+
+
+Searching 833 files for "sourcei" (case sensitive)
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/ALAudioContext.hx:
+  535  	
+  536  	
+  537: 	public function sourcei (source:Int, param:Int, value:Int):Void {
+  538  		
+  539: 		AL.sourcei (source, param, value);
+  540  		
+  541  	}
+  542  	
+  543  	
+  544: 	public function sourceiv (source:Int, param:Int, values:Array<Int>):Void {
+  545  		
+  546: 		AL.sourceiv (source, param, values);
+  547  		
+  548  	}
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/AudioSource.hx:
+   85  				
+   86  				id = al.genSource ();
+   87: 				al.sourcei (id, al.BUFFER, buffer.id);
+   88  			
+   89  			default:
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/openal/AL.hx:
+  575  		
+  576  		#if ((cpp || neko || nodejs) && lime_openal)
+  577: 		return lime_al_get_sourcei (source, param);
+  578  		#else
+  579  		return 0;
+  ...
+  586  		
+  587  		#if ((cpp || neko || nodejs) && lime_openal)
+  588: 		return lime_al_get_sourceiv (source, param, count);
+  589  		#else
+  590  		return null;
+  ...
+  739  	
+  740  	
+  741: 	public static function sourcei (source:Int, param:Int, value:Int):Void {
+  742  		
+  743  		#if ((cpp || neko || nodejs) && lime_openal)
+  744: 		lime_al_sourcei (source, param, value);
+  745  		#end
+  746  		
+  ...
+  748  	
+  749  	
+  750: 	public static function sourceiv (source:Int, param:Int, values:Array<Int>):Void {
+  751  		
+  752  		#if ((cpp || neko || nodejs) && lime_openal)
+  753: 		lime_al_sourceiv (source, param, values);
+  754  		#end
+  755  		
+  ...
+  927  	private static var lime_al_get_sourcef = System.load ("lime", "lime_al_get_sourcef", 2);
+  928  	private static var lime_al_get_sourcefv = System.load ("lime", "lime_al_get_sourcefv", 2);
+  929: 	private static var lime_al_get_sourcei = System.load ("lime", "lime_al_get_sourcei", 2);
+  930: 	private static var lime_al_get_sourceiv = System.load ("lime", "lime_al_get_sourceiv", 3);
+  931  	private static var lime_al_get_string = System.load ("lime", "lime_al_get_string", 1);
+  932  	private static var lime_al_is_buffer = System.load ("lime", "lime_al_is_buffer", 1);
+  ...
+  954  	private static var lime_al_sourcef = System.load ("lime", "lime_al_sourcef", 3);
+  955  	private static var lime_al_sourcefv = System.load ("lime", "lime_al_sourcefv", 3);
+  956: 	private static var lime_al_sourcei = System.load ("lime", "lime_al_sourcei", 3);
+  957: 	private static var lime_al_sourceiv = System.load ("lime", "lime_al_sourceiv", 3);
+  958  	private static var lime_al_speed_of_sound = System.load ("lime", "lime_al_speed_of_sound", 1);
+  959  	#end
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Linux/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Linux64/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Mac/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Mac64/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Windows/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/tools/tools.n:
+    <binary>
+
+57 matches across 9 files
+
+
+Searching 833 files for "AL.bufferi" (case sensitive)
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/ALAudioContext.hx:
+  117  	public function bufferi (buffer:Int, param:Int, value:Int):Void {
+  118  		
+  119: 		AL.bufferi (buffer, param, value);
+  120  		
+  121  	}
+  ...
+  124  	public function bufferiv (buffer:Int, param:Int, values:Array<Int>):Void {
+  125  		
+  126: 		AL.bufferiv (buffer, param, values);
+  127  		
+  128  	}
+
+2 matches in 1 file
+
+
+Searching 833 files for "ALSource" (case sensitive)
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/ndll/Linux/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/ndll/Linux64/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Linux/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Linux64/lime.ndll:
+    <binary>
+
+4 matches across 4 files
+
+
+Searching 833 files for "sourcei" (case sensitive)
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/ALAudioContext.hx:
+  535  	
+  536  	
+  537: 	public function sourcei (source:Int, param:Int, value:Int):Void {
+  538  		
+  539: 		AL.sourcei (source, param, value);
+  540  		
+  541  	}
+  542  	
+  543  	
+  544: 	public function sourceiv (source:Int, param:Int, values:Array<Int>):Void {
+  545  		
+  546: 		AL.sourceiv (source, param, values);
+  547  		
+  548  	}
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/AudioSource.hx:
+   85  				
+   86  				id = al.genSource ();
+   87: 				al.sourcei (id, al.BUFFER, buffer.id);
+   88  			
+   89  			default:
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/openal/AL.hx:
+  575  		
+  576  		#if ((cpp || neko || nodejs) && lime_openal)
+  577: 		return lime_al_get_sourcei (source, param);
+  578  		#else
+  579  		return 0;
+  ...
+  586  		
+  587  		#if ((cpp || neko || nodejs) && lime_openal)
+  588: 		return lime_al_get_sourceiv (source, param, count);
+  589  		#else
+  590  		return null;
+  ...
+  739  	
+  740  	
+  741: 	public static function sourcei (source:Int, param:Int, value:Int):Void {
+  742  		
+  743  		#if ((cpp || neko || nodejs) && lime_openal)
+  744: 		lime_al_sourcei (source, param, value);
+  745  		#end
+  746  		
+  ...
+  748  	
+  749  	
+  750: 	public static function sourceiv (source:Int, param:Int, values:Array<Int>):Void {
+  751  		
+  752  		#if ((cpp || neko || nodejs) && lime_openal)
+  753: 		lime_al_sourceiv (source, param, values);
+  754  		#end
+  755  		
+  ...
+  927  	private static var lime_al_get_sourcef = System.load ("lime", "lime_al_get_sourcef", 2);
+  928  	private static var lime_al_get_sourcefv = System.load ("lime", "lime_al_get_sourcefv", 2);
+  929: 	private static var lime_al_get_sourcei = System.load ("lime", "lime_al_get_sourcei", 2);
+  930: 	private static var lime_al_get_sourceiv = System.load ("lime", "lime_al_get_sourceiv", 3);
+  931  	private static var lime_al_get_string = System.load ("lime", "lime_al_get_string", 1);
+  932  	private static var lime_al_is_buffer = System.load ("lime", "lime_al_is_buffer", 1);
+  ...
+  954  	private static var lime_al_sourcef = System.load ("lime", "lime_al_sourcef", 3);
+  955  	private static var lime_al_sourcefv = System.load ("lime", "lime_al_sourcefv", 3);
+  956: 	private static var lime_al_sourcei = System.load ("lime", "lime_al_sourcei", 3);
+  957: 	private static var lime_al_sourceiv = System.load ("lime", "lime_al_sourceiv", 3);
+  958  	private static var lime_al_speed_of_sound = System.load ("lime", "lime_al_speed_of_sound", 1);
+  959  	#end
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Linux/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Linux64/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Mac/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Mac64/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Windows/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/tools/tools.n:
+    <binary>
+
+57 matches across 9 files
+
+
+Searching 833 files for "AL.bufferi" (case sensitive)
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/ALAudioContext.hx:
+  117  	public function bufferi (buffer:Int, param:Int, value:Int):Void {
+  118  		
+  119: 		AL.bufferi (buffer, param, value);
+  120  		
+  121  	}
+  ...
+  124  	public function bufferiv (buffer:Int, param:Int, values:Array<Int>):Void {
+  125  		
+  126: 		AL.bufferiv (buffer, param, values);
+  127  		
+  128  	}
+
+2 matches in 1 file
+
+
+Searching 833 files for "ufferi " (case sensitive)
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/ALAudioContext.hx:
+  115  	
+  116  	
+  117: 	public function bufferi (buffer:Int, param:Int, value:Int):Void {
+  118  		
+  119: 		AL.bufferi (buffer, param, value);
+  120  		
+  121  	}
+  ...
+  262  	
+  263  	
+  264: 	public function getBufferi (buffer:Int, param:Int):Int {
+  265  		
+  266: 		return AL.getBufferi (buffer, param);
+  267  		
+  268  	}
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/openal/AL.hx:
+  120  	
+  121  	
+  122: 	public static function bufferi (buffer:Int, param:Int, value:Int):Void {
+  123  		
+  124  		#if ((cpp || neko || nodejs) && lime_openal)
+  125: 		lime_al_bufferi (buffer, param, value);
+  126  		#end
+  127  		
+  ...
+  329  	
+  330  	
+  331: 	public static function getBufferi (buffer:Int, param:Int):Int {
+  332  		
+  333  		#if ((cpp || neko || nodejs) && lime_openal)
+  334: 		return lime_al_get_bufferi (buffer, param);
+  335  		#else
+  336  		return 0;
+  ...
+  884  	private static var lime_al_buffer3f = System.load ("lime", "lime_al_buffer3f", 5);
+  885  	private static var lime_al_bufferfv = System.load ("lime", "lime_al_bufferfv", 3);
+  886: 	private static var lime_al_bufferi = System.load ("lime", "lime_al_bufferi", 3);
+  887  	private static var lime_al_buffer3i = System.load ("lime", "lime_al_buffer3i", 5);
+  888  	private static var lime_al_bufferiv = System.load ("lime", "lime_al_bufferiv", 3);
+  ...
+  904  	private static var lime_al_get_bufferf = System.load ("lime", "lime_al_get_bufferf", 2);
+  905  	private static var lime_al_get_bufferfv = System.load ("lime", "lime_al_get_bufferfv", 3);
+  906: 	private static var lime_al_get_bufferi = System.load ("lime", "lime_al_get_bufferi", 2);
+  907  	private static var lime_al_get_bufferiv = System.load ("lime", "lime_al_get_bufferiv", 3);
+  908  	private static var lime_al_get_boolean = System.load ("lime", "lime_al_get_boolean", 1);
+
+10 matches across 2 files
+
+
+Searching 833 files for "BUFFER" (case sensitive)
+
+/usr/lib/haxe/lib/lime/2,0,6/svg.n:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/dependencies/webgl-debug.js:
+  268    var numAttribs = ctx.getParameter(ctx.MAX_VERTEX_ATTRIBS);
+  269    var tmp = ctx.createBuffer();
+  270:   ctx.bindBuffer(ctx.ARRAY_BUFFER, tmp);
+  271    for (var ii = 0; ii < numAttribs; ++ii) {
+  272      ctx.disableVertexAttribArray(ii);
+  ...
+  285    ctx.activeTexture(ctx.TEXTURE0);
+  286    ctx.useProgram(null);
+  287:   ctx.bindBuffer(ctx.ARRAY_BUFFER, null);
+  288:   ctx.bindBuffer(ctx.ELEMENT_ARRAY_BUFFER, null);
+  289:   ctx.bindFramebuffer(ctx.FRAMEBUFFER, null);
+  290:   ctx.bindRenderbuffer(ctx.RENDERBUFFER, null);
+  291    ctx.disable(ctx.BLEND);
+  292    ctx.disable(ctx.CULL_FACE);
+  ...
+  323    ctx.stencilOp(ctx.KEEP, ctx.KEEP, ctx.KEEP);
+  324    ctx.viewport(0, 0, ctx.canvas.width, ctx.canvas.height);
+  325:   ctx.clear(ctx.COLOR_BUFFER_BIT | ctx.DEPTH_BUFFER_BIT | ctx.STENCIL_BUFFER_BIT);
+  326  
+  327    // TODO: This should NOT be needed but Firefox fails with 'hint'
+  ...
+  659          loseContextIfTime();
+  660          if (contextLost_) {
+  661:           return wrappedContext_.FRAMEBUFFER_UNSUPPORTED;
+  662          }
+  663          return f.apply(ctx, arguments);
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/ndll/Linux/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/ndll/Linux64/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/ndll/Mac/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/ndll/Mac64/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/ndll/Windows/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/include/nme/ImageBuffer.h:
+    1: #ifndef NME_IMAGE_BUFFER_H
+    2: #define NME_IMAGE_BUFFER_H
+    3  
+    4  #include "Texture.h"
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/include/SDL12/SDL_opengl.h:
+  282  #define GL_SAMPLE_ALPHA_TO_ONE            0x809F
+  283  #define GL_SAMPLE_COVERAGE                0x80A0
+  284: #define GL_SAMPLE_BUFFERS                 0x80A8
+  285  #define GL_SAMPLES                        0x80A9
+  286  #define GL_SAMPLE_COVERAGE_VALUE          0x80AA
+  ...
+  380  
+  381  #ifndef GL_VERSION_1_5
+  382: #define GL_BUFFER_SIZE                    0x8764
+  383: #define GL_BUFFER_USAGE                   0x8765
+  384  #define GL_QUERY_COUNTER_BITS             0x8864
+  385  #define GL_CURRENT_QUERY                  0x8865
+  386  #define GL_QUERY_RESULT                   0x8866
+  387  #define GL_QUERY_RESULT_AVAILABLE         0x8867
+  388: #define GL_ARRAY_BUFFER                   0x8892
+  389: #define GL_ELEMENT_ARRAY_BUFFER           0x8893
+  390: #define GL_ARRAY_BUFFER_BINDING           0x8894
+  391: #define GL_ELEMENT_ARRAY_BUFFER_BINDING   0x8895
+  392: #define GL_VERTEX_ARRAY_BUFFER_BINDING    0x8896
+  393: #define GL_NORMAL_ARRAY_BUFFER_BINDING    0x8897
+  394: #define GL_COLOR_ARRAY_BUFFER_BINDING     0x8898
+  395: #define GL_INDEX_ARRAY_BUFFER_BINDING     0x8899
+  396: #define GL_TEXTURE_COORD_ARRAY_BUFFER_BINDING 0x889A
+  397: #define GL_EDGE_FLAG_ARRAY_BUFFER_BINDING 0x889B
+  398: #define GL_SECONDARY_COLOR_ARRAY_BUFFER_BINDING 0x889C
+  399: #define GL_FOG_COORDINATE_ARRAY_BUFFER_BINDING 0x889D
+  400: #define GL_WEIGHT_ARRAY_BUFFER_BINDING    0x889E
+  401: #define GL_VERTEX_ATTRIB_ARRAY_BUFFER_BINDING 0x889F
+  402  #define GL_READ_ONLY                      0x88B8
+  403  #define GL_WRITE_ONLY                     0x88B9
+  404  #define GL_READ_WRITE                     0x88BA
+  405: #define GL_BUFFER_ACCESS                  0x88BB
+  406: #define GL_BUFFER_MAPPED                  0x88BC
+  407: #define GL_BUFFER_MAP_POINTER             0x88BD
+  408  #define GL_STREAM_DRAW                    0x88E0
+  409  #define GL_STREAM_READ                    0x88E1
+  ...
+  423  #define GL_FOG_COORD_ARRAY_POINTER        GL_FOG_COORDINATE_ARRAY_POINTER
+  424  #define GL_FOG_COORD_ARRAY                GL_FOG_COORDINATE_ARRAY
+  425: #define GL_FOG_COORD_ARRAY_BUFFER_BINDING GL_FOG_COORDINATE_ARRAY_BUFFER_BINDING
+  426  #define GL_SRC0_RGB                       GL_SOURCE0_RGB
+  427  #define GL_SRC1_RGB                       GL_SOURCE1_RGB
+  ...
+  446  #define GL_STENCIL_BACK_PASS_DEPTH_FAIL   0x8802
+  447  #define GL_STENCIL_BACK_PASS_DEPTH_PASS   0x8803
+  448: #define GL_MAX_DRAW_BUFFERS               0x8824
+  449: #define GL_DRAW_BUFFER0                   0x8825
+  450: #define GL_DRAW_BUFFER1                   0x8826
+  451: #define GL_DRAW_BUFFER2                   0x8827
+  452: #define GL_DRAW_BUFFER3                   0x8828
+  453: #define GL_DRAW_BUFFER4                   0x8829
+  454: #define GL_DRAW_BUFFER5                   0x882A
+  455: #define GL_DRAW_BUFFER6                   0x882B
+  456: #define GL_DRAW_BUFFER7                   0x882C
+  457: #define GL_DRAW_BUFFER8                   0x882D
+  458: #define GL_DRAW_BUFFER9                   0x882E
+  459: #define GL_DRAW_BUFFER10                  0x882F
+  460: #define GL_DRAW_BUFFER11                  0x8830
+  461: #define GL_DRAW_BUFFER12                  0x8831
+  462: #define GL_DRAW_BUFFER13                  0x8832
+  463: #define GL_DRAW_BUFFER14                  0x8833
+  464: #define GL_DRAW_BUFFER15                  0x8834
+  465  #define GL_BLEND_EQUATION_ALPHA           0x883D
+  466  #define GL_POINT_SPRITE                   0x8861
+  ...
+  569  #define GL_SAMPLE_ALPHA_TO_ONE_ARB        0x809F
+  570  #define GL_SAMPLE_COVERAGE_ARB            0x80A0
+  571: #define GL_SAMPLE_BUFFERS_ARB             0x80A8
+  572  #define GL_SAMPLES_ARB                    0x80A9
+  573  #define GL_SAMPLE_COVERAGE_VALUE_ARB      0x80AA
+  ...
+  836  
+  837  #ifndef GL_ARB_vertex_buffer_object
+  838: #define GL_BUFFER_SIZE_ARB                0x8764
+  839: #define GL_BUFFER_USAGE_ARB               0x8765
+  840: #define GL_ARRAY_BUFFER_ARB               0x8892
+  841: #define GL_ELEMENT_ARRAY_BUFFER_ARB       0x8893
+  842: #define GL_ARRAY_BUFFER_BINDING_ARB       0x8894
+  843: #define GL_ELEMENT_ARRAY_BUFFER_BINDING_ARB 0x8895
+  844: #define GL_VERTEX_ARRAY_BUFFER_BINDING_ARB 0x8896
+  845: #define GL_NORMAL_ARRAY_BUFFER_BINDING_ARB 0x8897
+  846: #define GL_COLOR_ARRAY_BUFFER_BINDING_ARB 0x8898
+  847: #define GL_INDEX_ARRAY_BUFFER_BINDING_ARB 0x8899
+  848: #define GL_TEXTURE_COORD_ARRAY_BUFFER_BINDING_ARB 0x889A
+  849: #define GL_EDGE_FLAG_ARRAY_BUFFER_BINDING_ARB 0x889B
+  850: #define GL_SECONDARY_COLOR_ARRAY_BUFFER_BINDING_ARB 0x889C
+  851: #define GL_FOG_COORDINATE_ARRAY_BUFFER_BINDING_ARB 0x889D
+  852: #define GL_WEIGHT_ARRAY_BUFFER_BINDING_ARB 0x889E
+  853: #define GL_VERTEX_ATTRIB_ARRAY_BUFFER_BINDING_ARB 0x889F
+  854  #define GL_READ_ONLY_ARB                  0x88B8
+  855  #define GL_WRITE_ONLY_ARB                 0x88B9
+  856  #define GL_READ_WRITE_ARB                 0x88BA
+  857: #define GL_BUFFER_ACCESS_ARB              0x88BB
+  858: #define GL_BUFFER_MAPPED_ARB              0x88BC
+  859: #define GL_BUFFER_MAP_POINTER_ARB         0x88BD
+  860  #define GL_STREAM_DRAW_ARB                0x88E0
+  861  #define GL_STREAM_READ_ARB                0x88E1
+  ...
+  946  
+  947  #ifndef GL_ARB_draw_buffers
+  948: #define GL_MAX_DRAW_BUFFERS_ARB           0x8824
+  949: #define GL_DRAW_BUFFER0_ARB               0x8825
+  950: #define GL_DRAW_BUFFER1_ARB               0x8826
+  951: #define GL_DRAW_BUFFER2_ARB               0x8827
+  952: #define GL_DRAW_BUFFER3_ARB               0x8828
+  953: #define GL_DRAW_BUFFER4_ARB               0x8829
+  954: #define GL_DRAW_BUFFER5_ARB               0x882A
+  955: #define GL_DRAW_BUFFER6_ARB               0x882B
+  956: #define GL_DRAW_BUFFER7_ARB               0x882C
+  957: #define GL_DRAW_BUFFER8_ARB               0x882D
+  958: #define GL_DRAW_BUFFER9_ARB               0x882E
+  959: #define GL_DRAW_BUFFER10_ARB              0x882F
+  960: #define GL_DRAW_BUFFER11_ARB              0x8830
+  961: #define GL_DRAW_BUFFER12_ARB              0x8831
+  962: #define GL_DRAW_BUFFER13_ARB              0x8832
+  963: #define GL_DRAW_BUFFER14_ARB              0x8833
+  964: #define GL_DRAW_BUFFER15_ARB              0x8834
+  965  #endif
+  966  
+  ...
+ 1008  
+ 1009  #ifndef GL_ARB_pixel_buffer_object
+ 1010: #define GL_PIXEL_PACK_BUFFER_ARB          0x88EB
+ 1011: #define GL_PIXEL_UNPACK_BUFFER_ARB        0x88EC
+ 1012: #define GL_PIXEL_PACK_BUFFER_BINDING_ARB  0x88ED
+ 1013: #define GL_PIXEL_UNPACK_BUFFER_BINDING_ARB 0x88EF
+ 1014  #endif
+ 1015  
+ ....
+ 1264  #define GL_4PASS_2_SGIS                   0x80A6
+ 1265  #define GL_4PASS_3_SGIS                   0x80A7
+ 1266: #define GL_SAMPLE_BUFFERS_SGIS            0x80A8
+ 1267  #define GL_SAMPLES_SGIS                   0x80A9
+ 1268  #define GL_SAMPLE_MASK_VALUE_SGIS         0x80AA
+ ....
+ 1414  
+ 1415  #ifndef GL_SGIX_texture_multi_buffer
+ 1416: #define GL_TEXTURE_MULTI_BUFFER_HINT_SGIX 0x812E
+ 1417  #endif
+ 1418  
+ ....
+ 1432  
+ 1433  #ifndef GL_SGIX_instruments
+ 1434: #define GL_INSTRUMENT_BUFFER_POINTER_SGIX 0x8180
+ 1435  #define GL_INSTRUMENT_MEASUREMENTS_SGIX   0x8181
+ 1436  #endif
+ ....
+ 1550  
+ 1551  #ifndef GL_PGI_misc_hints
+ 1552: #define GL_PREFER_DOUBLEBUFFER_HINT_PGI   0x1A1F8
+ 1553  #define GL_CONSERVE_MEMORY_HINT_PGI       0x1A1FD
+ 1554  #define GL_RECLAIM_MEMORY_HINT_PGI        0x1A1FE
+ ....
+ 2162  #ifndef GL_3DFX_multisample
+ 2163  #define GL_MULTISAMPLE_3DFX               0x86B2
+ 2164: #define GL_SAMPLE_BUFFERS_3DFX            0x86B3
+ 2165  #define GL_SAMPLES_3DFX                   0x86B4
+ 2166  #define GL_MULTISAMPLE_BIT_3DFX           0x20000000
+ ....
+ 2182  #define GL_4PASS_2_EXT                    0x80A6
+ 2183  #define GL_4PASS_3_EXT                    0x80A7
+ 2184: #define GL_SAMPLE_BUFFERS_EXT             0x80A8
+ 2185  #define GL_SAMPLES_EXT                    0x80A9
+ 2186  #define GL_SAMPLE_MASK_VALUE_EXT          0x80AA
+ ....
+ 2627  #define GL_PRESERVE_ATI                   0x8762
+ 2628  #define GL_DISCARD_ATI                    0x8763
+ 2629: #define GL_OBJECT_BUFFER_SIZE_ATI         0x8764
+ 2630: #define GL_OBJECT_BUFFER_USAGE_ATI        0x8765
+ 2631: #define GL_ARRAY_OBJECT_BUFFER_ATI        0x8766
+ 2632  #define GL_ARRAY_OBJECT_OFFSET_ATI        0x8767
+ 2633  #endif
+ ....
+ 2872  
+ 2873  #ifndef GL_ATI_draw_buffers
+ 2874: #define GL_MAX_DRAW_BUFFERS_ATI           0x8824
+ 2875: #define GL_DRAW_BUFFER0_ATI               0x8825
+ 2876: #define GL_DRAW_BUFFER1_ATI               0x8826
+ 2877: #define GL_DRAW_BUFFER2_ATI               0x8827
+ 2878: #define GL_DRAW_BUFFER3_ATI               0x8828
+ 2879: #define GL_DRAW_BUFFER4_ATI               0x8829
+ 2880: #define GL_DRAW_BUFFER5_ATI               0x882A
+ 2881: #define GL_DRAW_BUFFER6_ATI               0x882B
+ 2882: #define GL_DRAW_BUFFER7_ATI               0x882C
+ 2883: #define GL_DRAW_BUFFER8_ATI               0x882D
+ 2884: #define GL_DRAW_BUFFER9_ATI               0x882E
+ 2885: #define GL_DRAW_BUFFER10_ATI              0x882F
+ 2886: #define GL_DRAW_BUFFER11_ATI              0x8830
+ 2887: #define GL_DRAW_BUFFER12_ATI              0x8831
+ 2888: #define GL_DRAW_BUFFER13_ATI              0x8832
+ 2889: #define GL_DRAW_BUFFER14_ATI              0x8833
+ 2890: #define GL_DRAW_BUFFER15_ATI              0x8834
+ 2891  #endif
+ 2892  
+ ....
+ 3014  
+ 3015  #ifndef GL_EXT_pixel_buffer_object
+ 3016: #define GL_PIXEL_PACK_BUFFER_EXT          0x88EB
+ 3017: #define GL_PIXEL_UNPACK_BUFFER_EXT        0x88EC
+ 3018: #define GL_PIXEL_PACK_BUFFER_BINDING_EXT  0x88ED
+ 3019: #define GL_PIXEL_UNPACK_BUFFER_BINDING_EXT 0x88EF
+ 3020  #endif
+ 3021  
+ ....
+ 3041  
+ 3042  #ifndef GL_EXT_framebuffer_object
+ 3043: #define GL_INVALID_FRAMEBUFFER_OPERATION_EXT 0x0506
+ 3044: #define GL_MAX_RENDERBUFFER_SIZE_EXT      0x84E8
+ 3045: #define GL_FRAMEBUFFER_BINDING_EXT        0x8CA6
+ 3046: #define GL_RENDERBUFFER_BINDING_EXT       0x8CA7
+ 3047: #define GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE_EXT 0x8CD0
+ 3048: #define GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME_EXT 0x8CD1
+ 3049: #define GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL_EXT 0x8CD2
+ 3050: #define GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE_EXT 0x8CD3
+ 3051: #define GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_3D_ZOFFSET_EXT 0x8CD4
+ 3052: #define GL_FRAMEBUFFER_COMPLETE_EXT       0x8CD5
+ 3053: #define GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT_EXT 0x8CD6
+ 3054: #define GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT_EXT 0x8CD7
+ 3055: #define GL_FRAMEBUFFER_INCOMPLETE_DUPLICATE_ATTACHMENT_EXT 0x8CD8
+ 3056: #define GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS_EXT 0x8CD9
+ 3057: #define GL_FRAMEBUFFER_INCOMPLETE_FORMATS_EXT 0x8CDA
+ 3058: #define GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER_EXT 0x8CDB
+ 3059: #define GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER_EXT 0x8CDC
+ 3060: #define GL_FRAMEBUFFER_UNSUPPORTED_EXT    0x8CDD
+ 3061  #define GL_MAX_COLOR_ATTACHMENTS_EXT      0x8CDF
+ 3062  #define GL_COLOR_ATTACHMENT0_EXT          0x8CE0
+ ....
+ 3078  #define GL_DEPTH_ATTACHMENT_EXT           0x8D00
+ 3079  #define GL_STENCIL_ATTACHMENT_EXT         0x8D20
+ 3080: #define GL_FRAMEBUFFER_EXT                0x8D40
+ 3081: #define GL_RENDERBUFFER_EXT               0x8D41
+ 3082: #define GL_RENDERBUFFER_WIDTH_EXT         0x8D42
+ 3083: #define GL_RENDERBUFFER_HEIGHT_EXT        0x8D43
+ 3084: #define GL_RENDERBUFFER_INTERNAL_FORMAT_EXT 0x8D44
+ 3085  #define GL_STENCIL_INDEX1_EXT             0x8D46
+ 3086  #define GL_STENCIL_INDEX4_EXT             0x8D47
+ 3087  #define GL_STENCIL_INDEX8_EXT             0x8D48
+ 3088  #define GL_STENCIL_INDEX16_EXT            0x8D49
+ 3089: #define GL_RENDERBUFFER_RED_SIZE_EXT      0x8D50
+ 3090: #define GL_RENDERBUFFER_GREEN_SIZE_EXT    0x8D51
+ 3091: #define GL_RENDERBUFFER_BLUE_SIZE_EXT     0x8D52
+ 3092: #define GL_RENDERBUFFER_ALPHA_SIZE_EXT    0x8D53
+ 3093: #define GL_RENDERBUFFER_DEPTH_SIZE_EXT    0x8D54
+ 3094: #define GL_RENDERBUFFER_STENCIL_SIZE_EXT  0x8D55
+ 3095  #endif
+ 3096  
+ ....
+ 3455  typedef void (APIENTRYP PFNGLGETQUERYOBJECTIVPROC) (GLuint id, GLenum pname, GLint *params);
+ 3456  typedef void (APIENTRYP PFNGLGETQUERYOBJECTUIVPROC) (GLuint id, GLenum pname, GLuint *params);
+ 3457: typedef void (APIENTRYP PFNGLBINDBUFFERPROC) (GLenum target, GLuint buffer);
+ 3458: typedef void (APIENTRYP PFNGLDELETEBUFFERSPROC) (GLsizei n, const GLuint *buffers);
+ 3459: typedef void (APIENTRYP PFNGLGENBUFFERSPROC) (GLsizei n, GLuint *buffers);
+ 3460: typedef GLboolean (APIENTRYP PFNGLISBUFFERPROC) (GLuint buffer);
+ 3461: typedef void (APIENTRYP PFNGLBUFFERDATAPROC) (GLenum target, GLsizeiptr size, const GLvoid *data, GLenum usage);
+ 3462: typedef void (APIENTRYP PFNGLBUFFERSUBDATAPROC) (GLenum target, GLintptr offset, GLsizeiptr size, const GLvoid *data);
+ 3463: typedef void (APIENTRYP PFNGLGETBUFFERSUBDATAPROC) (GLenum target, GLintptr offset, GLsizeiptr size, GLvoid *data);
+ 3464: typedef GLvoid* (APIENTRYP PFNGLMAPBUFFERPROC) (GLenum target, GLenum access);
+ 3465: typedef GLboolean (APIENTRYP PFNGLUNMAPBUFFERPROC) (GLenum target);
+ 3466: typedef void (APIENTRYP PFNGLGETBUFFERPARAMETERIVPROC) (GLenum target, GLenum pname, GLint *params);
+ 3467: typedef void (APIENTRYP PFNGLGETBUFFERPOINTERVPROC) (GLenum target, GLenum pname, GLvoid* *params);
+ 3468  #endif
+ 3469  
+ ....
+ 3566  #endif /* GL_GLEXT_PROTOTYPES */
+ 3567  typedef void (APIENTRYP PFNGLBLENDEQUATIONSEPARATEPROC) (GLenum modeRGB, GLenum modeAlpha);
+ 3568: typedef void (APIENTRYP PFNGLDRAWBUFFERSPROC) (GLsizei n, const GLenum *bufs);
+ 3569  typedef void (APIENTRYP PFNGLSTENCILOPSEPARATEPROC) (GLenum face, GLenum sfail, GLenum dpfail, GLenum dppass);
+ 3570  typedef void (APIENTRYP PFNGLSTENCILFUNCSEPARATEPROC) (GLenum frontfunc, GLenum backfunc, GLint ref, GLuint mask);
+ ....
+ 4056  GLAPI void APIENTRY glGetBufferPointervARB (GLenum, GLenum, GLvoid* *);
+ 4057  #endif /* GL_GLEXT_PROTOTYPES */
+ 4058: typedef void (APIENTRYP PFNGLBINDBUFFERARBPROC) (GLenum target, GLuint buffer);
+ 4059: typedef void (APIENTRYP PFNGLDELETEBUFFERSARBPROC) (GLsizei n, const GLuint *buffers);
+ 4060: typedef void (APIENTRYP PFNGLGENBUFFERSARBPROC) (GLsizei n, GLuint *buffers);
+ 4061: typedef GLboolean (APIENTRYP PFNGLISBUFFERARBPROC) (GLuint buffer);
+ 4062: typedef void (APIENTRYP PFNGLBUFFERDATAARBPROC) (GLenum target, GLsizeiptrARB size, const GLvoid *data, GLenum usage);
+ 4063: typedef void (APIENTRYP PFNGLBUFFERSUBDATAARBPROC) (GLenum target, GLintptrARB offset, GLsizeiptrARB size, const GLvoid *data);
+ 4064: typedef void (APIENTRYP PFNGLGETBUFFERSUBDATAARBPROC) (GLenum target, GLintptrARB offset, GLsizeiptrARB size, GLvoid *data);
+ 4065: typedef GLvoid* (APIENTRYP PFNGLMAPBUFFERARBPROC) (GLenum target, GLenum access);
+ 4066: typedef GLboolean (APIENTRYP PFNGLUNMAPBUFFERARBPROC) (GLenum target);
+ 4067: typedef void (APIENTRYP PFNGLGETBUFFERPARAMETERIVARBPROC) (GLenum target, GLenum pname, GLint *params);
+ 4068: typedef void (APIENTRYP PFNGLGETBUFFERPOINTERVARBPROC) (GLenum target, GLenum pname, GLvoid* *params);
+ 4069  #endif
+ 4070  
+ ....
+ 4212  GLAPI void APIENTRY glDrawBuffersARB (GLsizei, const GLenum *);
+ 4213  #endif /* GL_GLEXT_PROTOTYPES */
+ 4214: typedef void (APIENTRYP PFNGLDRAWBUFFERSARBPROC) (GLsizei n, const GLenum *bufs);
+ 4215  #endif
+ 4216  
+ ....
+ 4620  #endif /* GL_GLEXT_PROTOTYPES */
+ 4621  typedef GLint (APIENTRYP PFNGLGETINSTRUMENTSSGIXPROC) (void);
+ 4622: typedef void (APIENTRYP PFNGLINSTRUMENTSBUFFERSGIXPROC) (GLsizei size, GLint *buffer);
+ 4623  typedef GLint (APIENTRYP PFNGLPOLLINSTRUMENTSSGIXPROC) (GLint *marker_p);
+ 4624  typedef void (APIENTRYP PFNGLREADINSTRUMENTSSGIXPROC) (GLint marker);
+ ....
+ 4644  GLAPI void APIENTRY glTagSampleBufferSGIX (void);
+ 4645  #endif /* GL_GLEXT_PROTOTYPES */
+ 4646: typedef void (APIENTRYP PFNGLTAGSAMPLEBUFFERSGIXPROC) (void);
+ 4647  #endif
+ 4648  
+ ....
+ 5410  GLAPI void APIENTRY glResizeBuffersMESA (void);
+ 5411  #endif /* GL_GLEXT_PROTOTYPES */
+ 5412: typedef void (APIENTRYP PFNGLRESIZEBUFFERSMESAPROC) (void);
+ 5413  #endif
+ 5414  
+ ....
+ 5532  GLAPI void APIENTRY glTbufferMask3DFX (GLuint);
+ 5533  #endif /* GL_GLEXT_PROTOTYPES */
+ 5534: typedef void (APIENTRYP PFNGLTBUFFERMASK3DFXPROC) (GLuint mask);
+ 5535  #endif
+ 5536  
+ ....
+ 5895  GLAPI void APIENTRY glGetVariantArrayObjectivATI (GLuint, GLenum, GLint *);
+ 5896  #endif /* GL_GLEXT_PROTOTYPES */
+ 5897: typedef GLuint (APIENTRYP PFNGLNEWOBJECTBUFFERATIPROC) (GLsizei size, const GLvoid *pointer, GLenum usage);
+ 5898: typedef GLboolean (APIENTRYP PFNGLISOBJECTBUFFERATIPROC) (GLuint buffer);
+ 5899: typedef void (APIENTRYP PFNGLUPDATEOBJECTBUFFERATIPROC) (GLuint buffer, GLuint offset, GLsizei size, const GLvoid *pointer, GLenum preserve);
+ 5900: typedef void (APIENTRYP PFNGLGETOBJECTBUFFERFVATIPROC) (GLuint buffer, GLenum pname, GLfloat *params);
+ 5901: typedef void (APIENTRYP PFNGLGETOBJECTBUFFERIVATIPROC) (GLuint buffer, GLenum pname, GLint *params);
+ 5902: typedef void (APIENTRYP PFNGLFREEOBJECTBUFFERATIPROC) (GLuint buffer);
+ 5903  typedef void (APIENTRYP PFNGLARRAYOBJECTATIPROC) (GLenum array, GLint size, GLenum type, GLsizei stride, GLuint buffer, GLuint offset);
+ 5904  typedef void (APIENTRYP PFNGLGETARRAYOBJECTFVATIPROC) (GLenum array, GLenum pname, GLfloat *params);
+ ....
+ 6262  GLAPI void APIENTRY glDrawBuffersATI (GLsizei, const GLenum *);
+ 6263  #endif /* GL_GLEXT_PROTOTYPES */
+ 6264: typedef void (APIENTRYP PFNGLDRAWBUFFERSATIPROC) (GLsizei n, const GLenum *bufs);
+ 6265  #endif
+ 6266  
+ ....
+ 6435  GLAPI void APIENTRY glUnmapObjectBufferATI (GLuint);
+ 6436  #endif /* GL_GLEXT_PROTOTYPES */
+ 6437: typedef GLvoid* (APIENTRYP PFNGLMAPOBJECTBUFFERATIPROC) (GLuint buffer);
+ 6438: typedef void (APIENTRYP PFNGLUNMAPOBJECTBUFFERATIPROC) (GLuint buffer);
+ 6439  #endif
+ 6440  
+ ....
+ 6534  GLAPI void APIENTRY glGenerateMipmapEXT (GLenum);
+ 6535  #endif /* GL_GLEXT_PROTOTYPES */
+ 6536: typedef GLboolean (APIENTRYP PFNGLISRENDERBUFFEREXTPROC) (GLuint renderbuffer);
+ 6537: typedef void (APIENTRYP PFNGLBINDRENDERBUFFEREXTPROC) (GLenum target, GLuint renderbuffer);
+ 6538: typedef void (APIENTRYP PFNGLDELETERENDERBUFFERSEXTPROC) (GLsizei n, const GLuint *renderbuffers);
+ 6539: typedef void (APIENTRYP PFNGLGENRENDERBUFFERSEXTPROC) (GLsizei n, GLuint *renderbuffers);
+ 6540: typedef void (APIENTRYP PFNGLRENDERBUFFERSTORAGEEXTPROC) (GLenum target, GLenum internalformat, GLsizei width, GLsizei height);
+ 6541: typedef void (APIENTRYP PFNGLGETRENDERBUFFERPARAMETERIVEXTPROC) (GLenum target, GLenum pname, GLint *params);
+ 6542: typedef GLboolean (APIENTRYP PFNGLISFRAMEBUFFEREXTPROC) (GLuint framebuffer);
+ 6543: typedef void (APIENTRYP PFNGLBINDFRAMEBUFFEREXTPROC) (GLenum target, GLuint framebuffer);
+ 6544: typedef void (APIENTRYP PFNGLDELETEFRAMEBUFFERSEXTPROC) (GLsizei n, const GLuint *framebuffers);
+ 6545: typedef void (APIENTRYP PFNGLGENFRAMEBUFFERSEXTPROC) (GLsizei n, GLuint *framebuffers);
+ 6546: typedef GLenum (APIENTRYP PFNGLCHECKFRAMEBUFFERSTATUSEXTPROC) (GLenum target);
+ 6547: typedef void (APIENTRYP PFNGLFRAMEBUFFERTEXTURE1DEXTPROC) (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level);
+ 6548: typedef void (APIENTRYP PFNGLFRAMEBUFFERTEXTURE2DEXTPROC) (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level);
+ 6549: typedef void (APIENTRYP PFNGLFRAMEBUFFERTEXTURE3DEXTPROC) (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLint zoffset);
+ 6550: typedef void (APIENTRYP PFNGLFRAMEBUFFERRENDERBUFFEREXTPROC) (GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer);
+ 6551: typedef void (APIENTRYP PFNGLGETFRAMEBUFFERATTACHMENTPARAMETERIVEXTPROC) (GLenum target, GLenum attachment, GLenum pname, GLint *params);
+ 6552  typedef void (APIENTRYP PFNGLGENERATEMIPMAPEXTPROC) (GLenum target);
+ 6553  #endif
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/include/SDL12/SDL_video.h:
+  233      SDL_GL_BLUE_SIZE,
+  234      SDL_GL_ALPHA_SIZE,
+  235:     SDL_GL_BUFFER_SIZE,
+  236:     SDL_GL_DOUBLEBUFFER,
+  237      SDL_GL_DEPTH_SIZE,
+  238      SDL_GL_STENCIL_SIZE,
+  ...
+  242      SDL_GL_ACCUM_ALPHA_SIZE,
+  243      SDL_GL_STEREO,
+  244:     SDL_GL_MULTISAMPLEBUFFERS,
+  245      SDL_GL_MULTISAMPLESAMPLES,
+  246      SDL_GL_ACCELERATED_VISUAL,
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/include/xcompile/EGL/egl.h:
+   94  
+   95  /* Config attributes */
+   96: #define EGL_BUFFER_SIZE			0x3020
+   97  #define EGL_ALPHA_SIZE			0x3021
+   98  #define EGL_BLUE_SIZE			0x3022
+   ..
+  104  #define EGL_CONFIG_ID			0x3028
+  105  #define EGL_LEVEL			0x3029
+  106: #define EGL_MAX_PBUFFER_HEIGHT		0x302A
+  107: #define EGL_MAX_PBUFFER_PIXELS		0x302B
+  108: #define EGL_MAX_PBUFFER_WIDTH		0x302C
+  109  #define EGL_NATIVE_RENDERABLE		0x302D
+  110  #define EGL_NATIVE_VISUAL_ID		0x302E
+  111  #define EGL_NATIVE_VISUAL_TYPE		0x302F
+  112  #define EGL_SAMPLES			0x3031
+  113: #define EGL_SAMPLE_BUFFERS		0x3032
+  114  #define EGL_SURFACE_TYPE		0x3033
+  115  #define EGL_TRANSPARENT_TYPE		0x3034
+  ...
+  124  #define EGL_LUMINANCE_SIZE		0x303D
+  125  #define EGL_ALPHA_MASK_SIZE		0x303E
+  126: #define EGL_COLOR_BUFFER_TYPE		0x303F
+  127  #define EGL_RENDERABLE_TYPE		0x3040
+  128  #define EGL_MATCH_NATIVE_PIXMAP		0x3041	/* Pseudo-attribute (not queryable) */
+  ...
+  135  #define EGL_NON_CONFORMANT_CONFIG	0x3051	/* EGL_CONFIG_CAVEAT value */
+  136  #define EGL_TRANSPARENT_RGB		0x3052	/* EGL_TRANSPARENT_TYPE value */
+  137: #define EGL_RGB_BUFFER			0x308E	/* EGL_COLOR_BUFFER_TYPE value */
+  138: #define EGL_LUMINANCE_BUFFER		0x308F	/* EGL_COLOR_BUFFER_TYPE value */
+  139  
+  140  /* More config attribute values, for EGL_TEXTURE_FORMAT */
+  ...
+  145  
+  146  /* Config attribute mask bits */
+  147: #define EGL_PBUFFER_BIT			0x0001	/* EGL_SURFACE_TYPE mask bits */
+  148  #define EGL_PIXMAP_BIT			0x0002	/* EGL_SURFACE_TYPE mask bits */
+  149  #define EGL_WINDOW_BIT			0x0004	/* EGL_SURFACE_TYPE mask bits */
+  ...
+  167  #define EGL_HEIGHT			0x3056
+  168  #define EGL_WIDTH			0x3057
+  169: #define EGL_LARGEST_PBUFFER		0x3058
+  170  #define EGL_TEXTURE_FORMAT		0x3080
+  171  #define EGL_TEXTURE_TARGET		0x3081
+  172  #define EGL_MIPMAP_TEXTURE		0x3082
+  173  #define EGL_MIPMAP_LEVEL		0x3083
+  174: #define EGL_RENDER_BUFFER		0x3086
+  175  #define EGL_VG_COLORSPACE		0x3087
+  176  #define EGL_VG_ALPHA_FORMAT		0x3088
+  ...
+  181  #define EGL_MULTISAMPLE_RESOLVE		0x3099
+  182  
+  183: /* EGL_RENDER_BUFFER values / BindTexImage / ReleaseTexImage buffer targets */
+  184: #define EGL_BACK_BUFFER			0x3084
+  185: #define EGL_SINGLE_BUFFER		0x3085
+  186  
+  187  /* OpenVG color spaces */
+  ...
+  202  
+  203  /* Back buffer swap behaviors */
+  204: #define EGL_BUFFER_PRESERVED		0x3094	/* EGL_SWAP_BEHAVIOR value */
+  205: #define EGL_BUFFER_DESTROYED		0x3095	/* EGL_SWAP_BEHAVIOR value */
+  206  
+  207  /* CreatePbufferFromClientBuffer buffer types */
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/include/xcompile/EGL/eglext.h:
+  118  #ifndef EGL_KHR_gl_renderbuffer_image
+  119  #define EGL_KHR_gl_renderbuffer_image 1
+  120: #define EGL_GL_RENDERBUFFER_KHR			0x30B9	/* eglCreateImageKHR target */
+  121  #endif
+  122  
+  ...
+  172  #ifndef EGL_NV_coverage_sample
+  173  #define EGL_NV_coverage_sample 1
+  174: #define EGL_COVERAGE_BUFFERS_NV 0x30E0
+  175  #define EGL_COVERAGE_SAMPLES_NV 0x30E1
+  176  #endif
+  ...
+  227  #define EGL_ANDROID_image_native_buffer 1
+  228  struct ANativeWindowBuffer;
+  229: #define EGL_NATIVE_BUFFER_ANDROID               0x3140  /* eglCreateImageKHR target */
+  230  #endif
+  231  
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/include/xcompile/GL/gl.h:
+  116  #define GL_LIGHTING_BIT                   0x00000040
+  117  #define GL_FOG_BIT                        0x00000080
+  118: #define GL_DEPTH_BUFFER_BIT               0x00000100
+  119: #define GL_ACCUM_BUFFER_BIT               0x00000200
+  120: #define GL_STENCIL_BUFFER_BIT             0x00000400
+  121  #define GL_VIEWPORT_BIT                   0x00000800
+  122  #define GL_TRANSFORM_BIT                  0x00001000
+  123  #define GL_ENABLE_BIT                     0x00002000
+  124: #define GL_COLOR_BUFFER_BIT               0x00004000
+  125  #define GL_HINT_BIT                       0x00008000
+  126  #define GL_EVAL_BIT                       0x00010000
+  ...
+  184  
+  185  /* ClearBufferMask */
+  186: /*      GL_COLOR_BUFFER_BIT */
+  187: /*      GL_ACCUM_BUFFER_BIT */
+  188: /*      GL_STENCIL_BUFFER_BIT */
+  189: /*      GL_DEPTH_BUFFER_BIT */
+  190  
+  191  /* ClientArrayType */
+  ...
+  571  #define GL_INDEX_LOGIC_OP                 0x0BF1
+  572  #define GL_COLOR_LOGIC_OP                 0x0BF2
+  573: #define GL_AUX_BUFFERS                    0x0C00
+  574: #define GL_DRAW_BUFFER                    0x0C01
+  575: #define GL_READ_BUFFER                    0x0C02
+  576  #define GL_SCISSOR_BOX                    0x0C10
+  577  #define GL_SCISSOR_TEST                   0x0C11
+  ...
+  582  #define GL_INDEX_MODE                     0x0C30
+  583  #define GL_RGBA_MODE                      0x0C31
+  584: #define GL_DOUBLEBUFFER                   0x0C32
+  585  #define GL_STEREO                         0x0C33
+  586  #define GL_RENDER_MODE                    0x0C40
+  ...
+  692  #define GL_TEXTURE_1D                     0x0DE0
+  693  #define GL_TEXTURE_2D                     0x0DE1
+  694: #define GL_FEEDBACK_BUFFER_POINTER        0x0DF0
+  695: #define GL_FEEDBACK_BUFFER_SIZE           0x0DF1
+  696: #define GL_FEEDBACK_BUFFER_TYPE           0x0DF2
+  697: #define GL_SELECTION_BUFFER_POINTER       0x0DF3
+  698: #define GL_SELECTION_BUFFER_SIZE          0x0DF4
+  699  /*      GL_TEXTURE_BINDING_1D */
+  700  /*      GL_TEXTURE_BINDING_2D */
+  ...
+ 1585  #define GL_SAMPLE_ALPHA_TO_ONE            0x809F
+ 1586  #define GL_SAMPLE_COVERAGE                0x80A0
+ 1587: #define GL_SAMPLE_BUFFERS                 0x80A8
+ 1588  #define GL_SAMPLES                        0x80A9
+ 1589  #define GL_SAMPLE_COVERAGE_VALUE          0x80AA
+ ....
+ 1657  
+ 1658  /* vertex_buffer_object */
+ 1659: #define GL_ARRAY_BUFFER                                0x8892
+ 1660: #define GL_ELEMENT_ARRAY_BUFFER                        0x8893
+ 1661: #define GL_ARRAY_BUFFER_BINDING                        0x8894
+ 1662: #define GL_ELEMENT_ARRAY_BUFFER_BINDING                0x8895
+ 1663: #define GL_VERTEX_ARRAY_BUFFER_BINDING                 0x8896
+ 1664: #define GL_NORMAL_ARRAY_BUFFER_BINDING                 0x8897
+ 1665: #define GL_COLOR_ARRAY_BUFFER_BINDING                  0x8898
+ 1666: #define GL_INDEX_ARRAY_BUFFER_BINDING                  0x8899
+ 1667: #define GL_TEXTURE_COORD_ARRAY_BUFFER_BINDING          0x889A
+ 1668: #define GL_EDGE_FLAG_ARRAY_BUFFER_BINDING              0x889B
+ 1669: #define GL_SECONDARY_COLOR_ARRAY_BUFFER_BINDING        0x889C
+ 1670: #define GL_FOG_COORD_ARRAY_BUFFER_BINDING              0x889D
+ 1671: #define GL_WEIGHT_ARRAY_BUFFER_BINDING                 0x889E
+ 1672: #define GL_VERTEX_ATTRIB_ARRAY_BUFFER_BINDING          0x889F
+ 1673  #define GL_STREAM_DRAW                                 0x88E0
+ 1674  #define GL_STREAM_READ                                 0x88E1
+ ....
+ 1683  #define GL_WRITE_ONLY                                  0x88B9
+ 1684  #define GL_READ_WRITE                                  0x88BA
+ 1685: #define GL_BUFFER_SIZE                                 0x8764
+ 1686: #define GL_BUFFER_USAGE                                0x8765
+ 1687: #define GL_BUFFER_ACCESS                               0x88BB
+ 1688: #define GL_BUFFER_MAPPED                               0x88BC
+ 1689: #define GL_BUFFER_MAP_POINTER                          0x88BD
+ 1690  /* Obsolete */
+ 1691: #define GL_FOG_COORDINATE_ARRAY_BUFFER_BINDING         0x889D
+ 1692  
+ 1693  /* OpenGL 2.0 */
+ ....
+ 1745  #define GL_MAX_TEXTURE_COORDS             0x8871
+ 1746  #define GL_MAX_TEXTURE_IMAGE_UNITS        0x8872
+ 1747: #define GL_MAX_DRAW_BUFFERS               0x8824
+ 1748: #define GL_DRAW_BUFFER0                   0x8825
+ 1749: #define GL_DRAW_BUFFER1                   0x8826
+ 1750: #define GL_DRAW_BUFFER2                   0x8827
+ 1751: #define GL_DRAW_BUFFER3                   0x8828
+ 1752: #define GL_DRAW_BUFFER4                   0x8829
+ 1753: #define GL_DRAW_BUFFER5                   0x882A
+ 1754: #define GL_DRAW_BUFFER6                   0x882B
+ 1755: #define GL_DRAW_BUFFER7                   0x882C
+ 1756: #define GL_DRAW_BUFFER8                   0x882D
+ 1757: #define GL_DRAW_BUFFER9                   0x882E
+ 1758: #define GL_DRAW_BUFFER10                  0x882F
+ 1759: #define GL_DRAW_BUFFER11                  0x8830
+ 1760: #define GL_DRAW_BUFFER12                  0x8831
+ 1761: #define GL_DRAW_BUFFER13                  0x8832
+ 1762: #define GL_DRAW_BUFFER14                  0x8833
+ 1763: #define GL_DRAW_BUFFER15                  0x8834
+ 1764  #define GL_POINT_SPRITE                   0x8861
+ 1765  #define GL_COORD_REPLACE                  0x8862
+ ....
+ 1777  /* OpenGL 2.1 */
+ 1778  #define GL_CURRENT_RASTER_SECONDARY_COLOR 0x845F
+ 1779: #define GL_PIXEL_PACK_BUFFER              0x88EB
+ 1780: #define GL_PIXEL_UNPACK_BUFFER            0x88EC
+ 1781: #define GL_PIXEL_PACK_BUFFER_BINDING      0x88ED
+ 1782: #define GL_PIXEL_UNPACK_BUFFER_BINDING    0x88EF
+ 1783  #define GL_FLOAT_MAT2x3                   0x8B65
+ 1784  #define GL_FLOAT_MAT2x4                   0x8B66
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/include/xcompile/GL/glext.h:
+  286  
+  287  #if GL_ARB_draw_buffers
+  288: #define GL_MAX_DRAW_BUFFERS_ARB                              0x8824
+  289: #define GL_DRAW_BUFFER0_ARB                                  0x8825
+  290: #define GL_DRAW_BUFFER1_ARB                                  0x8826
+  291: #define GL_DRAW_BUFFER2_ARB                                  0x8827
+  292: #define GL_DRAW_BUFFER3_ARB                                  0x8828
+  293: #define GL_DRAW_BUFFER4_ARB                                  0x8829
+  294: #define GL_DRAW_BUFFER5_ARB                                  0x882A
+  295: #define GL_DRAW_BUFFER6_ARB                                  0x882B
+  296: #define GL_DRAW_BUFFER7_ARB                                  0x882C
+  297: #define GL_DRAW_BUFFER8_ARB                                  0x882D
+  298: #define GL_DRAW_BUFFER9_ARB                                  0x882E
+  299: #define GL_DRAW_BUFFER10_ARB                                 0x882F
+  300: #define GL_DRAW_BUFFER11_ARB                                 0x8830
+  301: #define GL_DRAW_BUFFER12_ARB                                 0x8831
+  302: #define GL_DRAW_BUFFER13_ARB                                 0x8832
+  303: #define GL_DRAW_BUFFER14_ARB                                 0x8833
+  304: #define GL_DRAW_BUFFER15_ARB                                 0x8834
+  305  #endif
+  306  
+  ...
+  332  
+  333  #if GL_ARB_framebuffer_object
+  334: #define GL_INVALID_FRAMEBUFFER_OPERATION                     0x0506
+  335: #define GL_FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING             0x8210
+  336: #define GL_FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE             0x8211
+  337: #define GL_FRAMEBUFFER_ATTACHMENT_RED_SIZE                   0x8212
+  338: #define GL_FRAMEBUFFER_ATTACHMENT_GREEN_SIZE                 0x8213
+  339: #define GL_FRAMEBUFFER_ATTACHMENT_BLUE_SIZE                  0x8214
+  340: #define GL_FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE                 0x8215
+  341: #define GL_FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE                 0x8216
+  342: #define GL_FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE               0x8217
+  343: #define GL_FRAMEBUFFER_DEFAULT                               0x8218
+  344: #define GL_FRAMEBUFFER_UNDEFINED                             0x8219
+  345  #define GL_DEPTH_STENCIL_ATTACHMENT                          0x821A
+  346: #define GL_MAX_RENDERBUFFER_SIZE                             0x84E8
+  347  #define GL_DEPTH_STENCIL                                     0x84F9
+  348  #define GL_UNSIGNED_INT_24_8                                 0x84FA
+  ...
+  355  #define GL_TEXTURE_DEPTH_TYPE                                0x8C16
+  356  #define GL_UNSIGNED_NORMALIZED                               0x8C17
+  357: #define GL_FRAMEBUFFER_BINDING                               0x8CA6
+  358: #define GL_DRAW_FRAMEBUFFER_BINDING                          GL_FRAMEBUFFER_BINDING
+  359: #define GL_RENDERBUFFER_BINDING                              0x8CA7
+  360: #define GL_READ_FRAMEBUFFER                                  0x8CA8
+  361: #define GL_DRAW_FRAMEBUFFER                                  0x8CA9
+  362: #define GL_READ_FRAMEBUFFER_BINDING                          0x8CAA
+  363: #define GL_RENDERBUFFER_SAMPLES                              0x8CAB
+  364: #define GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE                0x8CD0
+  365: #define GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME                0x8CD1
+  366: #define GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL              0x8CD2
+  367: #define GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE      0x8CD3
+  368: #define GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER              0x8CD4
+  369: #define GL_FRAMEBUFFER_COMPLETE                              0x8CD5
+  370: #define GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT                 0x8CD6
+  371: #define GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT         0x8CD7
+  372: #define GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER                0x8CDB
+  373: #define GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER                0x8CDC
+  374: #define GL_FRAMEBUFFER_UNSUPPORTED                           0x8CDD
+  375  #define GL_MAX_COLOR_ATTACHMENTS                             0x8CDF
+  376  #define GL_COLOR_ATTACHMENT0                                 0x8CE0
+  ...
+  392  #define GL_DEPTH_ATTACHMENT                                  0x8D00
+  393  #define GL_STENCIL_ATTACHMENT                                0x8D20
+  394: #define GL_FRAMEBUFFER                                       0x8D40
+  395: #define GL_RENDERBUFFER                                      0x8D41
+  396: #define GL_RENDERBUFFER_WIDTH                                0x8D42
+  397: #define GL_RENDERBUFFER_HEIGHT                               0x8D43
+  398: #define GL_RENDERBUFFER_INTERNAL_FORMAT                      0x8D44
+  399  #define GL_STENCIL_INDEX1                                    0x8D46
+  400  #define GL_STENCIL_INDEX4                                    0x8D47
+  401  #define GL_STENCIL_INDEX8                                    0x8D48
+  402  #define GL_STENCIL_INDEX16                                   0x8D49
+  403: #define GL_RENDERBUFFER_RED_SIZE                             0x8D50
+  404: #define GL_RENDERBUFFER_GREEN_SIZE                           0x8D51
+  405: #define GL_RENDERBUFFER_BLUE_SIZE                            0x8D52
+  406: #define GL_RENDERBUFFER_ALPHA_SIZE                           0x8D53
+  407: #define GL_RENDERBUFFER_DEPTH_SIZE                           0x8D54
+  408: #define GL_RENDERBUFFER_STENCIL_SIZE                         0x8D55
+  409: #define GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE                0x8D56
+  410  #define GL_MAX_SAMPLES                                       0x8D57
+  411  #endif
+  412  
+  413  #if GL_ARB_framebuffer_sRGB
+  414: #define GL_FRAMEBUFFER_SRGB                                  0x8DB9
+  415  #endif
+  416  
+  ...
+  432  #define GL_SAMPLE_ALPHA_TO_ONE_ARB                           0x809F
+  433  #define GL_SAMPLE_COVERAGE_ARB                               0x80A0
+  434: #define GL_SAMPLE_BUFFERS_ARB                                0x80A8
+  435  #define GL_SAMPLES_ARB                                       0x80A9
+  436  #define GL_SAMPLE_COVERAGE_VALUE_ARB                         0x80AA
+  ...
+  486  
+  487  #if GL_ARB_pixel_buffer_object
+  488: #define GL_PIXEL_PACK_BUFFER_ARB                             0x88EB
+  489: #define GL_PIXEL_UNPACK_BUFFER_ARB                           0x88EC
+  490: #define GL_PIXEL_PACK_BUFFER_BINDING_ARB                     0x88ED
+  491: #define GL_PIXEL_UNPACK_BUFFER_BINDING_ARB                   0x88EF
+  492  #endif
+  493  
+  ...
+  768  
+  769  #if GL_ARB_vertex_buffer_object
+  770: #define GL_ARRAY_BUFFER_ARB                                  0x8892
+  771: #define GL_ELEMENT_ARRAY_BUFFER_ARB                          0x8893
+  772: #define GL_ARRAY_BUFFER_BINDING_ARB                          0x8894
+  773: #define GL_ELEMENT_ARRAY_BUFFER_BINDING_ARB                  0x8895
+  774: #define GL_VERTEX_ARRAY_BUFFER_BINDING_ARB                   0x8896
+  775: #define GL_NORMAL_ARRAY_BUFFER_BINDING_ARB                   0x8897
+  776: #define GL_COLOR_ARRAY_BUFFER_BINDING_ARB                    0x8898
+  777: #define GL_INDEX_ARRAY_BUFFER_BINDING_ARB                    0x8899
+  778: #define GL_TEXTURE_COORD_ARRAY_BUFFER_BINDING_ARB            0x889A
+  779: #define GL_EDGE_FLAG_ARRAY_BUFFER_BINDING_ARB                0x889B
+  780: #define GL_SECONDARY_COLOR_ARRAY_BUFFER_BINDING_ARB          0x889C
+  781: #define GL_FOG_COORD_ARRAY_BUFFER_BINDING_ARB                0x889D
+  782: #define GL_WEIGHT_ARRAY_BUFFER_BINDING_ARB                   0x889E
+  783: #define GL_VERTEX_ATTRIB_ARRAY_BUFFER_BINDING_ARB            0x889F
+  784  #define GL_STREAM_DRAW_ARB                                   0x88E0
+  785  #define GL_STREAM_READ_ARB                                   0x88E1
+  ...
+  794  #define GL_WRITE_ONLY_ARB                                    0x88B9
+  795  #define GL_READ_WRITE_ARB                                    0x88BA
+  796: #define GL_BUFFER_SIZE_ARB                                   0x8764
+  797: #define GL_BUFFER_USAGE_ARB                                  0x8765
+  798: #define GL_BUFFER_ACCESS_ARB                                 0x88BB
+  799: #define GL_BUFFER_MAPPED_ARB                                 0x88BC
+  800: #define GL_BUFFER_MAP_POINTER_ARB                            0x88BD
+  801  /* Obsolete */
+  802: #define GL_FOG_COORDINATE_ARRAY_BUFFER_BINDING_ARB           0x889D
+  803  #endif
+  804  
+  ...
+  925  #define GL_MAX_GEOMETRY_BINDABLE_UNIFORMS_EXT                0x8DE4
+  926  #define GL_MAX_BINDABLE_UNIFORM_SIZE_EXT                     0x8DED
+  927: #define GL_UNIFORM_BUFFER_BINDING_EXT                        0x8DEF
+  928: #define GL_UNIFORM_BUFFER_EXT                                0x8DEE
+  929  #endif
+  930  
+  ...
+ 1015  
+ 1016  #if GL_EXT_framebuffer_blit
+ 1017: #define GL_READ_FRAMEBUFFER_EXT                              0x8CA8
+ 1018: #define GL_DRAW_FRAMEBUFFER_EXT                              0x8CA9
+ 1019: #define GL_DRAW_FRAMEBUFFER_BINDING_EXT                      0x8CA6
+ 1020: #define GL_READ_FRAMEBUFFER_BINDING_EXT                      0x8CAA
+ 1021  #endif
+ 1022  
+ 1023  #if GL_EXT_framebuffer_multisample
+ 1024: #define GL_RENDERBUFFER_SAMPLES_EXT                          0x8CAB
+ 1025: #define GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_EXT            0x8D56
+ 1026  #define GL_MAX_SAMPLES_EXT                                   0x8D57
+ 1027  #endif
+ ....
+ 1033  
+ 1034  #if GL_EXT_framebuffer_object
+ 1035: #define GL_FRAMEBUFFER_EXT                                   0x8D40
+ 1036: #define GL_RENDERBUFFER_EXT                                  0x8D41
+ 1037  #define GL_STENCIL_INDEX1_EXT                                0x8D46
+ 1038  #define GL_STENCIL_INDEX4_EXT                                0x8D47
+ 1039  #define GL_STENCIL_INDEX8_EXT                                0x8D48
+ 1040  #define GL_STENCIL_INDEX16_EXT                               0x8D49
+ 1041: #define GL_RENDERBUFFER_WIDTH_EXT                            0x8D42
+ 1042: #define GL_RENDERBUFFER_HEIGHT_EXT                           0x8D43
+ 1043: #define GL_RENDERBUFFER_INTERNAL_FORMAT_EXT                  0x8D44
+ 1044: #define GL_RENDERBUFFER_RED_SIZE_EXT                         0x8D50
+ 1045: #define GL_RENDERBUFFER_GREEN_SIZE_EXT                       0x8D51
+ 1046: #define GL_RENDERBUFFER_BLUE_SIZE_EXT                        0x8D52
+ 1047: #define GL_RENDERBUFFER_ALPHA_SIZE_EXT                       0x8D53
+ 1048: #define GL_RENDERBUFFER_DEPTH_SIZE_EXT                       0x8D54
+ 1049: #define GL_RENDERBUFFER_STENCIL_SIZE_EXT                     0x8D55
+ 1050: #define GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE_EXT            0x8CD0
+ 1051: #define GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME_EXT            0x8CD1
+ 1052: #define GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL_EXT          0x8CD2
+ 1053: #define GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE_EXT  0x8CD3
+ 1054: #define GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_3D_ZOFFSET_EXT     0x8CD4
+ 1055  #define GL_COLOR_ATTACHMENT0_EXT                             0x8CE0
+ 1056  #define GL_COLOR_ATTACHMENT1_EXT                             0x8CE1
+ ....
+ 1071  #define GL_DEPTH_ATTACHMENT_EXT                              0x8D00
+ 1072  #define GL_STENCIL_ATTACHMENT_EXT                            0x8D20
+ 1073: #define GL_FRAMEBUFFER_COMPLETE_EXT                          0x8CD5
+ 1074: #define GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT_EXT             0x8CD6
+ 1075: #define GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT_EXT     0x8CD7
+ 1076: #define GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS_EXT             0x8CD9
+ 1077: #define GL_FRAMEBUFFER_INCOMPLETE_FORMATS_EXT                0x8CDA
+ 1078: #define GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER_EXT            0x8CDB
+ 1079: #define GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER_EXT            0x8CDC
+ 1080: #define GL_FRAMEBUFFER_UNSUPPORTED_EXT                       0x8CDD
+ 1081: #define GL_FRAMEBUFFER_BINDING_EXT                           0x8CA6
+ 1082: #define GL_RENDERBUFFER_BINDING_EXT                          0x8CA7
+ 1083  #define GL_MAX_COLOR_ATTACHMENTS_EXT                         0x8CDF
+ 1084: #define GL_MAX_RENDERBUFFER_SIZE_EXT                         0x84E8
+ 1085: #define GL_INVALID_FRAMEBUFFER_OPERATION_EXT                 0x0506
+ 1086  #endif
+ 1087  
+ 1088  #if GL_EXT_framebuffer_sRGB
+ 1089: #define GL_FRAMEBUFFER_SRGB_EXT                              0x8DB9
+ 1090: #define GL_FRAMEBUFFER_SRGB_CAPABLE_EXT                      0x8DBA
+ 1091  #endif
+ 1092  
+ ....
+ 1107  #define GL_TRIANGLES_ADJACENCY_EXT                           0xC
+ 1108  #define GL_TRIANGLE_STRIP_ADJACENCY_EXT                      0xD
+ 1109: #define GL_FRAMEBUFFER_INCOMPLETE_LAYER_TARGETS_EXT          0x8DA8
+ 1110: #define GL_FRAMEBUFFER_INCOMPLETE_LAYER_COUNT_EXT            0x8DA9
+ 1111: #define GL_FRAMEBUFFER_ATTACHMENT_LAYERED_EXT                0x8DA7
+ 1112: #define GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER_EXT          0x8CD4
+ 1113  #define GL_PROGRAM_POINT_SIZE_EXT                            0x8642
+ 1114  #endif
+ ....
+ 1118  #define GL_SAMPLER_1D_ARRAY_EXT                              0x8DC0
+ 1119  #define GL_SAMPLER_2D_ARRAY_EXT                              0x8DC1
+ 1120: #define GL_SAMPLER_BUFFER_EXT                                0x8DC2
+ 1121  #define GL_SAMPLER_1D_ARRAY_SHADOW_EXT                       0x8DC3
+ 1122  #define GL_SAMPLER_2D_ARRAY_SHADOW_EXT                       0x8DC4
+ ....
+ 1132  #define GL_INT_SAMPLER_1D_ARRAY_EXT                          0x8DCE
+ 1133  #define GL_INT_SAMPLER_2D_ARRAY_EXT                          0x8DCF
+ 1134: #define GL_INT_SAMPLER_BUFFER_EXT                            0x8DD0
+ 1135  #define GL_UNSIGNED_INT_SAMPLER_1D_EXT                       0x8DD1
+ 1136  #define GL_UNSIGNED_INT_SAMPLER_2D_EXT                       0x8DD2
+ ....
+ 1140  #define GL_UNSIGNED_INT_SAMPLER_1D_ARRAY_EXT                 0x8DD6
+ 1141  #define GL_UNSIGNED_INT_SAMPLER_2D_ARRAY_EXT                 0x8DD7
+ 1142: #define GL_UNSIGNED_INT_SAMPLER_BUFFER_EXT                   0x8DD8
+ 1143  #define GL_MIN_PROGRAM_TEXEL_OFFSET_EXT                      0x8904
+ 1144  #define GL_MAX_PROGRAM_TEXEL_OFFSET_EXT                      0x8905
+ ....
+ 1307  #define GL_MAX_ARRAY_TEXTURE_LAYERS_EXT                      0x88FF
+ 1308  #define GL_COMPARE_REF_DEPTH_TO_TEXTURE_EXT                  0x884E
+ 1309: /* reuse GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER_EXT */
+ 1310  /* reuse GL_SAMPLER_1D_ARRAY_EXT */
+ 1311  /* reuse GL_SAMPLER_2D_ARRAY_EXT */
+ ....
+ 1478  
+ 1479  #if GL_EXT_transform_feedback
+ 1480: #define GL_TRANSFORM_FEEDBACK_BUFFER_EXT                     0x8C8E
+ 1481: #define GL_TRANSFORM_FEEDBACK_BUFFER_START_EXT               0x8C84
+ 1482: #define GL_TRANSFORM_FEEDBACK_BUFFER_SIZE_EXT                0x8C85
+ 1483: #define GL_TRANSFORM_FEEDBACK_BUFFER_BINDING_EXT             0x8C8F
+ 1484  #define GL_INTERLEAVED_ATTRIBS_EXT                           0x8C8C
+ 1485  #define GL_SEPARATE_ATTRIBS_EXT                              0x8C8D
+ ....
+ 1491  #define GL_MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS_EXT    0x8C80
+ 1492  #define GL_TRANSFORM_FEEDBACK_VARYINGS_EXT                   0x8C83
+ 1493: #define GL_TRANSFORM_FEEDBACK_BUFFER_MODE_EXT                0x8C7F
+ 1494  #define GL_TRANSFORM_FEEDBACK_VARYING_MAX_LENGTH_EXT         0x8C76
+ 1495  #endif
+ ....
+ 1547  #define GL_DRAW_PIXELS_APPLE                                 0x8A0A
+ 1548  #define GL_FENCE_APPLE                                       0x8A0B
+ 1549: #define GL_BUFFER_OBJECT_APPLE                               0x85B3
+ 1550  #endif
+ 1551  
+ ....
+ 1568  
+ 1569  #if GL_APPLE_flush_buffer_range
+ 1570: #define GL_BUFFER_SERIALIZED_MODIFY_APPLE                    0x8A12
+ 1571: #define GL_BUFFER_FLUSHING_UNMAP_APPLE                       0x8A13
+ 1572  #endif
+ 1573  
+ ....
+ 1581  
+ 1582  #if GL_APPLE_pixel_buffer
+ 1583: #define GL_MIN_PBUFFER_VIEWPORT_DIMS_APPLE                   0x8A10
+ 1584  #endif
+ 1585  
+ ....
+ 1636  #define GL_POINT_SIZE_ARRAY_STRIDE_APPLE                     0x898B
+ 1637  #define GL_POINT_SIZE_ARRAY_POINTER_APPLE                    0x898C
+ 1638: #define GL_POINT_SIZE_ARRAY_BUFFER_BINDING_APPLE             0x8B9F
+ 1639  #endif
+ 1640  
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/include/xcompile/GLES/gl.h:
+   45  
+   46  /* ClearBufferMask */
+   47: #define GL_DEPTH_BUFFER_BIT               0x00000100
+   48: #define GL_STENCIL_BUFFER_BIT             0x00000400
+   49: #define GL_COLOR_BUFFER_BIT               0x00004000
+   50  
+   51  /* Boolean */
+   ..
+  269  #define GL_COLOR_ARRAY_POINTER            0x8090
+  270  #define GL_TEXTURE_COORD_ARRAY_POINTER    0x8092
+  271: #define GL_SAMPLE_BUFFERS                 0x80A8
+  272  #define GL_SAMPLES                        0x80A9
+  273  #define GL_SAMPLE_COVERAGE_VALUE          0x80AA
+  ...
+  503  
+  504  /* Buffer Objects */
+  505: #define GL_ARRAY_BUFFER                   0x8892
+  506: #define GL_ELEMENT_ARRAY_BUFFER           0x8893
+  507  
+  508: #define GL_ARRAY_BUFFER_BINDING               0x8894
+  509: #define GL_ELEMENT_ARRAY_BUFFER_BINDING       0x8895
+  510: #define GL_VERTEX_ARRAY_BUFFER_BINDING        0x8896
+  511: #define GL_NORMAL_ARRAY_BUFFER_BINDING        0x8897
+  512: #define GL_COLOR_ARRAY_BUFFER_BINDING         0x8898
+  513: #define GL_TEXTURE_COORD_ARRAY_BUFFER_BINDING 0x889A
+  514  
+  515  #define GL_STATIC_DRAW                    0x88E4
+  516  #define GL_DYNAMIC_DRAW                   0x88E8
+  517  
+  518: #define GL_BUFFER_SIZE                    0x8764
+  519: #define GL_BUFFER_USAGE                   0x8765
+  520  
+  521  /* Texture combine + dot3 */
+  ...
+  579  #define GL_POINT_SIZE_ARRAY_STRIDE_OES                          0x898B
+  580  #define GL_POINT_SIZE_ARRAY_POINTER_OES                         0x898C
+  581: #define GL_POINT_SIZE_ARRAY_BUFFER_BINDING_OES                  0x8B9F
+  582  #endif
+  583  
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/include/xcompile/GLES/glext.h:
+   82  #ifndef GL_OES_framebuffer_object
+   83  #define GL_NONE_OES                                             0
+   84: #define GL_FRAMEBUFFER_OES                                      0x8D40
+   85: #define GL_RENDERBUFFER_OES                                     0x8D41
+   86  #define GL_RGBA4_OES                                            0x8056
+   87  #define GL_RGB5_A1_OES                                          0x8057
+   88  #define GL_RGB565_OES                                           0x8D62
+   89  #define GL_DEPTH_COMPONENT16_OES                                0x81A5
+   90: #define GL_RENDERBUFFER_WIDTH_OES                               0x8D42
+   91: #define GL_RENDERBUFFER_HEIGHT_OES                              0x8D43
+   92: #define GL_RENDERBUFFER_INTERNAL_FORMAT_OES                     0x8D44
+   93: #define GL_RENDERBUFFER_RED_SIZE_OES                            0x8D50
+   94: #define GL_RENDERBUFFER_GREEN_SIZE_OES                          0x8D51
+   95: #define GL_RENDERBUFFER_BLUE_SIZE_OES                           0x8D52
+   96: #define GL_RENDERBUFFER_ALPHA_SIZE_OES                          0x8D53
+   97: #define GL_RENDERBUFFER_DEPTH_SIZE_OES                          0x8D54
+   98: #define GL_RENDERBUFFER_STENCIL_SIZE_OES                        0x8D55
+   99: #define GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE_OES               0x8CD0
+  100: #define GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME_OES               0x8CD1
+  101: #define GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL_OES             0x8CD2
+  102: #define GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE_OES     0x8CD3
+  103  #define GL_COLOR_ATTACHMENT0_OES                                0x8CE0
+  104  #define GL_DEPTH_ATTACHMENT_OES                                 0x8D00
+  105  #define GL_STENCIL_ATTACHMENT_OES                               0x8D20
+  106: #define GL_FRAMEBUFFER_COMPLETE_OES                             0x8CD5
+  107: #define GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT_OES                0x8CD6
+  108: #define GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT_OES        0x8CD7
+  109: #define GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS_OES                0x8CD9
+  110: #define GL_FRAMEBUFFER_INCOMPLETE_FORMATS_OES                   0x8CDA
+  111: #define GL_FRAMEBUFFER_UNSUPPORTED_OES                          0x8CDD
+  112: #define GL_FRAMEBUFFER_BINDING_OES                              0x8CA6
+  113: #define GL_RENDERBUFFER_BINDING_OES                             0x8CA7
+  114: #define GL_MAX_RENDERBUFFER_SIZE_OES                            0x84E8
+  115: #define GL_INVALID_FRAMEBUFFER_OPERATION_OES                    0x0506
+  116  #endif
+  117  
+  ...
+  119  #ifndef GL_OES_mapbuffer
+  120  #define GL_WRITE_ONLY_OES                                       0x88B9
+  121: #define GL_BUFFER_ACCESS_OES                                    0x88BB
+  122: #define GL_BUFFER_MAPPED_OES                                    0x88BC
+  123: #define GL_BUFFER_MAP_POINTER_OES                               0x88BD
+  124  #endif
+  125  
+  ...
+  143  #define GL_MATRIX_INDEX_ARRAY_STRIDE_OES                        0x8848
+  144  #define GL_MATRIX_INDEX_ARRAY_POINTER_OES                       0x8849
+  145: #define GL_MATRIX_INDEX_ARRAY_BUFFER_BINDING_OES                0x8B9E
+  146  #define GL_WEIGHT_ARRAY_SIZE_OES                                0x86AB
+  147  #define GL_WEIGHT_ARRAY_TYPE_OES                                0x86A9
+  148  #define GL_WEIGHT_ARRAY_STRIDE_OES                              0x86AA
+  149  #define GL_WEIGHT_ARRAY_POINTER_OES                             0x86AC
+  150: #define GL_WEIGHT_ARRAY_BUFFER_BINDING_OES                      0x889E
+  151  #endif
+  152  
+  ...
+  331  /* GL_IMG_multisampled_render_to_texture */
+  332  #ifndef GL_IMG_multisampled_render_to_texture
+  333: #define GL_RENDERBUFFER_SAMPLES_IMG                             0x9133
+  334: #define GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_IMG               0x9134
+  335  #define GL_MAX_SAMPLES_IMG                                      0x9135
+  336  #define GL_TEXTURE_SAMPLES_IMG                                  0x9136
+  ...
+  385  /* GL_QCOM_tiled_rendering */
+  386  #ifndef GL_QCOM_tiled_rendering
+  387: #define GL_COLOR_BUFFER_BIT0_QCOM                               0x00000001
+  388: #define GL_COLOR_BUFFER_BIT1_QCOM                               0x00000002
+  389: #define GL_COLOR_BUFFER_BIT2_QCOM                               0x00000004
+  390: #define GL_COLOR_BUFFER_BIT3_QCOM                               0x00000008
+  391: #define GL_COLOR_BUFFER_BIT4_QCOM                               0x00000010
+  392: #define GL_COLOR_BUFFER_BIT5_QCOM                               0x00000020
+  393: #define GL_COLOR_BUFFER_BIT6_QCOM                               0x00000040
+  394: #define GL_COLOR_BUFFER_BIT7_QCOM                               0x00000080
+  395: #define GL_DEPTH_BUFFER_BIT0_QCOM                               0x00000100
+  396: #define GL_DEPTH_BUFFER_BIT1_QCOM                               0x00000200
+  397: #define GL_DEPTH_BUFFER_BIT2_QCOM                               0x00000400
+  398: #define GL_DEPTH_BUFFER_BIT3_QCOM                               0x00000800
+  399: #define GL_DEPTH_BUFFER_BIT4_QCOM                               0x00001000
+  400: #define GL_DEPTH_BUFFER_BIT5_QCOM                               0x00002000
+  401: #define GL_DEPTH_BUFFER_BIT6_QCOM                               0x00004000
+  402: #define GL_DEPTH_BUFFER_BIT7_QCOM                               0x00008000
+  403: #define GL_STENCIL_BUFFER_BIT0_QCOM                             0x00010000
+  404: #define GL_STENCIL_BUFFER_BIT1_QCOM                             0x00020000
+  405: #define GL_STENCIL_BUFFER_BIT2_QCOM                             0x00040000
+  406: #define GL_STENCIL_BUFFER_BIT3_QCOM                             0x00080000
+  407: #define GL_STENCIL_BUFFER_BIT4_QCOM                             0x00100000
+  408: #define GL_STENCIL_BUFFER_BIT5_QCOM                             0x00200000
+  409: #define GL_STENCIL_BUFFER_BIT6_QCOM                             0x00400000
+  410: #define GL_STENCIL_BUFFER_BIT7_QCOM                             0x00800000
+  411: #define GL_MULTISAMPLE_BUFFER_BIT0_QCOM                         0x01000000
+  412: #define GL_MULTISAMPLE_BUFFER_BIT1_QCOM                         0x02000000
+  413: #define GL_MULTISAMPLE_BUFFER_BIT2_QCOM                         0x04000000
+  414: #define GL_MULTISAMPLE_BUFFER_BIT3_QCOM                         0x08000000
+  415: #define GL_MULTISAMPLE_BUFFER_BIT4_QCOM                         0x10000000
+  416: #define GL_MULTISAMPLE_BUFFER_BIT5_QCOM                         0x20000000
+  417: #define GL_MULTISAMPLE_BUFFER_BIT6_QCOM                         0x40000000
+  418: #define GL_MULTISAMPLE_BUFFER_BIT7_QCOM                         0x80000000
+  419  #endif
+  420  
+  ...
+  505  #endif
+  506  typedef void (GL_APIENTRYP PFNGLEGLIMAGETARGETTEXTURE2DOESPROC) (GLenum target, GLeglImageOES image);
+  507: typedef void (GL_APIENTRYP PFNGLEGLIMAGETARGETRENDERBUFFERSTORAGEOESPROC) (GLenum target, GLeglImageOES image);
+  508  #endif
+  509  
+  ...
+  628  GL_API void GL_APIENTRY glGenerateMipmapOES (GLenum target);
+  629  #endif
+  630: typedef GLboolean (GL_APIENTRYP PFNGLISRENDERBUFFEROESPROC) (GLuint renderbuffer);
+  631: typedef void (GL_APIENTRYP PFNGLBINDRENDERBUFFEROESPROC) (GLenum target, GLuint renderbuffer);
+  632: typedef void (GL_APIENTRYP PFNGLDELETERENDERBUFFERSOESPROC) (GLsizei n, const GLuint* renderbuffers);
+  633: typedef void (GL_APIENTRYP PFNGLGENRENDERBUFFERSOESPROC) (GLsizei n, GLuint* renderbuffers);
+  634: typedef void (GL_APIENTRYP PFNGLRENDERBUFFERSTORAGEOESPROC) (GLenum target, GLenum internalformat, GLsizei width, GLsizei height);
+  635: typedef void (GL_APIENTRYP PFNGLGETRENDERBUFFERPARAMETERIVOESPROC) (GLenum target, GLenum pname, GLint* params);
+  636: typedef GLboolean (GL_APIENTRYP PFNGLISFRAMEBUFFEROESPROC) (GLuint framebuffer);
+  637: typedef void (GL_APIENTRYP PFNGLBINDFRAMEBUFFEROESPROC) (GLenum target, GLuint framebuffer);
+  638: typedef void (GL_APIENTRYP PFNGLDELETEFRAMEBUFFERSOESPROC) (GLsizei n, const GLuint* framebuffers);
+  639: typedef void (GL_APIENTRYP PFNGLGENFRAMEBUFFERSOESPROC) (GLsizei n, GLuint* framebuffers);
+  640: typedef GLenum (GL_APIENTRYP PFNGLCHECKFRAMEBUFFERSTATUSOESPROC) (GLenum target);
+  641: typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERRENDERBUFFEROESPROC) (GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer);
+  642: typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERTEXTURE2DOESPROC) (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level);
+  643: typedef void (GL_APIENTRYP PFNGLGETFRAMEBUFFERATTACHMENTPARAMETERIVOESPROC) (GLenum target, GLenum attachment, GLenum pname, GLint* params);
+  644  typedef void (GL_APIENTRYP PFNGLGENERATEMIPMAPOESPROC) (GLenum target);
+  645  #endif
+  ...
+  653  GL_API void GL_APIENTRY glGetBufferPointervOES (GLenum target, GLenum pname, GLvoid ** params);
+  654  #endif
+  655: typedef void* (GL_APIENTRYP PFNGLMAPBUFFEROESPROC) (GLenum target, GLenum access);
+  656: typedef GLboolean (GL_APIENTRYP PFNGLUNMAPBUFFEROESPROC) (GLenum target);
+  657: typedef void (GL_APIENTRYP PFNGLGETBUFFERPOINTERVOESPROC) (GLenum target, GLenum pname, GLvoid ** params);
+  658  #endif
+  659  
+  ...
+  829  GL_API void GL_APIENTRY glDiscardFramebufferEXT (GLenum target, GLsizei numAttachments, const GLenum *attachments);
+  830  #endif
+  831: typedef void (GL_APIENTRYP PFNGLDISCARDFRAMEBUFFEREXTPROC) (GLenum target, GLsizei numAttachments, const GLenum *attachments);
+  832  #endif
+  833  
+  ...
+  900  GL_API void GL_APIENTRY glFramebufferTexture2DMultisampleIMG (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLsizei samples);
+  901  #endif
+  902: typedef void (GL_APIENTRYP PFNGLRENDERBUFFERSTORAGEMULTISAMPLEIMG) (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
+  903: typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERTEXTURE2DMULTISAMPLEIMG) (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLsizei samples);
+  904  #endif
+  905  
+  ...
+  962  #endif
+  963  typedef void (GL_APIENTRYP PFNGLEXTGETTEXTURESQCOMPROC) (GLuint *textures, GLint maxTextures, GLint *numTextures);
+  964: typedef void (GL_APIENTRYP PFNGLEXTGETBUFFERSQCOMPROC) (GLuint *buffers, GLint maxBuffers, GLint *numBuffers);
+  965: typedef void (GL_APIENTRYP PFNGLEXTGETRENDERBUFFERSQCOMPROC) (GLuint *renderbuffers, GLint maxRenderbuffers, GLint *numRenderbuffers);
+  966: typedef void (GL_APIENTRYP PFNGLEXTGETFRAMEBUFFERSQCOMPROC) (GLuint *framebuffers, GLint maxFramebuffers, GLint *numFramebuffers);
+  967  typedef void (GL_APIENTRYP PFNGLEXTGETTEXLEVELPARAMETERIVQCOMPROC) (GLuint texture, GLenum face, GLint level, GLenum pname, GLint *params);
+  968  typedef void (GL_APIENTRYP PFNGLEXTTEXOBJECTSTATEOVERRIDEIQCOMPROC) (GLenum target, GLenum pname, GLint param);
+  969  typedef void (GL_APIENTRYP PFNGLEXTGETTEXSUBIMAGEQCOMPROC) (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, GLvoid *texels);
+  970: typedef void (GL_APIENTRYP PFNGLEXTGETBUFFERPOINTERVQCOMPROC) (GLenum target, GLvoid **params);
+  971  #endif
+  972  
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/include/xcompile/GLES2/gl2.h:
+   43  
+   44  /* ClearBufferMask */
+   45: #define GL_DEPTH_BUFFER_BIT               0x00000100
+   46: #define GL_STENCIL_BUFFER_BIT             0x00000400
+   47: #define GL_COLOR_BUFFER_BIT               0x00004000
+   48  
+   49  /* Boolean */
+   ..
+  113  
+  114  /* Buffer Objects */
+  115: #define GL_ARRAY_BUFFER                   0x8892
+  116: #define GL_ELEMENT_ARRAY_BUFFER           0x8893
+  117: #define GL_ARRAY_BUFFER_BINDING           0x8894
+  118: #define GL_ELEMENT_ARRAY_BUFFER_BINDING   0x8895
+  119  
+  120  #define GL_STREAM_DRAW                    0x88E0
+  ...
+  122  #define GL_DYNAMIC_DRAW                   0x88E8
+  123  
+  124: #define GL_BUFFER_SIZE                    0x8764
+  125: #define GL_BUFFER_USAGE                   0x8765
+  126  
+  127  #define GL_CURRENT_VERTEX_ATTRIB          0x8626
+  ...
+  210  #define GL_POLYGON_OFFSET_FACTOR          0x8038
+  211  #define GL_TEXTURE_BINDING_2D             0x8069
+  212: #define GL_SAMPLE_BUFFERS                 0x80A8
+  213  #define GL_SAMPLES                        0x80A9
+  214  #define GL_SAMPLE_COVERAGE_VALUE          0x80AA
+  ...
+  400  #define GL_VERTEX_ATTRIB_ARRAY_NORMALIZED     0x886A
+  401  #define GL_VERTEX_ATTRIB_ARRAY_POINTER        0x8645
+  402: #define GL_VERTEX_ATTRIB_ARRAY_BUFFER_BINDING 0x889F
+  403  
+  404  /* Read Format */
+  ...
+  425  
+  426  /* Framebuffer Object. */
+  427: #define GL_FRAMEBUFFER                    0x8D40
+  428: #define GL_RENDERBUFFER                   0x8D41
+  429  
+  430  #define GL_RGBA4                          0x8056
+  ...
+  435  #define GL_STENCIL_INDEX8                 0x8D48
+  436  
+  437: #define GL_RENDERBUFFER_WIDTH             0x8D42
+  438: #define GL_RENDERBUFFER_HEIGHT            0x8D43
+  439: #define GL_RENDERBUFFER_INTERNAL_FORMAT   0x8D44
+  440: #define GL_RENDERBUFFER_RED_SIZE          0x8D50
+  441: #define GL_RENDERBUFFER_GREEN_SIZE        0x8D51
+  442: #define GL_RENDERBUFFER_BLUE_SIZE         0x8D52
+  443: #define GL_RENDERBUFFER_ALPHA_SIZE        0x8D53
+  444: #define GL_RENDERBUFFER_DEPTH_SIZE        0x8D54
+  445: #define GL_RENDERBUFFER_STENCIL_SIZE      0x8D55
+  446  
+  447: #define GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE           0x8CD0
+  448: #define GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME           0x8CD1
+  449: #define GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL         0x8CD2
+  450: #define GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE 0x8CD3
+  451  
+  452  #define GL_COLOR_ATTACHMENT0              0x8CE0
+  ...
+  456  #define GL_NONE                           0
+  457  
+  458: #define GL_FRAMEBUFFER_COMPLETE                      0x8CD5
+  459: #define GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT         0x8CD6
+  460: #define GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT 0x8CD7
+  461: #define GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS         0x8CD9
+  462: #define GL_FRAMEBUFFER_UNSUPPORTED                   0x8CDD
+  463  
+  464: #define GL_FRAMEBUFFER_BINDING            0x8CA6
+  465: #define GL_RENDERBUFFER_BINDING           0x8CA7
+  466: #define GL_MAX_RENDERBUFFER_SIZE          0x84E8
+  467  
+  468: #define GL_INVALID_FRAMEBUFFER_OPERATION  0x0506
+  469  
+  470  /*-------------------------------------------------------------------------
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/include/xcompile/GLES2/gl2ext.h:
+   73  #ifndef GL_OES_mapbuffer
+   74  #define GL_WRITE_ONLY_OES                                       0x88B9
+   75: #define GL_BUFFER_ACCESS_OES                                    0x88BB
+   76: #define GL_BUFFER_MAPPED_OES                                    0x88BC
+   77: #define GL_BUFFER_MAP_POINTER_OES                               0x88BD
+   78  #endif
+   79  
+   ..
+  113  #define GL_MAX_3D_TEXTURE_SIZE_OES                              0x8073
+  114  #define GL_SAMPLER_3D_OES                                       0x8B5F
+  115: #define GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_3D_ZOFFSET_OES        0x8CD4
+  116  #endif
+  117  
+  ...
+  267  /* GL_IMG_multisampled_render_to_texture */
+  268  #ifndef GL_IMG_multisampled_render_to_texture
+  269: #define GL_RENDERBUFFER_SAMPLES_IMG                             0x9133
+  270: #define GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_IMG               0x9134
+  271  #define GL_MAX_SAMPLES_IMG                                      0x9135
+  272  #define GL_TEXTURE_SAMPLES_IMG                                  0x9136
+  ...
+  289  #define GL_COVERAGE_COMPONENT4_NV                               0x8ED1
+  290  #define GL_COVERAGE_ATTACHMENT_NV                               0x8ED2
+  291: #define GL_COVERAGE_BUFFERS_NV                                  0x8ED3
+  292  #define GL_COVERAGE_SAMPLES_NV                                  0x8ED4
+  293  #define GL_COVERAGE_ALL_FRAGMENTS_NV                            0x8ED5
+  294  #define GL_COVERAGE_EDGE_FRAGMENTS_NV                           0x8ED6
+  295  #define GL_COVERAGE_AUTOMATIC_NV                                0x8ED7
+  296: #define GL_COVERAGE_BUFFER_BIT_NV                               0x8000
+  297  #endif
+  298  
+  ...
+  339  /* GL_QCOM_tiled_rendering */
+  340  #ifndef GL_QCOM_tiled_rendering
+  341: #define GL_COLOR_BUFFER_BIT0_QCOM                               0x00000001
+  342: #define GL_COLOR_BUFFER_BIT1_QCOM                               0x00000002
+  343: #define GL_COLOR_BUFFER_BIT2_QCOM                               0x00000004
+  344: #define GL_COLOR_BUFFER_BIT3_QCOM                               0x00000008
+  345: #define GL_COLOR_BUFFER_BIT4_QCOM                               0x00000010
+  346: #define GL_COLOR_BUFFER_BIT5_QCOM                               0x00000020
+  347: #define GL_COLOR_BUFFER_BIT6_QCOM                               0x00000040
+  348: #define GL_COLOR_BUFFER_BIT7_QCOM                               0x00000080
+  349: #define GL_DEPTH_BUFFER_BIT0_QCOM                               0x00000100
+  350: #define GL_DEPTH_BUFFER_BIT1_QCOM                               0x00000200
+  351: #define GL_DEPTH_BUFFER_BIT2_QCOM                               0x00000400
+  352: #define GL_DEPTH_BUFFER_BIT3_QCOM                               0x00000800
+  353: #define GL_DEPTH_BUFFER_BIT4_QCOM                               0x00001000
+  354: #define GL_DEPTH_BUFFER_BIT5_QCOM                               0x00002000
+  355: #define GL_DEPTH_BUFFER_BIT6_QCOM                               0x00004000
+  356: #define GL_DEPTH_BUFFER_BIT7_QCOM                               0x00008000
+  357: #define GL_STENCIL_BUFFER_BIT0_QCOM                             0x00010000
+  358: #define GL_STENCIL_BUFFER_BIT1_QCOM                             0x00020000
+  359: #define GL_STENCIL_BUFFER_BIT2_QCOM                             0x00040000
+  360: #define GL_STENCIL_BUFFER_BIT3_QCOM                             0x00080000
+  361: #define GL_STENCIL_BUFFER_BIT4_QCOM                             0x00100000
+  362: #define GL_STENCIL_BUFFER_BIT5_QCOM                             0x00200000
+  363: #define GL_STENCIL_BUFFER_BIT6_QCOM                             0x00400000
+  364: #define GL_STENCIL_BUFFER_BIT7_QCOM                             0x00800000
+  365: #define GL_MULTISAMPLE_BUFFER_BIT0_QCOM                         0x01000000
+  366: #define GL_MULTISAMPLE_BUFFER_BIT1_QCOM                         0x02000000
+  367: #define GL_MULTISAMPLE_BUFFER_BIT2_QCOM                         0x04000000
+  368: #define GL_MULTISAMPLE_BUFFER_BIT3_QCOM                         0x08000000
+  369: #define GL_MULTISAMPLE_BUFFER_BIT4_QCOM                         0x10000000
+  370: #define GL_MULTISAMPLE_BUFFER_BIT5_QCOM                         0x20000000
+  371: #define GL_MULTISAMPLE_BUFFER_BIT6_QCOM                         0x40000000
+  372: #define GL_MULTISAMPLE_BUFFER_BIT7_QCOM                         0x80000000
+  373  #endif
+  374  
+  ...
+  414  #endif
+  415  typedef void (GL_APIENTRYP PFNGLEGLIMAGETARGETTEXTURE2DOESPROC) (GLenum target, GLeglImageOES image);
+  416: typedef void (GL_APIENTRYP PFNGLEGLIMAGETARGETRENDERBUFFERSTORAGEOESPROC) (GLenum target, GLeglImageOES image);
+  417  #endif
+  418  
+  ...
+  451  GL_APICALL void GL_APIENTRY glGetBufferPointervOES (GLenum target, GLenum pname, GLvoid** params);
+  452  #endif
+  453: typedef void* (GL_APIENTRYP PFNGLMAPBUFFEROESPROC) (GLenum target, GLenum access);
+  454: typedef GLboolean (GL_APIENTRYP PFNGLUNMAPBUFFEROESPROC) (GLenum target);
+  455: typedef void (GL_APIENTRYP PFNGLGETBUFFERPOINTERVOESPROC) (GLenum target, GLenum pname, GLvoid** params);
+  456  #endif
+  457  
+  ...
+  497  typedef void (GL_APIENTRYP PFNGLCOMPRESSEDTEXIMAGE3DOESPROC) (GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const GLvoid* data);
+  498  typedef void (GL_APIENTRYP PFNGLCOMPRESSEDTEXSUBIMAGE3DOESPROC) (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid* data);
+  499: typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERTEXTURE3DOES) (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLint zoffset);
+  500  #endif
+  501  
+  ...
+  618  GL_APICALL void GL_APIENTRY glDiscardFramebufferEXT (GLenum target, GLsizei numAttachments, const GLenum *attachments);
+  619  #endif
+  620: typedef void (GL_APIENTRYP PFNGLDISCARDFRAMEBUFFEREXTPROC) (GLenum target, GLsizei numAttachments, const GLenum *attachments);
+  621  #endif
+  622  
+  ...
+  687  GL_APICALL void GL_APIENTRY glFramebufferTexture2DMultisampleIMG (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLsizei samples);
+  688  #endif
+  689: typedef void (GL_APIENTRYP PFNGLRENDERBUFFERSTORAGEMULTISAMPLEIMG) (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
+  690: typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERTEXTURE2DMULTISAMPLEIMG) (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLsizei samples);
+  691  #endif
+  692  
+  ...
+  765  #endif
+  766  typedef void (GL_APIENTRYP PFNGLEXTGETTEXTURESQCOMPROC) (GLuint *textures, GLint maxTextures, GLint *numTextures);
+  767: typedef void (GL_APIENTRYP PFNGLEXTGETBUFFERSQCOMPROC) (GLuint *buffers, GLint maxBuffers, GLint *numBuffers);
+  768: typedef void (GL_APIENTRYP PFNGLEXTGETRENDERBUFFERSQCOMPROC) (GLuint *renderbuffers, GLint maxRenderbuffers, GLint *numRenderbuffers);
+  769: typedef void (GL_APIENTRYP PFNGLEXTGETFRAMEBUFFERSQCOMPROC) (GLuint *framebuffers, GLint maxFramebuffers, GLint *numFramebuffers);
+  770  typedef void (GL_APIENTRYP PFNGLEXTGETTEXLEVELPARAMETERIVQCOMPROC) (GLuint texture, GLenum face, GLint level, GLenum pname, GLint *params);
+  771  typedef void (GL_APIENTRYP PFNGLEXTTEXOBJECTSTATEOVERRIDEIQCOMPROC) (GLenum target, GLenum pname, GLint param);
+  772  typedef void (GL_APIENTRYP PFNGLEXTGETTEXSUBIMAGEQCOMPROC) (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, GLvoid *texels);
+  773: typedef void (GL_APIENTRYP PFNGLEXTGETBUFFERPOINTERVQCOMPROC) (GLenum target, GLvoid **params);
+  774  #endif
+  775  
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/common/Audio.cpp:
+   76  		
+   77  		
+   78: 		static ov_callbacks OAL_CALLBACKS_BUFFER = {
+   79  			(size_t (*)(void *, size_t, size_t, void *))	OAL_OggBufferRead,
+   80  			(int (*)(void *, ogg_int64_t, int))				OAL_OggBufferSeek,
+   ..
+  205  			// 0 for Little-Endian, 1 for Big-Endian
+  206  			#ifdef HXCPP_BIG_ENDIAN
+  207: 			#define BUFFER_READ_TYPE 1
+  208  			#else
+  209: 			#define BUFFER_READ_TYPE 0
+  210  			#endif
+  211  			
+  ...
+  214  			int totalBytes = 0;
+  215  			
+  216: 			#define BUFFER_SIZE 32768
+  217  			
+  218  			//Get the file information
+  ...
+  238  			while (bytes > 0)
+  239  			{
+  240: 				if (outBuffer.size() < totalBytes + BUFFER_SIZE)
+  241  				{
+  242: 					outBuffer.resize(totalBytes + BUFFER_SIZE);
+  243  				}
+  244  				// Read up to a buffer's worth of decoded sound data
+  245: 				bytes = ov_read(&oggFile, (char*)outBuffer.begin() + totalBytes, BUFFER_SIZE, BUFFER_READ_TYPE, 2, 1, &bitStream);
+  246  				totalBytes += bytes;
+  247  			}
+  ...
+  250  			ov_clear(&oggFile);
+  251  			
+  252: 			#undef BUFFER_SIZE
+  253: 			#undef BUFFER_READ_TYPE
+  254  			
+  255  			return true;
+  ...
+  262  			OggVorbis_File ovFileHandle;
+  263  			
+  264: 			if (ov_open_callbacks(&fakeFile, &ovFileHandle, NULL, 0, OAL_CALLBACKS_BUFFER) == 0)
+  265  			{
+  266  				return loadOggSample(ovFileHandle, outBuffer, channels, bitsPerSample, outSampleRate);
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/common/CURL.cpp:
+   89        curl_easy_setopt(mHandle, CURLOPT_PROGRESSFUNCTION, staticOnProgress);
+   90        curl_easy_setopt(mHandle, CURLOPT_PROGRESSDATA, (void *)this);
+   91:       curl_easy_setopt(mHandle, CURLOPT_ERRORBUFFER, mErrorBuf );
+   92        
+   93        if (r.debug)
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/directfb/DirectFBStage.cpp:
+  294         sgEventBuffer->WaitForEventWithTimeout(sgEventBuffer, 0, waitMs);
+  295        
+  296:       while (sgEventBuffer->HasEvent(sgEventBuffer) != DFB_BUFFEREMPTY) {
+  297            DFBEvent event;
+  298            sgEventBuffer->GetEvent(sgEventBuffer, DFB_EVENT(&event));
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/iPhone/UIStageView.mm:
+  694        glGenFramebuffers(1, &defaultFramebuffer);
+  695        glGenRenderbuffers(1, &colorRenderbuffer);
+  696:       glBindFramebuffer(GL_FRAMEBUFFER, defaultFramebuffer);
+  697:       glBindRenderbuffer(GL_RENDERBUFFER, colorRenderbuffer);
+  698        
+  699:       [mOGLContext renderbufferStorage:GL_RENDERBUFFER fromDrawable:(CAEAGLLayer*)mLayer];
+  700:       glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, colorRenderbuffer);
+  701        
+  702        //fetch the values of size first
+  703:       glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &backingWidth);
+  704:       glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &backingHeight);
+  705        
+  706        //Create the depth / stencil buffers
+  ...
+  710           //Create just the depth buffer
+  711           glGenRenderbuffers(1, &depthStencilBuffer);
+  712:          glBindRenderbuffer(GL_RENDERBUFFER, depthStencilBuffer);
+  713:          glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT16, backingWidth, backingHeight);
+  714:          glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthStencilBuffer);
+  715        }
+  716        else if (sgHasDepthBuffer && sgHasStencilBuffer)
+  ...
+  721           //Create the depth/stencil buffer combo
+  722           glGenRenderbuffers(1, &depthStencilBuffer);
+  723:          glBindRenderbuffer(GL_RENDERBUFFER, depthStencilBuffer);
+  724:          glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8_OES, backingWidth, backingHeight);
+  725:          glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthStencilBuffer);
+  726:          glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_STENCIL_ATTACHMENT, GL_RENDERBUFFER, depthStencilBuffer);    
+  727        }
+  728        else
+  ...
+  742        {
+  743           glGenFramebuffers(1, &msaaFramebuffer);
+  744:          glBindFramebuffer(GL_FRAMEBUFFER, msaaFramebuffer);
+  745           glGenRenderbuffers(1, &msaaRenderBuffer);
+  746:          glBindRenderbuffer(GL_RENDERBUFFER, msaaRenderBuffer);
+  747           
+  748:          glRenderbufferStorageMultisampleAPPLE(GL_RENDERBUFFER, (sgEnableMSAA4 ? 4 : 2) , GL_RGB5_A1, backingWidth, backingHeight);
+  749:          glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, msaaRenderBuffer);
+  750           glGenRenderbuffers(1, &msaaDepthBuffer);
+  751           
+  ...
+  758        }
+  759        
+  760:       int framebufferStatus = glCheckFramebufferStatus(GL_FRAMEBUFFER);
+  761        
+  762:       if (framebufferStatus != GL_FRAMEBUFFER_COMPLETE)
+  763        {
+  764           NSLog(@"Failed to make complete framebuffer object %x",
+  765:          glCheckFramebufferStatus(GL_FRAMEBUFFER));
+  766           throw "OpenGL resize failed";
+  767        }
+  ...
+  771        glGenFramebuffersOES(1, &defaultFramebuffer);
+  772        glGenRenderbuffersOES(1, &colorRenderbuffer);
+  773:       glBindFramebufferOES(GL_FRAMEBUFFER_OES, defaultFramebuffer);
+  774:       glBindRenderbufferOES(GL_RENDERBUFFER_OES, colorRenderbuffer);
+  775        
+  776:       [mOGLContext renderbufferStorage:GL_RENDERBUFFER_OES fromDrawable:(CAEAGLLayer*)mLayer];
+  777        
+  778:       glFramebufferRenderbufferOES(GL_FRAMEBUFFER_OES, GL_COLOR_ATTACHMENT0_OES, GL_RENDERBUFFER_OES, colorRenderbuffer);
+  779        
+  780:       glGetRenderbufferParameterivOES(GL_RENDERBUFFER_OES, GL_RENDERBUFFER_WIDTH_OES, &backingWidth);
+  781:       glGetRenderbufferParameterivOES(GL_RENDERBUFFER_OES, GL_RENDERBUFFER_HEIGHT_OES, &backingHeight);
+  782        
+  783        if (sgHasDepthBuffer && !sgHasStencilBuffer)
+  ...
+  785           //Create just the depth buffer
+  786           glGenRenderbuffersOES(1, &depthStencilBuffer);
+  787:          glBindRenderbufferOES(GL_RENDERBUFFER, depthStencilBuffer);
+  788:          glRenderbufferStorageOES(GL_RENDERBUFFER, GL_DEPTH_COMPONENT16, backingWidth, backingHeight);
+  789:          glFramebufferRenderbufferOES(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthStencilBuffer);
+  790           
+  791        }
+  ...
+  794           //Create the depth/stencil buffer combo
+  795           glGenRenderbuffersOES(1, &depthStencilBuffer);
+  796:          glBindRenderbufferOES(GL_RENDERBUFFER_OES, depthStencilBuffer);
+  797:          glRenderbufferStorageOES(GL_RENDERBUFFER_OES, GL_DEPTH24_STENCIL8_OES, backingWidth, backingHeight);
+  798:          glFramebufferRenderbufferOES(GL_FRAMEBUFFER_OES, GL_DEPTH_ATTACHMENT_OES, GL_RENDERBUFFER, depthStencilBuffer);
+  799:          glFramebufferRenderbufferOES(GL_FRAMEBUFFER_OES, GL_STENCIL_ATTACHMENT_OES, GL_RENDERBUFFER, depthStencilBuffer);          
+  800        }
+  801        
+  ...
+  811        {
+  812           glGenFramebuffersOES(1, &msaaFramebuffer);
+  813:          glBindFramebufferOES(GL_FRAMEBUFFER_OES, msaaFramebuffer);
+  814           glGenRenderbuffersOES(1, &msaaRenderBuffer);
+  815:          glBindRenderbufferOES(GL_RENDERBUFFER_OES, msaaRenderBuffer);
+  816           
+  817:          glRenderbufferStorageMultisampleAPPLE(GL_RENDERBUFFER_OES, (sgEnableMSAA4 ? 4 : 2) , GL_RGB5_A1_OES, backingWidth, backingHeight);
+  818:          glFramebufferRenderbufferOES(GL_FRAMEBUFFER_OES, GL_COLOR_ATTACHMENT0_OES, GL_RENDERBUFFER_OES, msaaRenderBuffer);
+  819           glGenRenderbuffersOES(1, &msaaDepthBuffer);
+  820           
+  ...
+  826        }
+  827        
+  828:       int framebufferStatus = glCheckFramebufferStatusOES(GL_FRAMEBUFFER_OES);
+  829        
+  830:       if (framebufferStatus != GL_FRAMEBUFFER_COMPLETE_OES)
+  831        {
+  832           NSLog(@"Failed to make complete framebuffer object %x",
+  833:          glCheckFramebufferStatusOES(GL_FRAMEBUFFER_OES));
+  834           throw "OpenGL resize failed";
+  835        }
+  ...
+  891           if (sgAllowShaders)
+  892           {
+  893:             glBindFramebuffer(GL_FRAMEBUFFER, msaaFramebuffer);
+  894:             glBindRenderbuffer(GL_RENDERBUFFER, msaaRenderBuffer);
+  895           }
+  896           else
+  897           {
+  898:             glBindFramebufferOES(GL_FRAMEBUFFER_OES, msaaFramebuffer);
+  899:             glBindRenderbufferOES(GL_RENDERBUFFER_OES, msaaRenderBuffer);
+  900           }
+  901        }
+  ...
+  904           if (sgAllowShaders)
+  905           {
+  906:             glBindFramebuffer(GL_FRAMEBUFFER, defaultFramebuffer);
+  907:             glBindRenderbuffer(GL_RENDERBUFFER, colorRenderbuffer);
+  908           }
+  909           else
+  910           {
+  911:             glBindFramebufferOES(GL_FRAMEBUFFER_OES, defaultFramebuffer);
+  912:             glBindRenderbufferOES(GL_RENDERBUFFER_OES, colorRenderbuffer);
+  913           }
+  914        }
+  ...
+  919        if (sgAllowShaders)
+  920        {
+  921:          glBindFramebuffer(GL_FRAMEBUFFER, msaaFramebuffer);  
+  922        }
+  923        else
+  924        {
+  925:          glBindFramebufferOES(GL_FRAMEBUFFER_OES, msaaFramebuffer);
+  926        }
+  927     }
+  ...
+  986        // https://devforums.apple.com/thread/45850
+  987        //GLenum attachments[] = {GL_DEPTH_ATTACHMENT_OES};
+  988:       //glDiscardFramebufferEXT(GL_READ_FRAMEBUFFER_APPLE, 1, attachments);
+  989        
+  990        if (sgAllowShaders)
+  991        {
+  992           const GLenum discards[] = {GL_DEPTH_ATTACHMENT,GL_COLOR_ATTACHMENT0};
+  993:          glDiscardFramebufferEXT(GL_READ_FRAMEBUFFER_APPLE, 2, discards);
+  994        }
+  995        else
+  996        {
+  997           const GLenum discards[] = {GL_DEPTH_ATTACHMENT_OES,GL_COLOR_ATTACHMENT0_OES};
+  998:          glDiscardFramebufferEXT(GL_READ_FRAMEBUFFER_APPLE, 2, discards);
+  999        }
+ 1000        
+ ....
+ 1002        if (sgAllowShaders)
+ 1003        {
+ 1004:          glBindFramebuffer(GL_READ_FRAMEBUFFER_APPLE, msaaFramebuffer);
+ 1005:          glBindFramebuffer(GL_DRAW_FRAMEBUFFER_APPLE, defaultFramebuffer);
+ 1006        }
+ 1007        else
+ 1008        {
+ 1009:          glBindFramebufferOES(GL_READ_FRAMEBUFFER_APPLE, msaaFramebuffer);
+ 1010:          glBindFramebufferOES(GL_DRAW_FRAMEBUFFER_APPLE, defaultFramebuffer);
+ 1011        }
+ 1012        
+ ....
+ 1018     if (sgAllowShaders)
+ 1019     {
+ 1020:       glBindRenderbuffer(GL_RENDERBUFFER, colorRenderbuffer);
+ 1021:       [mOGLContext presentRenderbuffer:GL_RENDERBUFFER];
+ 1022     }
+ 1023     else
+ 1024     {
+ 1025:       glBindRenderbufferOES(GL_RENDERBUFFER_OES, colorRenderbuffer);
+ 1026:       [mOGLContext presentRenderbuffer:GL_RENDERBUFFER_OES];
+ 1027     }
+ 1028  }
+ ....
+ 2606           glGenFramebuffers(1, &defaultFramebuffer);
+ 2607           glGenRenderbuffers(1, &colorRenderbuffer);
+ 2608:          glBindFramebuffer(GL_FRAMEBUFFER, defaultFramebuffer);
+ 2609:          glBindRenderbuffer(GL_RENDERBUFFER, colorRenderbuffer);
+ 2610           
+ 2611:          [mOGLContext renderbufferStorage:GL_RENDERBUFFER fromDrawable:(CAEAGLLayer*)mLayer];
+ 2612:          glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, colorRenderbuffer);
+ 2613           
+ 2614           //fetch the values of size first
+ 2615:          glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &backingWidth);
+ 2616:          glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &backingHeight);
+ 2617           
+ 2618           //Create the depth / stencil buffers
+ ....
+ 2622              //Create just the depth buffer
+ 2623              glGenRenderbuffers(1, &depthStencilBuffer);
+ 2624:             glBindRenderbuffer(GL_RENDERBUFFER, depthStencilBuffer);
+ 2625:             glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT16, backingWidth, backingHeight);
+ 2626:             glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthStencilBuffer);
+ 2627           }
+ 2628           else if (sgHasDepthBuffer && sgHasStencilBuffer)
+ ....
+ 2633              //Create the depth/stencil buffer combo
+ 2634              glGenRenderbuffers(1, &depthStencilBuffer);
+ 2635:             glBindRenderbuffer(GL_RENDERBUFFER, depthStencilBuffer);
+ 2636:             glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8_OES, backingWidth, backingHeight);
+ 2637:             glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthStencilBuffer);
+ 2638:             glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_STENCIL_ATTACHMENT, GL_RENDERBUFFER, depthStencilBuffer);    
+ 2639           }
+ 2640           else
+ ....
+ 2654           {
+ 2655              glGenFramebuffers(1, &msaaFramebuffer);
+ 2656:             glBindFramebuffer(GL_FRAMEBUFFER, msaaFramebuffer);
+ 2657              glGenRenderbuffers(1, &msaaRenderBuffer);
+ 2658:             glBindRenderbuffer(GL_RENDERBUFFER, msaaRenderBuffer);
+ 2659              
+ 2660:             glRenderbufferStorageMultisampleAPPLE(GL_RENDERBUFFER, (sgEnableMSAA4 ? 4 : 2) , GL_RGB5_A1, backingWidth, backingHeight);
+ 2661:             glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, msaaRenderBuffer);
+ 2662              glGenRenderbuffers(1, &msaaDepthBuffer);
+ 2663              
+ ....
+ 2670           }
+ 2671           
+ 2672:          int framebufferStatus = glCheckFramebufferStatus(GL_FRAMEBUFFER);
+ 2673           
+ 2674:          if (framebufferStatus != GL_FRAMEBUFFER_COMPLETE)
+ 2675           {
+ 2676              NSLog(@"Failed to make complete framebuffer object %x",
+ 2677:             glCheckFramebufferStatus(GL_FRAMEBUFFER));
+ 2678              throw "OpenGL resize failed";
+ 2679           }
+ ....
+ 2683           glGenFramebuffersOES(1, &defaultFramebuffer);
+ 2684           glGenRenderbuffersOES(1, &colorRenderbuffer);
+ 2685:          glBindFramebufferOES(GL_FRAMEBUFFER_OES, defaultFramebuffer);
+ 2686:          glBindRenderbufferOES(GL_RENDERBUFFER_OES, colorRenderbuffer);
+ 2687           
+ 2688:          [mOGLContext renderbufferStorage:GL_RENDERBUFFER_OES fromDrawable:(CAEAGLLayer*)mLayer];
+ 2689           
+ 2690:          glFramebufferRenderbufferOES(GL_FRAMEBUFFER_OES, GL_COLOR_ATTACHMENT0_OES, GL_RENDERBUFFER_OES, colorRenderbuffer);
+ 2691           
+ 2692:          glGetRenderbufferParameterivOES(GL_RENDERBUFFER_OES, GL_RENDERBUFFER_WIDTH_OES, &backingWidth);
+ 2693:          glGetRenderbufferParameterivOES(GL_RENDERBUFFER_OES, GL_RENDERBUFFER_HEIGHT_OES, &backingHeight);
+ 2694           
+ 2695           if (sgHasDepthBuffer && !sgHasStencilBuffer)
+ ....
+ 2697              //Create just the depth buffer
+ 2698              glGenRenderbuffersOES(1, &depthStencilBuffer);
+ 2699:             glBindRenderbufferOES(GL_RENDERBUFFER, depthStencilBuffer);
+ 2700:             glRenderbufferStorageOES(GL_RENDERBUFFER, GL_DEPTH_COMPONENT16, backingWidth, backingHeight);
+ 2701:             glFramebufferRenderbufferOES(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthStencilBuffer);
+ 2702              
+ 2703           }
+ ....
+ 2706              //Create the depth/stencil buffer combo
+ 2707              glGenRenderbuffersOES(1, &depthStencilBuffer);
+ 2708:             glBindRenderbufferOES(GL_RENDERBUFFER_OES, depthStencilBuffer);
+ 2709:             glRenderbufferStorageOES(GL_RENDERBUFFER_OES, GL_DEPTH24_STENCIL8_OES, backingWidth, backingHeight);
+ 2710:             glFramebufferRenderbufferOES(GL_FRAMEBUFFER_OES, GL_DEPTH_ATTACHMENT_OES, GL_RENDERBUFFER, depthStencilBuffer);
+ 2711:             glFramebufferRenderbufferOES(GL_FRAMEBUFFER_OES, GL_STENCIL_ATTACHMENT_OES, GL_RENDERBUFFER, depthStencilBuffer);          
+ 2712           }
+ 2713           
+ ....
+ 2723           {
+ 2724              glGenFramebuffersOES(1, &msaaFramebuffer);
+ 2725:             glBindFramebufferOES(GL_FRAMEBUFFER_OES, msaaFramebuffer);
+ 2726              glGenRenderbuffersOES(1, &msaaRenderBuffer);
+ 2727:             glBindRenderbufferOES(GL_RENDERBUFFER_OES, msaaRenderBuffer);
+ 2728              
+ 2729:             glRenderbufferStorageMultisampleAPPLE(GL_RENDERBUFFER_OES, (sgEnableMSAA4 ? 4 : 2) , GL_RGB5_A1_OES, backingWidth, backingHeight);
+ 2730:             glFramebufferRenderbufferOES(GL_FRAMEBUFFER_OES, GL_COLOR_ATTACHMENT0_OES, GL_RENDERBUFFER_OES, msaaRenderBuffer);
+ 2731              glGenRenderbuffersOES(1, &msaaDepthBuffer);
+ 2732              
+ ....
+ 2738           }
+ 2739           
+ 2740:          int framebufferStatus = glCheckFramebufferStatusOES(GL_FRAMEBUFFER_OES);
+ 2741           
+ 2742:          if (framebufferStatus != GL_FRAMEBUFFER_COMPLETE_OES)
+ 2743           {
+ 2744              NSLog(@"Failed to make complete framebuffer object %x",
+ 2745:             glCheckFramebufferStatusOES(GL_FRAMEBUFFER_OES));
+ 2746              throw "OpenGL resize failed";
+ 2747           }
+ ....
+ 2848              if (sgAllowShaders)
+ 2849              {
+ 2850:                glBindFramebuffer(GL_FRAMEBUFFER, msaaFramebuffer);
+ 2851:                glBindRenderbuffer(GL_RENDERBUFFER, msaaRenderBuffer);
+ 2852              }
+ 2853              else
+ 2854              {
+ 2855:                glBindFramebufferOES(GL_FRAMEBUFFER_OES, msaaFramebuffer);
+ 2856:                glBindRenderbufferOES(GL_RENDERBUFFER_OES, msaaRenderBuffer);
+ 2857              }
+ 2858           }
+ ....
+ 2861              if (sgAllowShaders)
+ 2862              {
+ 2863:                glBindFramebuffer(GL_FRAMEBUFFER, defaultFramebuffer);
+ 2864:                glBindRenderbuffer(GL_RENDERBUFFER, colorRenderbuffer);
+ 2865              }
+ 2866              else
+ 2867              {
+ 2868:                glBindFramebufferOES(GL_FRAMEBUFFER_OES, defaultFramebuffer);
+ 2869:                glBindRenderbufferOES(GL_RENDERBUFFER_OES, colorRenderbuffer);
+ 2870              }
+ 2871           }
+ ....
+ 2876           if (sgAllowShaders)
+ 2877           {
+ 2878:             glBindFramebuffer(GL_FRAMEBUFFER, msaaFramebuffer);  
+ 2879           }
+ 2880           else
+ 2881           {
+ 2882:             glBindFramebufferOES(GL_FRAMEBUFFER_OES, msaaFramebuffer);
+ 2883           }
+ 2884        }
+ ....
+ 2912              // https://devforums.apple.com/thread/45850
+ 2913              //GLenum attachments[] = {GL_DEPTH_ATTACHMENT_OES};
+ 2914:             //glDiscardFramebufferEXT(GL_READ_FRAMEBUFFER_APPLE, 1, attachments);
+ 2915              
+ 2916              if (sgAllowShaders)
+ 2917              {
+ 2918                 const GLenum discards[] = {GL_DEPTH_ATTACHMENT,GL_COLOR_ATTACHMENT0};
+ 2919:                glDiscardFramebufferEXT(GL_READ_FRAMEBUFFER_APPLE, 2, discards);
+ 2920              }
+ 2921              else
+ 2922              {
+ 2923                 const GLenum discards[] = {GL_DEPTH_ATTACHMENT_OES,GL_COLOR_ATTACHMENT0_OES};
+ 2924:                glDiscardFramebufferEXT(GL_READ_FRAMEBUFFER_APPLE, 2, discards);
+ 2925              }
+ 2926              
+ ....
+ 2928              if (sgAllowShaders)
+ 2929              {
+ 2930:                glBindFramebuffer(GL_READ_FRAMEBUFFER_APPLE, msaaFramebuffer);
+ 2931:                glBindFramebuffer(GL_DRAW_FRAMEBUFFER_APPLE, defaultFramebuffer);
+ 2932              }
+ 2933              else
+ 2934              {
+ 2935:                glBindFramebufferOES(GL_READ_FRAMEBUFFER_APPLE, msaaFramebuffer);
+ 2936:                glBindFramebufferOES(GL_DRAW_FRAMEBUFFER_APPLE, defaultFramebuffer);
+ 2937              }
+ 2938              
+ ....
+ 2944           if (sgAllowShaders)
+ 2945           {
+ 2946:             glBindRenderbuffer(GL_RENDERBUFFER, colorRenderbuffer);
+ 2947:             [mOGLContext presentRenderbuffer:GL_RENDERBUFFER];
+ 2948           }
+ 2949           else
+ 2950           {
+ 2951:             glBindRenderbufferOES(GL_RENDERBUFFER_OES, colorRenderbuffer);
+ 2952:             [mOGLContext presentRenderbuffer:GL_RENDERBUFFER_OES];
+ 2953           }
+ 2954        }
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/openal/OpenALSound.cpp:
+   34           //{
+   35              // attach the buffer to the source
+   36:             alSourcei(mSourceID, AL_BUFFER, inBufferID);
+   37           /*}
+   38           else
+   ..
+  177     {
+  178        ALint processed = 0;
+  179:       alGetSourcei(mSourceID, AL_BUFFERS_PROCESSED, &processed);
+  180        //LOG_SOUND("Recover buffers : %d (%d)", processed, mDynamicStackSize);
+  181        if (processed)
+  ...
+ 1104         bool active = true;
+ 1105  
+ 1106:        alGetSourcei(source, AL_BUFFERS_PROCESSED, &processed);
+ 1107  
+ 1108         while(processed--) {
+ ....
+ 1143         if (mSuspend) return true;
+ 1144         //LOG_SOUND("STREAM\n");
+ 1145:        char pcm[STREAM_BUFFER_SIZE];
+ 1146         int  size = 0;
+ 1147         int  section;
+ 1148         int  result;
+ 1149         
+ 1150:        while (size < STREAM_BUFFER_SIZE) {
+ 1151:            result = ov_read(oggStream, pcm + size, STREAM_BUFFER_SIZE - size, 0, 2, 1, &section);
+ 1152             if(result > 0)
+ 1153                 size += result;
+ ....
+ 1193        int queued;
+ 1194      
+ 1195:       alGetSourcei(source, AL_BUFFERS_QUEUED, &queued);
+ 1196      
+ 1197         while(queued--) {
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/openal/OpenALSound.h:
+   38  typedef unsigned char uint8;
+   39  
+   40: #define STREAM_BUFFER_SIZE (4096 * 8)
+   41  
+   42  namespace nme
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/opengl/OGL.h:
+   88  
+   89  
+   90: #ifndef GL_BUFFER_SIZE
+   91  
+   92: #define GL_BUFFER_SIZE                0x8764
+   93: #define GL_BUFFER_USAGE               0x8765
+   94: #define GL_ARRAY_BUFFER               0x8892
+   95: #define GL_ELEMENT_ARRAY_BUFFER       0x8893
+   96: #define GL_ARRAY_BUFFER_BINDING       0x8894
+   97: #define GL_ELEMENT_ARRAY_BUFFER_BINDING 0x8895
+   98: #define GL_VERTEX_ARRAY_BUFFER_BINDING 0x8896
+   99: #define GL_NORMAL_ARRAY_BUFFER_BINDING 0x8897
+  100: #define GL_COLOR_ARRAY_BUFFER_BINDING 0x8898
+  101: #define GL_INDEX_ARRAY_BUFFER_BINDING 0x8899
+  102: #define GL_TEXTURE_COORD_ARRAY_BUFFER_BINDING 0x889A
+  103: #define GL_EDGE_FLAG_ARRAY_BUFFER_BINDING 0x889B
+  104: #define GL_SECONDARY_COLOR_ARRAY_BUFFER_BINDING 0x889C
+  105: #define GL_FOG_COORDINATE_ARRAY_BUFFER_BINDING 0x889D
+  106: #define GL_WEIGHT_ARRAY_BUFFER_BINDING 0x889E
+  107: #define GL_VERTEX_ATTRIB_ARRAY_BUFFER_BINDING 0x889F
+  108  #define GL_READ_ONLY                  0x88B8
+  109  #define GL_WRITE_ONLY                 0x88B9
+  110  #define GL_READ_WRITE                 0x88BA
+  111: #define GL_BUFFER_ACCESS              0x88BB
+  112: #define GL_BUFFER_MAPPED              0x88BC
+  113: #define GL_BUFFER_MAP_POINTER         0x88BD
+  114  #define GL_STREAM_DRAW                0x88E0
+  115  #define GL_STREAM_READ                0x88E1
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/opengl/OGLExport.cpp:
+  479           break;
+  480  
+  481:       // case GL_ARRAY_BUFFER_BINDING  WebGLBuffer
+  482        // case GL_CURRENT_PROGRAM  WebGLProgram
+  483:       // case GL_ELEMENT_ARRAY_BUFFER_BINDING  WebGLBuffer
+  484:       // case GL_FRAMEBUFFER_BINDING  WebGLFramebuffer
+  485:       // case GL_RENDERBUFFER_BINDING  WebGLRenderbuffer
+  486        // case GL_TEXTURE_BINDING_2D  WebGLTexture
+  487        // case GL_TEXTURE_BINDING_CUBE_MAP  WebGLTexture
+  ...
+  526        case GL_MAX_CUBE_MAP_TEXTURE_SIZE:
+  527        //case GL_MAX_FRAGMENT_UNIFORM_VECTORS:
+  528:       //case GL_MAX_RENDERBUFFER_SIZE:
+  529        case GL_MAX_TEXTURE_IMAGE_UNITS:
+  530        case GL_MAX_TEXTURE_SIZE:
+  ...
+  536        case GL_PACK_ALIGNMENT:
+  537        case GL_RED_BITS:
+  538:       case GL_SAMPLE_BUFFERS:
+  539        case GL_SAMPLES:
+  540        case GL_SCISSOR_TEST:
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/opengl/OpenGLContext.cpp:
+  225        {
+  226           glClearColor(red, green, blue, alpha );
+  227:          glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+  228        }
+  229        else
+  ...
+  408           }
+  409           else
+  410:             glBindBuffer(GL_ARRAY_BUFFER, inData.mVertexBo);
+  411        }
+  412  
+  ...
+  421              IncRef();
+  422              inData.mContextId = gTextureContextVersion;
+  423:             glBindBuffer(GL_ARRAY_BUFFER, inData.mVertexBo);
+  424              // printf("VBO DATA %d\n", inData.mArray.size());
+  425:             glBufferData(GL_ARRAY_BUFFER, inData.mArray.size(), data, GL_STATIC_DRAW);
+  426              data = 0;
+  427           }
+  ...
+  595  
+  596        if (inData.mVertexBo)
+  597:          glBindBuffer(GL_ARRAY_BUFFER,0);
+  598     }
+  599  
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/opengl/OpenGLS3D.cpp:
+  101     };
+  102  
+  103:    glBindRenderbuffer(GL_RENDERBUFFER, 0);
+  104:    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+  105  
+  106     // use the multiplexing shader
+  ...
+  108     
+  109     glClearColor(0, 0, 0, 1.0);
+  110:    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+  111  
+  112     glEnableVertexAttribArray(mS3DProgram->vertexSlot);
+  113     glEnableVertexAttribArray(mS3DProgram->textureSlot);
+  114     
+  115:    glBindBuffer(GL_ARRAY_BUFFER, mS3DVertexBuffer);
+  116:    glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * 12, verts, GL_STATIC_DRAW);
+  117     glVertexAttribPointer(mS3DProgram->vertexSlot, 3, GL_FLOAT, false, 0, 0);
+  118  
+  119:    glBindBuffer(GL_ARRAY_BUFFER, mS3DTextureBuffer);
+  120:    glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * 8, textureCoords, GL_STATIC_DRAW);
+  121     glVertexAttribPointer(mS3DProgram->textureSlot, 2, GL_FLOAT, false, 0, 0);
+  122  
+  ...
+  145  
+  146     // clean up
+  147:    glBindBuffer(GL_ARRAY_BUFFER, 0);
+  148     glDisableVertexAttribArray(mS3DProgram->vertexSlot);
+  149     glDisableVertexAttribArray(mS3DProgram->textureSlot);
+  150     glUseProgram(0);
+  151  
+  152:    glBindRenderbuffer(GL_RENDERBUFFER, 0);
+  153:    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+  154  
+  155     glActiveTexture(GL_TEXTURE0);
+  ...
+  183     glBindTexture(GL_TEXTURE_2D, 0);
+  184  
+  185:    glBindFramebuffer(GL_FRAMEBUFFER, mFramebuffer);
+  186:    glBindRenderbuffer(GL_RENDERBUFFER, mRenderbuffer);
+  187     glBindTexture(GL_TEXTURE_2D, texture);
+  188  
+  189     glFramebufferTexture2D(
+  190:       GL_FRAMEBUFFER,
+  191        GL_COLOR_ATTACHMENT0,
+  192        GL_TEXTURE_2D, texture, 0);
+  193     
+  194     glClearColor(0, 0, 0, 1.0);
+  195:    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+  196  }
+  197  
+  ...
+  241  
+  242     // create depth buffer
+  243:    glBindRenderbuffer(GL_RENDERBUFFER, mRenderbuffer);
+  244:    glBindFramebuffer(GL_FRAMEBUFFER, mFramebuffer);
+  245:    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT16, inWidth, inHeight);
+  246:    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, mRenderbuffer);
+  247  
+  248:    glBindRenderbuffer(GL_RENDERBUFFER, 0);
+  249:    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+  250  }
+  251  
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/sdl/SDLStage.cpp:
+ 1229                    SDL_GL_SetAttribute(SDL_GL_STENCIL_SIZE, 8 );
+ 1230     
+ 1231:                SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
+ 1232     			
+ 1233                 if (aa_tries > 0)
+ 1234                 {
+ 1235:                   SDL_GL_SetAttribute(SDL_GL_MULTISAMPLEBUFFERS, aa_pass>0);
+ 1236                    SDL_GL_SetAttribute(SDL_GL_MULTISAMPLESAMPLES,  1<<aa_pass );
+ 1237                 }
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/sdl2/SDL2Stage.cpp:
+ 1470           SDL_GL_SetAttribute(SDL_GL_STENCIL_SIZE, 8);
+ 1471        
+ 1472:       SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
+ 1473        
+ 1474        if (inFlags & wfHW_AA_HIRES)
+ 1475        {
+ 1476:          SDL_GL_SetAttribute(SDL_GL_MULTISAMPLEBUFFERS, true);
+ 1477           SDL_GL_SetAttribute(SDL_GL_MULTISAMPLESAMPLES, 4);
+ 1478        }
+ 1479        else if (inFlags & wfHW_AA)
+ 1480        {
+ 1481:          SDL_GL_SetAttribute(SDL_GL_MULTISAMPLEBUFFERS, true);
+ 1482           SDL_GL_SetAttribute(SDL_GL_MULTISAMPLESAMPLES, 2);
+ 1483        }
+ ....
+ 1545           // if no window was created and AA was enabled, disable AA and try again
+ 1546           fprintf(stderr, "Multisampling is not available. Retrying without. (%s)\n", SDL_GetError());
+ 1547:          SDL_GL_SetAttribute(SDL_GL_MULTISAMPLEBUFFERS, false);
+ 1548           SDL_GL_SetAttribute(SDL_GL_MULTISAMPLESAMPLES, 0);
+ 1549           inFlags &= ~wfHW_AA_HIRES;
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/video/TheoraVideo.cpp:
+    6  #include <theoraplay.h>
+    7  
+    8: #define AUDIO_BUFFER_FRAMES 4096
+    9  #define AUDIO_OUT_CHANNELS 2
+   10  
+   ..
+  118           mRect = Rect(0, 0, inWidth, inHeight);
+  119  
+  120:          mSoundBuffer = new float[AUDIO_BUFFER_FRAMES * AUDIO_OUT_CHANNELS];
+  121           smoothing = false;
+  122        }
+  ...
+  134        void queueSoundBuffer()
+  135        {
+  136:          int size = AUDIO_BUFFER_FRAMES * AUDIO_OUT_CHANNELS * sizeof(float);
+  137           ByteArray soundBuffer = ByteArray(size);
+  138           memcpy(soundBuffer.Bytes(), mSoundBuffer, size);
+  ...
+  168        {
+  169           // check if audio needs to be split between queued buffers
+  170:          if (mSoundBufferOffset + mAudioPacket->frames >= AUDIO_BUFFER_FRAMES)
+  171           {
+  172:             int first = AUDIO_BUFFER_FRAMES - mSoundBufferOffset;
+  173              int last = mAudioPacket->frames - first;
+  174              const float *samples = (const float *)mAudioPacket->samples;
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/windows/SimpleFrame.cpp:
+  106        pfd.nVersion = 1;
+  107        pfd.dwFlags = PFD_DRAW_TO_WINDOW | PFD_SUPPORT_OPENGL |
+  108:                     PFD_DOUBLEBUFFER;
+  109        pfd.iPixelType = PFD_TYPE_RGBA;
+  110        pfd.cColorBits = 24;
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/project/src/winrt/WinRTStage.cpp:
+  131        m_pixelShader = nmeCreatePixelShader(inDevice,psSimple);
+  132  
+  133:       CD3D11_BUFFER_DESC constantBufferDesc(sizeof(ModelViewProjectionConstantBuffer),
+  134:                                             D3D11_BIND_CONSTANT_BUFFER);
+  135        DX::ThrowIfFailed(
+  136           device->CreateBuffer(
+  ...
+  157        vertexBufferData.SysMemPitch = 0;
+  158        vertexBufferData.SysMemSlicePitch = 0;
+  159:       CD3D11_BUFFER_DESC vertexBufferDesc(sizeof(cubeVertices), D3D11_BIND_VERTEX_BUFFER);
+  160        DX::ThrowIfFailed(
+  161           device->CreateBuffer(
+  ...
+  193        indexBufferData.SysMemPitch = 0;
+  194        indexBufferData.SysMemSlicePitch = 0;
+  195:       CD3D11_BUFFER_DESC indexBufferDesc(sizeof(cubeIndices), D3D11_BIND_INDEX_BUFFER);
+  196        DX::ThrowIfFailed(
+  197           device->CreateBuffer(
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/templates/android/template/src/org/haxe/lime/GameActivity.java:
+  289  		try {
+  290  			
+  291: 			InputStream inputStream = mAssets.open (inResource, AssetManager.ACCESS_BUFFER);
+  292  			long length = inputStream.available ();
+  293  			byte[] result = new byte[(int)length];
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/templates/android/template/src/org/haxe/lime/MainView.java:
+   89  			public EGLConfig chooseConfig (EGL10 egl, EGLDisplay display) {
+   90  				
+   91: 				int depth = ::if WIN_DEPTH_BUFFER::16::else::0::end::;
+   92: 				int stencil = ::if WIN_STENCIL_BUFFER::8::else::0::end::;
+   93  				EGLConfig[] configs = new EGLConfig[1];
+   94  				int[] num_config = new int[1];
+   ..
+  100  						EGL10.EGL_DEPTH_SIZE, depth,
+  101  						EGL10.EGL_STENCIL_SIZE, stencil,
+  102: 						EGL10.EGL_SAMPLE_BUFFERS, 1 /* true */,
+  103  						EGL10.EGL_SAMPLES, ::WIN_ANTIALIASING::,
+  104  						EGL10.EGL_RENDERABLE_TYPE, renderType,
+  ...
+  121  							EGL10.EGL_DEPTH_SIZE, depth,
+  122  							EGL10.EGL_STENCIL_SIZE, stencil,
+  123: 							EGL10.EGL_SAMPLE_BUFFERS, 1 /* true */,
+  124  							EGL10.EGL_SAMPLES, 2,
+  125  							EGL10.EGL_RENDERABLE_TYPE, renderType,
+  ...
+  138  					}
+  139  					
+  140: 					final int EGL_COVERAGE_BUFFERS_NV = 0x30E0;
+  141  					final int EGL_COVERAGE_SAMPLES_NV = 0x30E1;
+  142  					
+  ...
+  145  						EGL10.EGL_DEPTH_SIZE, depth,
+  146  						EGL10.EGL_STENCIL_SIZE, stencil,
+  147: 						EGL_COVERAGE_BUFFERS_NV, 1 /* true */,
+  148  						EGL_COVERAGE_SAMPLES_NV, 2,  // always 5 in practice on tegra 2
+  149  						EGL10.EGL_RENDERABLE_TYPE, renderType,
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/templates/emscripten/template/webgl-debug.js:
+  268    var numAttribs = ctx.getParameter(ctx.MAX_VERTEX_ATTRIBS);
+  269    var tmp = ctx.createBuffer();
+  270:   ctx.bindBuffer(ctx.ARRAY_BUFFER, tmp);
+  271    for (var ii = 0; ii < numAttribs; ++ii) {
+  272      ctx.disableVertexAttribArray(ii);
+  ...
+  285    ctx.activeTexture(ctx.TEXTURE0);
+  286    ctx.useProgram(null);
+  287:   ctx.bindBuffer(ctx.ARRAY_BUFFER, null);
+  288:   ctx.bindBuffer(ctx.ELEMENT_ARRAY_BUFFER, null);
+  289:   ctx.bindFramebuffer(ctx.FRAMEBUFFER, null);
+  290:   ctx.bindRenderbuffer(ctx.RENDERBUFFER, null);
+  291    ctx.disable(ctx.BLEND);
+  292    ctx.disable(ctx.CULL_FACE);
+  ...
+  323    ctx.stencilOp(ctx.KEEP, ctx.KEEP, ctx.KEEP);
+  324    ctx.viewport(0, 0, ctx.canvas.width, ctx.canvas.height);
+  325:   ctx.clear(ctx.COLOR_BUFFER_BIT | ctx.DEPTH_BUFFER_BIT | ctx.STENCIL_BUFFER_BIT);
+  326  
+  327    // TODO: This should NOT be needed but Firefox fails with 'hint'
+  ...
+  659          loseContextIfTime();
+  660          if (contextLost_) {
+  661:           return wrappedContext_.FRAMEBUFFER_UNSUPPORTED;
+  662          }
+  663          return f.apply(ctx, arguments);
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/templates/haxe/ApplicationMain.hx:
+   20              borderless      : ::WIN_BORDERLESS::,
+   21              antialiasing    : Std.int(::WIN_ANTIALIASING::),
+   22:             stencil_buffer  : ::WIN_STENCIL_BUFFER::,
+   23:             depth_buffer    : ::WIN_DEPTH_BUFFER::,
+   24              vsync           : ::WIN_VSYNC::,
+   25              fps             : Std.int(::WIN_FPS::),
+
+/usr/lib/haxe/lib/lime/2,0,6/legacy/templates/html5/haxe/ApplicationMain.hx:
+   20                  borderless      : ::WIN_BORDERLESS::,
+   21                  antialiasing    : Std.int(::WIN_ANTIALIASING::),
+   22:                 stencil_buffer  : ::WIN_STENCIL_BUFFER::,
+   23:                 depth_buffer    : ::WIN_DEPTH_BUFFER::,
+   24                  vsync           : ::WIN_VSYNC::,
+   25                  fps             : Std.int(::WIN_FPS::),
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/_backend/native/NativeWindow.hx:
+   54  		
+   55  		if (parent.config.borderless) flags |= cast WindowFlags.WINDOW_FLAG_BORDERLESS;
+   56: 		if (parent.config.depthBuffer) flags |= cast WindowFlags.WINDOW_FLAG_DEPTH_BUFFER;
+   57  		if (parent.config.fullscreen) flags |= cast WindowFlags.WINDOW_FLAG_FULLSCREEN;
+   58  		if (parent.config.resizable) flags |= cast WindowFlags.WINDOW_FLAG_RESIZABLE;
+   59: 		if (parent.config.stencilBuffer) flags |= cast WindowFlags.WINDOW_FLAG_STENCIL_BUFFER;
+   60  		if (parent.config.vsync) flags |= cast WindowFlags.WINDOW_FLAG_VSYNC;
+   61  		
+   ..
+  181  	var WINDOW_FLAG_ALLOW_SHADERS = 0x00000080;
+  182  	var WINDOW_FLAG_REQUIRE_SHADERS = 0x00000100;
+  183: 	var WINDOW_FLAG_DEPTH_BUFFER = 0x00000200;
+  184: 	var WINDOW_FLAG_STENCIL_BUFFER = 0x00000400;
+  185  	
+  186  }
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/ALAudioContext.hx:
+   20  	public var VELOCITY:Int = 0x1006;
+   21  	public var LOOPING:Int = 0x1007;
+   22: 	public var BUFFER:Int = 0x1009;
+   23  	public var GAIN:Int = 0x100A;
+   24  	public var MIN_GAIN:Int = 0x100D;
+   ..
+   30  	public var PAUSED:Int = 0x1013;
+   31  	public var STOPPED:Int = 0x1014;
+   32: 	public var BUFFERS_QUEUED:Int = 0x1015;
+   33: 	public var BUFFERS_PROCESSED:Int = 0x1016;
+   34  	public var REFERENCE_DISTANCE:Int = 0x1020;
+   35  	public var ROLLOFF_FACTOR:Int = 0x1021;
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/AudioSource.hx:
+   85  				
+   86  				id = al.genSource ();
+   87: 				al.sourcei (id, al.BUFFER, buffer.id);
+   88  			
+   89  			default:
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/audio/openal/AL.hx:
+   20  	public static inline var VELOCITY:Int = 0x1006;
+   21  	public static inline var LOOPING:Int = 0x1007;
+   22: 	public static inline var BUFFER:Int = 0x1009;
+   23  	public static inline var GAIN:Int = 0x100A;
+   24  	public static inline var MIN_GAIN:Int = 0x100D;
+   ..
+   30  	public static inline var PAUSED:Int = 0x1013;
+   31  	public static inline var STOPPED:Int = 0x1014;
+   32: 	public static inline var BUFFERS_QUEUED:Int = 0x1015;
+   33: 	public static inline var BUFFERS_PROCESSED:Int = 0x1016;
+   34  	public static inline var REFERENCE_DISTANCE:Int = 0x1020;
+   35  	public static inline var ROLLOFF_FACTOR:Int = 0x1021;
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/graphics/GLRenderContext.hx:
+   13  	
+   14  	
+   15: 	public var DEPTH_BUFFER_BIT = 0x00000100;
+   16: 	public var STENCIL_BUFFER_BIT = 0x00000400;
+   17: 	public var COLOR_BUFFER_BIT = 0x00004000;
+   18  	
+   19  	public var POINTS = 0x0000;
+   ..
+   56  	public var BLEND_COLOR = 0x8005;
+   57  	
+   58: 	public var ARRAY_BUFFER = 0x8892;
+   59: 	public var ELEMENT_ARRAY_BUFFER = 0x8893;
+   60: 	public var ARRAY_BUFFER_BINDING = 0x8894;
+   61: 	public var ELEMENT_ARRAY_BUFFER_BINDING = 0x8895;
+   62  	
+   63  	public var STREAM_DRAW = 0x88E0;
+   ..
+   65  	public var DYNAMIC_DRAW = 0x88E8;
+   66  	
+   67: 	public var BUFFER_SIZE = 0x8764;
+   68: 	public var BUFFER_USAGE = 0x8765;
+   69  	
+   70  	public var CURRENT_VERTEX_ATTRIB = 0x8626;
+   ..
+  137  	public var POLYGON_OFFSET_FACTOR = 0x8038;
+  138  	public var TEXTURE_BINDING_2D = 0x8069;
+  139: 	public var SAMPLE_BUFFERS = 0x80A8;
+  140  	public var SAMPLES = 0x80A9;
+  141  	public var SAMPLE_COVERAGE_VALUE = 0x80AA;
+  ...
+  295  	public var VERTEX_ATTRIB_ARRAY_NORMALIZED = 0x886A;
+  296  	public var VERTEX_ATTRIB_ARRAY_POINTER = 0x8645;
+  297: 	public var VERTEX_ATTRIB_ARRAY_BUFFER_BINDING = 0x889F;
+  298  	
+  299  	public var VERTEX_PROGRAM_POINT_SIZE = 0x8642;
+  ...
+  309  	public var HIGH_INT = 0x8DF5;
+  310  	
+  311: 	public var FRAMEBUFFER = 0x8D40;
+  312: 	public var RENDERBUFFER = 0x8D41;
+  313  	
+  314  	public var RGBA4 = 0x8056;
+  ...
+  320  	public var DEPTH_STENCIL = 0x84F9;
+  321  	
+  322: 	public var RENDERBUFFER_WIDTH = 0x8D42;
+  323: 	public var RENDERBUFFER_HEIGHT = 0x8D43;
+  324: 	public var RENDERBUFFER_INTERNAL_FORMAT = 0x8D44;
+  325: 	public var RENDERBUFFER_RED_SIZE = 0x8D50;
+  326: 	public var RENDERBUFFER_GREEN_SIZE = 0x8D51;
+  327: 	public var RENDERBUFFER_BLUE_SIZE = 0x8D52;
+  328: 	public var RENDERBUFFER_ALPHA_SIZE = 0x8D53;
+  329: 	public var RENDERBUFFER_DEPTH_SIZE = 0x8D54;
+  330: 	public var RENDERBUFFER_STENCIL_SIZE = 0x8D55;
+  331  	
+  332: 	public var FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE = 0x8CD0;
+  333: 	public var FRAMEBUFFER_ATTACHMENT_OBJECT_NAME = 0x8CD1;
+  334: 	public var FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL = 0x8CD2;
+  335: 	public var FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE = 0x8CD3;
+  336  	
+  337  	public var COLOR_ATTACHMENT0 = 0x8CE0;
+  ...
+  342  	public var NONE = 0;
+  343  	
+  344: 	public var FRAMEBUFFER_COMPLETE = 0x8CD5;
+  345: 	public var FRAMEBUFFER_INCOMPLETE_ATTACHMENT = 0x8CD6;
+  346: 	public var FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT = 0x8CD7;
+  347: 	public var FRAMEBUFFER_INCOMPLETE_DIMENSIONS = 0x8CD9;
+  348: 	public var FRAMEBUFFER_UNSUPPORTED = 0x8CDD;
+  349  	
+  350: 	public var FRAMEBUFFER_BINDING = 0x8CA6;
+  351: 	public var RENDERBUFFER_BINDING = 0x8CA7;
+  352: 	public var MAX_RENDERBUFFER_SIZE = 0x84E8;
+  353  	
+  354: 	public var INVALID_FRAMEBUFFER_OPERATION = 0x0506;
+  355  	
+  356  	public var UNPACK_FLIP_Y_WEBGL = 0x9240;
+  ...
+ 1362  	var ALPHA_BITS:Int;
+ 1363  	var ALWAYS:Int;
+ 1364: 	var ARRAY_BUFFER:Int;
+ 1365: 	var ARRAY_BUFFER_BINDING:Int;
+ 1366  	var ATTACHED_SHADERS:Int;
+ 1367  	var BACK:Int;
+ ....
+ 1381  	var BOOL_VEC4:Int;
+ 1382  	var BROWSER_DEFAULT_WEBGL:Int;
+ 1383: 	var BUFFER_SIZE:Int;
+ 1384: 	var BUFFER_USAGE:Int;
+ 1385  	var BYTE:Int;
+ 1386  	var CCW:Int;
+ 1387  	var CLAMP_TO_EDGE:Int;
+ 1388  	var COLOR_ATTACHMENT0:Int;
+ 1389: 	var COLOR_BUFFER_BIT:Int;
+ 1390  	var COLOR_CLEAR_VALUE:Int;
+ 1391  	var COLOR_WRITEMASK:Int;
+ ....
+ 1405  	var DEPTH_ATTACHMENT:Int;
+ 1406  	var DEPTH_BITS:Int;
+ 1407: 	var DEPTH_BUFFER_BIT:Int;
+ 1408  	var DEPTH_CLEAR_VALUE:Int;
+ 1409  	var DEPTH_COMPONENT:Int;
+ ....
+ 1420  	var DST_COLOR:Int;
+ 1421  	var DYNAMIC_DRAW:Int;
+ 1422: 	var ELEMENT_ARRAY_BUFFER:Int;
+ 1423: 	var ELEMENT_ARRAY_BUFFER_BINDING:Int;
+ 1424  	var EQUAL:Int;
+ 1425  	var FASTEST:Int;
+ ....
+ 1432  	var FLOAT_VEC4:Int;
+ 1433  	var FRAGMENT_SHADER:Int;
+ 1434: 	var FRAMEBUFFER:Int;
+ 1435: 	var FRAMEBUFFER_ATTACHMENT_OBJECT_NAME:Int;
+ 1436: 	var FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE:Int;
+ 1437: 	var FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE:Int;
+ 1438: 	var FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL:Int;
+ 1439: 	var FRAMEBUFFER_BINDING:Int;
+ 1440: 	var FRAMEBUFFER_COMPLETE:Int;
+ 1441: 	var FRAMEBUFFER_INCOMPLETE_ATTACHMENT:Int;
+ 1442: 	var FRAMEBUFFER_INCOMPLETE_DIMENSIONS:Int;
+ 1443: 	var FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT:Int;
+ 1444: 	var FRAMEBUFFER_UNSUPPORTED:Int;
+ 1445  	var FRONT:Int;
+ 1446  	var FRONT_AND_BACK:Int;
+ ....
+ 1462  	var INT_VEC4:Int;
+ 1463  	var INVALID_ENUM:Int;
+ 1464: 	var INVALID_FRAMEBUFFER_OPERATION:Int;
+ 1465  	var INVALID_OPERATION:Int;
+ 1466  	var INVALID_VALUE:Int;
+ ....
+ 1484  	var MAX_CUBE_MAP_TEXTURE_SIZE:Int;
+ 1485  	var MAX_FRAGMENT_UNIFORM_VECTORS:Int;
+ 1486: 	var MAX_RENDERBUFFER_SIZE:Int;
+ 1487  	var MAX_TEXTURE_IMAGE_UNITS:Int;
+ 1488  	var MAX_TEXTURE_SIZE:Int;
+ ....
+ 1517  	var POLYGON_OFFSET_UNITS:Int;
+ 1518  	var RED_BITS:Int;
+ 1519: 	var RENDERBUFFER:Int;
+ 1520: 	var RENDERBUFFER_ALPHA_SIZE:Int;
+ 1521: 	var RENDERBUFFER_BINDING:Int;
+ 1522: 	var RENDERBUFFER_BLUE_SIZE:Int;
+ 1523: 	var RENDERBUFFER_DEPTH_SIZE:Int;
+ 1524: 	var RENDERBUFFER_GREEN_SIZE:Int;
+ 1525: 	var RENDERBUFFER_HEIGHT:Int;
+ 1526: 	var RENDERBUFFER_INTERNAL_FORMAT:Int;
+ 1527: 	var RENDERBUFFER_RED_SIZE:Int;
+ 1528: 	var RENDERBUFFER_STENCIL_SIZE:Int;
+ 1529: 	var RENDERBUFFER_WIDTH:Int;
+ 1530  	var RENDERER:Int;
+ 1531  	var REPEAT:Int;
+ ....
+ 1540  	var SAMPLES:Int;
+ 1541  	var SAMPLE_ALPHA_TO_COVERAGE:Int;
+ 1542: 	var SAMPLE_BUFFERS:Int;
+ 1543  	var SAMPLE_COVERAGE:Int;
+ 1544  	var SAMPLE_COVERAGE_INVERT:Int;
+ ....
+ 1562  	var STENCIL_BACK_WRITEMASK:Int;
+ 1563  	var STENCIL_BITS:Int;
+ 1564: 	var STENCIL_BUFFER_BIT:Int;
+ 1565  	var STENCIL_CLEAR_VALUE:Int;
+ 1566  	var STENCIL_FAIL:Int;
+ ....
+ 1639  	var VENDOR:Int;
+ 1640  	var VERSION:Int;
+ 1641: 	var VERTEX_ATTRIB_ARRAY_BUFFER_BINDING:Int;
+ 1642  	var VERTEX_ATTRIB_ARRAY_ENABLED:Int;
+ 1643  	var VERTEX_ATTRIB_ARRAY_NORMALIZED:Int;
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/graphics/opengl/GL.hx:
+   27  	
+   28  	
+   29: 	public static inline var DEPTH_BUFFER_BIT = 0x00000100;
+   30: 	public static inline var STENCIL_BUFFER_BIT = 0x00000400;
+   31: 	public static inline var COLOR_BUFFER_BIT = 0x00004000;
+   32  	
+   33  	public static inline var POINTS = 0x0000;
+   ..
+   70  	public static inline var BLEND_COLOR = 0x8005;
+   71  	
+   72: 	public static inline var ARRAY_BUFFER = 0x8892;
+   73: 	public static inline var ELEMENT_ARRAY_BUFFER = 0x8893;
+   74: 	public static inline var ARRAY_BUFFER_BINDING = 0x8894;
+   75: 	public static inline var ELEMENT_ARRAY_BUFFER_BINDING = 0x8895;
+   76  	
+   77  	public static inline var STREAM_DRAW = 0x88E0;
+   ..
+   79  	public static inline var DYNAMIC_DRAW = 0x88E8;
+   80  	
+   81: 	public static inline var BUFFER_SIZE = 0x8764;
+   82: 	public static inline var BUFFER_USAGE = 0x8765;
+   83  	
+   84  	public static inline var CURRENT_VERTEX_ATTRIB = 0x8626;
+   ..
+  151  	public static inline var POLYGON_OFFSET_FACTOR = 0x8038;
+  152  	public static inline var TEXTURE_BINDING_2D = 0x8069;
+  153: 	public static inline var SAMPLE_BUFFERS = 0x80A8;
+  154  	public static inline var SAMPLES = 0x80A9;
+  155  	public static inline var SAMPLE_COVERAGE_VALUE = 0x80AA;
+  ...
+  309  	public static inline var VERTEX_ATTRIB_ARRAY_NORMALIZED = 0x886A;
+  310  	public static inline var VERTEX_ATTRIB_ARRAY_POINTER = 0x8645;
+  311: 	public static inline var VERTEX_ATTRIB_ARRAY_BUFFER_BINDING = 0x889F;
+  312  	
+  313  	public static inline var VERTEX_PROGRAM_POINT_SIZE = 0x8642;
+  ...
+  323  	public static inline var HIGH_INT = 0x8DF5;
+  324  	
+  325: 	public static inline var FRAMEBUFFER = 0x8D40;
+  326: 	public static inline var RENDERBUFFER = 0x8D41;
+  327  	
+  328  	public static inline var RGBA4 = 0x8056;
+  ...
+  334  	public static inline var DEPTH_STENCIL = 0x84F9;
+  335  	
+  336: 	public static inline var RENDERBUFFER_WIDTH = 0x8D42;
+  337: 	public static inline var RENDERBUFFER_HEIGHT = 0x8D43;
+  338: 	public static inline var RENDERBUFFER_INTERNAL_FORMAT = 0x8D44;
+  339: 	public static inline var RENDERBUFFER_RED_SIZE = 0x8D50;
+  340: 	public static inline var RENDERBUFFER_GREEN_SIZE = 0x8D51;
+  341: 	public static inline var RENDERBUFFER_BLUE_SIZE = 0x8D52;
+  342: 	public static inline var RENDERBUFFER_ALPHA_SIZE = 0x8D53;
+  343: 	public static inline var RENDERBUFFER_DEPTH_SIZE = 0x8D54;
+  344: 	public static inline var RENDERBUFFER_STENCIL_SIZE = 0x8D55;
+  345  	
+  346: 	public static inline var FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE = 0x8CD0;
+  347: 	public static inline var FRAMEBUFFER_ATTACHMENT_OBJECT_NAME = 0x8CD1;
+  348: 	public static inline var FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL = 0x8CD2;
+  349: 	public static inline var FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE = 0x8CD3;
+  350  	
+  351  	public static inline var COLOR_ATTACHMENT0 = 0x8CE0;
+  ...
+  356  	public static inline var NONE = 0;
+  357  	
+  358: 	public static inline var FRAMEBUFFER_COMPLETE = 0x8CD5;
+  359: 	public static inline var FRAMEBUFFER_INCOMPLETE_ATTACHMENT = 0x8CD6;
+  360: 	public static inline var FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT = 0x8CD7;
+  361: 	public static inline var FRAMEBUFFER_INCOMPLETE_DIMENSIONS = 0x8CD9;
+  362: 	public static inline var FRAMEBUFFER_UNSUPPORTED = 0x8CDD;
+  363  	
+  364: 	public static inline var FRAMEBUFFER_BINDING = 0x8CA6;
+  365: 	public static inline var RENDERBUFFER_BINDING = 0x8CA7;
+  366: 	public static inline var MAX_RENDERBUFFER_SIZE = 0x84E8;
+  367  	
+  368: 	public static inline var INVALID_FRAMEBUFFER_OPERATION = 0x0506;
+  369  	
+  370  	public static inline var UNPACK_FLIP_Y_WEBGL = 0x9240;
+
+/usr/lib/haxe/lib/lime/2,0,6/lime/net/curl/CURLOption.hx:
+   14  	//var INFILE = 10009;
+   15  	//var READDATA = 10009;
+   16: 	var ERRORBUFFER = 10010;
+   17  	var WRITEFUNCTION = 20011;
+   18  	var READFUNCTION = 20012;
+   ..
+   97  	var COOKIESESSION = 96;
+   98  	var CAPATH = 10097;
+   99: 	var BUFFERSIZE = 98;
+  100  	var NOSIGNAL = 99;
+  101  	var SHARE = 10100;
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Linux/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Linux64/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Mac/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Mac64/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/ndll/Windows/lime.ndll:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/samples/HelloWorld/Source/Main.hx:
+   39  				
+   40  				gl.clearColor (0.75, 1, 0, 1);
+   41: 				gl.clear (gl.COLOR_BUFFER_BIT);
+   42  			
+   43  			case CONSOLE (context):
+
+/usr/lib/haxe/lib/lime/2,0,6/samples/HerokuShaders/Source/Main.hx:
+  130  				
+  131  				buffer = gl.createBuffer ();
+  132: 				gl.bindBuffer (gl.ARRAY_BUFFER, buffer);
+  133: 				gl.bufferData (gl.ARRAY_BUFFER, new Float32Array ([ -1.0, -1.0, 1.0, -1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0 ]), gl.STATIC_DRAW);
+  134: 				gl.bindBuffer (gl.ARRAY_BUFFER, null);
+  135  				
+  136  				compile ();
+  ...
+  181  				gl.uniform2f (surfaceSizeUniform, window.width, window.height);
+  182  				
+  183: 				gl.bindBuffer (gl.ARRAY_BUFFER, buffer);
+  184  				gl.vertexAttribPointer (positionAttribute, 2, gl.FLOAT, false, 0, 0);
+  185  				gl.vertexAttribPointer (vertexPosition, 2, gl.FLOAT, false, 0, 0);
+  186  				
+  187  				gl.clearColor (0, 0, 0, 1);
+  188: 				gl.clear (gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT );
+  189  				gl.drawArrays (gl.TRIANGLES, 0, 6);
+  190: 				gl.bindBuffer (gl.ARRAY_BUFFER, null);
+  191  				
+  192  			default:
+
+/usr/lib/haxe/lib/lime/2,0,6/samples/SimpleAudio/Source/Main.hx:
+   63  				gl.viewport (0, 0, window.width, window.height);
+   64  				gl.clearColor (60 / 255, 184 / 255, 7 / 255, 1);
+   65: 				gl.clear (gl.COLOR_BUFFER_BIT);
+   66  				
+   67  			default:
+
+/usr/lib/haxe/lib/lime/2,0,6/samples/SimpleImage/Source/Main.hx:
+  107  				
+  108  				buffer = gl.createBuffer ();
+  109: 				gl.bindBuffer (gl.ARRAY_BUFFER, buffer);
+  110: 				gl.bufferData (gl.ARRAY_BUFFER, new Float32Array (cast data), gl.STATIC_DRAW);
+  111: 				gl.bindBuffer (gl.ARRAY_BUFFER, null);
+  112  				
+  113  				texture = gl.createTexture ();
+  ...
+  145  				
+  146  				gl.clearColor (r, g, b, a);
+  147: 				gl.clear (gl.COLOR_BUFFER_BIT);
+  148  				
+  149  				var matrix = Matrix4.createOrtho (0, window.width, window.height, 0, -1000, 1000);
+  ...
+  157  				#end
+  158  				
+  159: 				gl.bindBuffer (gl.ARRAY_BUFFER, buffer);
+  160  				gl.vertexAttribPointer (vertexAttribute, 3, gl.FLOAT, false, 5 * Float32Array.BYTES_PER_ELEMENT, 0);
+  161  				gl.vertexAttribPointer (textureAttribute, 2, gl.FLOAT, false, 5 * Float32Array.BYTES_PER_ELEMENT, 3 * Float32Array.BYTES_PER_ELEMENT);
+
+/usr/lib/haxe/lib/lime/2,0,6/samples/TextRendering/Source/Main.hx:
+  131  
+  132  				vertexBuffer = gl.createBuffer ();
+  133: 				gl.bindBuffer (gl.ARRAY_BUFFER, vertexBuffer);
+  134: 				gl.bufferData (gl.ARRAY_BUFFER, new Float32Array (cast vertices), gl.STATIC_DRAW);
+  135  
+  136  				indexBuffer = gl.createBuffer ();
+  137: 				gl.bindBuffer (gl.ELEMENT_ARRAY_BUFFER, indexBuffer);
+  138: 				gl.bufferData (gl.ELEMENT_ARRAY_BUFFER, new UInt8Array (cast indices), gl.STATIC_DRAW);
+  139  
+  140  				var format = image.bitsPerPixel == 1 ? GL.ALPHA : GL.RGBA;
+  ...
+  165  				gl.bindTexture (gl.TEXTURE_2D, texture);
+  166  
+  167: 				gl.bindBuffer (gl.ARRAY_BUFFER, vertexBuffer);
+  168  				gl.vertexAttribPointer (vertexAttribute, 2, gl.FLOAT, false, 4 * Float32Array.BYTES_PER_ELEMENT, 0);
+  169  				gl.vertexAttribPointer (textureAttribute, 2, gl.FLOAT, false, 4 * Float32Array.BYTES_PER_ELEMENT, 2 * Float32Array.BYTES_PER_ELEMENT);
+  170  
+  171: 				gl.bindBuffer (gl.ELEMENT_ARRAY_BUFFER, indexBuffer);
+  172  				gl.drawElements (gl.TRIANGLES, numTriangles, gl.UNSIGNED_BYTE, 0);
+  173  
+  ...
+  288  
+  289  				gl.clearColor (r, g, b, a);
+  290: 				gl.clear (gl.COLOR_BUFFER_BIT);
+  291  
+  292  				var matrix = Matrix4.createOrtho (0, window.width, window.height, 0, -10, 10);
+
+/usr/lib/haxe/lib/lime/2,0,6/templates/emscripten/template/webgl-debug.js:
+  268    var numAttribs = ctx.getParameter(ctx.MAX_VERTEX_ATTRIBS);
+  269    var tmp = ctx.createBuffer();
+  270:   ctx.bindBuffer(ctx.ARRAY_BUFFER, tmp);
+  271    for (var ii = 0; ii < numAttribs; ++ii) {
+  272      ctx.disableVertexAttribArray(ii);
+  ...
+  285    ctx.activeTexture(ctx.TEXTURE0);
+  286    ctx.useProgram(null);
+  287:   ctx.bindBuffer(ctx.ARRAY_BUFFER, null);
+  288:   ctx.bindBuffer(ctx.ELEMENT_ARRAY_BUFFER, null);
+  289:   ctx.bindFramebuffer(ctx.FRAMEBUFFER, null);
+  290:   ctx.bindRenderbuffer(ctx.RENDERBUFFER, null);
+  291    ctx.disable(ctx.BLEND);
+  292    ctx.disable(ctx.CULL_FACE);
+  ...
+  323    ctx.stencilOp(ctx.KEEP, ctx.KEEP, ctx.KEEP);
+  324    ctx.viewport(0, 0, ctx.canvas.width, ctx.canvas.height);
+  325:   ctx.clear(ctx.COLOR_BUFFER_BIT | ctx.DEPTH_BUFFER_BIT | ctx.STENCIL_BUFFER_BIT);
+  326  
+  327    // TODO: This should NOT be needed but Firefox fails with 'hint'
+  ...
+  659          loseContextIfTime();
+  660          if (contextLost_) {
+  661:           return wrappedContext_.FRAMEBUFFER_UNSUPPORTED;
+  662          }
+  663          return f.apply(ctx, arguments);
+
+/usr/lib/haxe/lib/lime/2,0,6/templates/haxe/ApplicationMain.hx:
+   46  			background: Std.int (::WIN_BACKGROUND::),
+   47  			borderless: ::WIN_BORDERLESS::,
+   48: 			depthBuffer: ::WIN_DEPTH_BUFFER::,
+   49  			fps: Std.int (::WIN_FPS::),
+   50  			fullscreen: ::WIN_FULLSCREEN::,
+   ..
+   52  			orientation: "::WIN_ORIENTATION::",
+   53  			resizable: ::WIN_RESIZABLE::,
+   54: 			stencilBuffer: ::WIN_STENCIL_BUFFER::,
+   55  			title: "::APP_TITLE::",
+   56  			vsync: ::WIN_VSYNC::,
+
+/usr/lib/haxe/lib/lime/2,0,6/tools/tools.n:
+    <binary>
+
+/usr/lib/haxe/lib/lime/2,0,6/tools/mpeg/audio/MpegAudioReader.hx:
+   10      //
+   11      // This is the next-largest power-of-two.
+   12:     static inline var BUFFER_SIZE = 4096;
+   13  
+   14      static inline var HEADER_SIZE = 4;
+   ..
+   79          seenFirstFrame = false;
+   80  
+   81:         buffer = Bytes.alloc(BUFFER_SIZE);
+   82          bufferCursor = 0;
+   83          bufferLength = 0;
+   ..
+  375  
+  376      inline function bufferSpace(bytes = 1) {
+  377:         return bufferCursor + bytes <= BUFFER_SIZE;
+  378      }
+  379  
+  ...
+  393  
+  394      inline function readBytesTo(position:Int) {
+  395:         assert(position >= 0 && position < BUFFER_SIZE);
+  396  
+  397          while (bufferLength <= position) {
+
+1194 matches across 59 files
+
+
+Searching 0 files for "BUFFER" (case sensitive)
+
+0 matches across 0 files
