@@ -4,6 +4,31 @@
 		{
 			"follow_symlinks": true,
 			"path": "."
+		},
+		{
+			"follow_symlinks": true,
+			"name": "Flixel",
+			"path": "/usr/lib/haxe/lib/flixel/3,3,6"
+		},
+		{
+			"follow_symlinks": true,
+			"name": "Flixel Addons",
+			"path": "/usr/lib/haxe/lib/flixel-addons/1,1,0"
+		},
+		{
+			"follow_symlinks": true,
+			"name": "Flixel UI",
+			"path": "/usr/lib/haxe/lib/flixel-ui/1,0,2"
+		},		
+		{
+			"follow_symlinks": true,
+			"name": "Lime",
+			"path": "/usr/lib/haxe/lib/lime/2,0,6"
+		},	
+		{
+			"follow_symlinks": true,
+			"name": "Haxe",
+			"path": "/usr/lib/haxe/std"
 		}
 	]
 }
