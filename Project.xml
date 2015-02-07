@@ -2,21 +2,15 @@
 <project>
 	<!------------------------------APPLICATION SETTINGS---------------------------->
 	
-	<app title="myosis_ngj2015" file="myosis_ngj2015" main="Main" version="0.0.1" company="Myosis" />
-	
-	<!--The flixel preloader is not accurate in Chrome. You can use it regularly if you embed the swf into a html file
-	<!--or you can set the actual size of your file manually at "FlxPreloaderBase-onUpdate-bytesTotal"!-->
+	<app title="myosis_ngj2015" file="myosis_ngj2015" main="Main" version="0.0.1" company="Myosis" />	
 	<app preloader="flixel.system.FlxPreloader" />
-	
-	<!--Minimum without FLX_NO_GAMEPAD: 11.8, without FLX_NO_NATIVE_CURSOR: 11.2 -->
 	<set name="SWF_VERSION" value="11.8" />
-
 	<android target-sdk-version="18" />
 	
 	<!--------------------------------WINDOW SETTINGS------------------------------->
 	
 	<!--These window settings apply to all targets-->
-	<window width="320" height="240" fps="60" background="#000000" hardware="true" vsync="true" />
+	<window width="1024" height="768" fps="60" background="#000000" hardware="true" vsync="true" />
 	
 	<!--Web-specific-->
 	<window if="web" orientation="landscape"  />
@@ -30,14 +24,9 @@
 	<!--------------------------------PATHS SETTINGS-------------------------------->
 	
 	<set name="BUILD_DIR" value="export" />
-	<set name="no-custom-backend" />
-
-	<classpath name="source" />
-	
+	<classpath name="source" />	
 	<assets path="assets/sounds" include="*.wav" />
-<!-- 	<assets path="assets/music" include="*.mp3" if="flash" />
-	<assets path="assets/music" include="*.ogg" unless="flash" />
- -->	
+
 	<!--------------------------------LIBRARIES------------------------------------->
 
 	<haxelib name="flixel"/>

@@ -14,7 +14,8 @@ using flixel.util.FlxSpriteUtil;
 class PlayState extends FlxState
 {
 	// Primitive vars
-	private var counter:Int;
+	private var _counter:Int;
+	private var _visualizerRadius:Float;
 
 	// Audio objects
 	private var _sound1:FlxSound;
@@ -28,7 +29,8 @@ class PlayState extends FlxState
 	override public function create():Void
 	{
 		// Init vars
-		counter = 0;
+		_counter = 0;
+		_visualizerRadius = 0.25 * FlxG.height;
 		// Init sound
 		_sound1 = FlxG.sound.load("assets/sounds/808_bd.wav", 1.0);
 		_sound2 = FlxG.sound.load("assets/sounds/808_sd.wav", 1.0);		
@@ -38,6 +40,9 @@ class PlayState extends FlxState
 		_canvas = new FlxSprite();
 		_canvas.makeGraphic(FlxG.width, FlxG.height, FlxColor.TRANSPARENT, true);
 		add(_canvas);
+		var lineStyle = { color: FlxColor.RED, thickness: 2.0 };
+		var fillStyle = { color: FlxColor.BLUE, alpha: 0.5 };
+		_canvas.drawCircle(0.5 * FlxG.width, 0.5 * FlxG.height, _visualizerRadius, FlxColor.BLACK, lineStyle);
 		super.create();
 	}
 	
@@ -61,25 +66,26 @@ class PlayState extends FlxState
 
 	override public function update():Void
 	{
-		// trace("Delta time: " + FlxG.elapsed);
+		// var lineStyle = { color: FlxColor.CHARTREUSE, thickness: 2.0 };
+		// _canvas.drawLine(0, 0, 200, 200, lineStyle);
 
-		if (counter % 60 == 0 || counter % 45 == 0) {
+		if (_counter % 60 == 0 || _counter % 45 == 0) {
 			_sound1.play(true);	
 		}
 		
-		if (counter % 120 == 0) {
+		if (_counter % 120 == 0) {
 			_sound2.play(true);	
 		}
 
-		if (counter % 15 == 0) {
+		if (_counter % 15 == 0) {
 			_sound3.play(true);	
 		}
 
-		if (counter % 120 == 0) {
+		if (_counter % 120 == 0) {
 			_sound4.play(true);	
 		}
 
-		++counter;
+		++_counter;
 		super.update();
 	}
 }
