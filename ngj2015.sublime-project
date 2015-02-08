@@ -19,7 +19,12 @@
 			"follow_symlinks": true,
 			"name": "Flixel UI",
 			"path": "/usr/lib/haxe/lib/flixel-ui/1,0,2"
-		},		
+		},
+		{
+			"follow_symlinks": true,
+			"name": "OpenFL",
+			"path": "/usr/lib/haxe/lib/openfl/2,2,4"
+		},	
 		{
 			"follow_symlinks": true,
 			"name": "Lime",

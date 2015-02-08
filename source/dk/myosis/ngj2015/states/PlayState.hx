@@ -7,74 +7,84 @@ import flixel.text.FlxText;
 import flixel.ui.FlxButton;
 import flixel.util.FlxColor;
 import flixel.util.FlxMath;
+import flixel.util.FlxDestroyUtil;
 import flixel.system.FlxSound;
-
-import dk.myosis.ngj2015.entities.Visualizer;
+import dk.myosis.ngj2015.euclidrhythm.EuclidRhythmManager;
+import dk.myosis.ngj2015.euclidrhythm.EuclidRhythmVisualizer;
 
 class PlayState extends FlxState
 {
-	// Primitive vars
-	private var _counter:Int;
+	/////////////////////
+    // Class variables //
+    /////////////////////
 
-	// Audio objects
+	private var _counter:Int;
 	private var _sound1:FlxSound;
 	private var _sound2:FlxSound;
 	private var _sound3:FlxSound;
 	private var _sound4:FlxSound;
+	private var _visualizer:EuclidRhythmVisualizer;
+	private var _noteManager:EuclidRhythmManager;
 
-	// Graphic objects
-	private var _visualizer:Visualizer;
+	//////////////////////
+    // Public functions //
+    //////////////////////
 
 	override public function create():Void
 	{
-		// Init vars
 		_counter = 0;
-
-		// Init sound
 		_sound1 = FlxG.sound.load("assets/sounds/808_bd.wav", 1.0);
 		_sound2 = FlxG.sound.load("assets/sounds/808_sd.wav", 1.0);		
 		_sound3 = FlxG.sound.load("assets/sounds/808_cl_hh.wav", 1.0);
 		_sound4 = FlxG.sound.load("assets/sounds/808_op_hh.wav", 1.0);
-		// Init grapbics
-		_visualizer = new Visualizer();
+		FlxG.sound.volume = 1.0;
+		_noteManager = new EuclidRhythmManager(4);
+		_visualizer = new EuclidRhythmVisualizer(1, 20.0, 2.0);
 		add(_visualizer);
+		_visualizer.setManager(_noteManager);
 		super.create();
 	}
 	
 	override public function destroy():Void
 	{
-		// Destroy audio objects
-		_sound1.destroy();
-		_sound2.destroy();
-		_sound3.destroy();		
-		_sound4.destroy();
+		FlxDestroyUtil.destroy(_sound1);
+		FlxDestroyUtil.destroy(_sound2);
+		FlxDestroyUtil.destroy(_sound3);		
+		FlxDestroyUtil.destroy(_sound4);
 		_sound1 = null;
 		_sound2 = null;
 		_sound3 = null;		
 		_sound4 = null;
-		// Destroy graphic objects
-		_visualizer.destroy();
+		FlxDestroyUtil.destroy(_visualizer);
 		_visualizer = null;
-		// Destroy me
 		super.destroy();
 	}
 
 	override public function update():Void
 	{
+		if (FlxG.keys.justPressed.D)
+		{
+			FlxG.debugger.visible = true;
+		}
+
 		if (_counter % 60 == 0 || _counter % 45 == 0) {
-			_sound1.play(true);	
+			_sound1.play(true);
+			// trace("Play sound 1");
 		}
 		
 		if (_counter % 120 == 0) {
-			_sound2.play(true);	
+			_sound2.play(true);
+			// trace("Play sound 2");			
 		}
 
 		if (_counter % 15 == 0) {
-			_sound3.play(true);	
+			_sound3.play(true);
+			// trace("Play sound 3");			
 		}
 
 		if (_counter % 120 == 0) {
-			_sound4.play(true);	
+			_sound4.play(true);
+			// trace("Play sound 4");				
 		}
 
 		++_counter;

@@ -1,17 +1,20 @@
 package dk.myosis.ngj2015;
 
-import flash.display.Sprite;
-import flash.display.StageAlign;
-import flash.display.StageScaleMode;
-import flash.events.Event;
-import flash.Lib;
+import openfl.display.Sprite;
+import openfl.display.StageAlign;
+import openfl.display.StageScaleMode;
+import openfl.events.Event;
+import openfl.Lib;
 import flixel.FlxGame;
 import flixel.FlxState;
-
 import dk.myosis.ngj2015.states.PlayState;
 
 class Main extends Sprite 
 {
+	/////////////////////
+    // Class variables //
+    /////////////////////
+
 	private var _gameWidth:Int = 1024; // Width of the game in pixels (might be less / more in actual pixels depending on your zoom).
 	private var _gameHeight:Int = 768; // Height of the game in pixels (might be less / more in actual pixels depending on your zoom).
 	private var _initialState:Class<FlxState> = PlayState; // The FlxState the game starts with.
@@ -19,12 +22,11 @@ class Main extends Sprite
 	private var _framerate:Int = 60; // How many frames per second the game should run at.
 	private var _skipSplash:Bool = false; // Whether to skip the flixel splash screen that appears in release mode.
 	private var _startFullscreen:Bool = false; // Whether to start the game in fullscreen on desktop targets
-	
-	public static function main():Void
-	{	
-		Lib.current.addChild(new Main());
-	}
-	
+		
+	/////////////////
+    // Constructor //
+    /////////////////
+
 	public function new() 
 	{
 		super();
@@ -38,7 +40,11 @@ class Main extends Sprite
 			addEventListener(Event.ADDED_TO_STAGE, init);
 		}
 	}
-	
+
+    ///////////////////////
+    // Private functions //
+    ///////////////////////
+
 	private function init(?E:Event):Void 
 	{
 		if (hasEventListener(Event.ADDED_TO_STAGE))
@@ -46,11 +52,6 @@ class Main extends Sprite
 			removeEventListener(Event.ADDED_TO_STAGE, init);
 		}
 		
-		setupGame();
-	}
-	
-	private function setupGame():Void
-	{
 		var stageWidth:Int = Lib.current.stage.stageWidth;
 		var stageHeight:Int = Lib.current.stage.stageHeight;
 
@@ -63,6 +64,15 @@ class Main extends Sprite
 			_gameHeight = Math.ceil(stageHeight / _zoom);
 		}
 
-		addChild(new FlxGame(_gameWidth, _gameHeight, _initialState, _zoom, _framerate, _framerate, _skipSplash, _startFullscreen));
+		addChild(new FlxGame(_gameWidth, _gameHeight, _initialState, _zoom, _framerate, _framerate, _skipSplash, _startFullscreen));	
+	}
+
+	/////////////////
+    // Entry point //
+    /////////////////
+
+	public static function main():Void
+	{	
+		Lib.current.addChild(new Main());
 	}
 }
