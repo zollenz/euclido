@@ -38,10 +38,9 @@ class PlayState extends FlxState
 		_sound3 = FlxG.sound.load("assets/sounds/808_cl_hh.wav", 1.0);
 		_sound4 = FlxG.sound.load("assets/sounds/808_op_hh.wav", 1.0);
 		FlxG.sound.volume = 1.0;
-		_noteManager = new EuclidRhythmManager(4);
-		_visualizer = new EuclidRhythmVisualizer(1, 20.0, 2.0);
+		_noteManager = new EuclidRhythmManager(4, 16);
+		_visualizer = new EuclidRhythmVisualizer(_noteManager, 50.0, 8.0);
 		add(_visualizer);
-		_visualizer.setManager(_noteManager);
 		super.create();
 	}
 	

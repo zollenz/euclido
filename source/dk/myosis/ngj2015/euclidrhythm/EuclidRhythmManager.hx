@@ -9,20 +9,35 @@ class EuclidRhythmManager extends FlxBasic
     // Class variables //
     /////////////////////
 
-	private var _parametersChanged:Bool;
+	public var notesPerBar(default, null):Int;
+	public var parametersChanged(default, null):Bool;
 	private var _noteMask:Vector<Int>;
 
   	/////////////////
     // Constructor //
     /////////////////
 
-	public function new(instrumentCount:Int) 
+	public function new(instrumentCount:Int, notesPerBar:Int) 
     {
+    	parametersChanged = false;
+    	this.notesPerBar = notesPerBar;
     	_noteMask = new Vector<Int>(instrumentCount);
 
     	for (i in 0..._noteMask.length)
     	{
 	    	_noteMask[i] = 0;
+    	}
+
+    	// Create random note masks
+    	for (i in 0..._noteMask.length)
+    	{
+    		for (j in 0...16)
+    		{
+    			if (Math.random() > 0.5)
+    			{
+		    		_noteMask[i] |= (1 << j);    				
+    			}
+    		}
     	}
 
     	super();
@@ -47,6 +62,16 @@ class EuclidRhythmManager extends FlxBasic
 	{
 		_noteMask = null;
 		super.destroy();
+	}
+
+	public function getInstrumentCount():Int
+	{
+		return _noteMask.length;
+	}
+
+	public function getNoteStatus(instrument:Int, note:Int):Bool
+	{
+		return (_noteMask[instrument] & (1 << note)) > 0;
 	}
 
 	///////////////////////
