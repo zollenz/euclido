@@ -1,4 +1,4 @@
-Nordic Game Jam 2015 game
+Euclido
 =========================
 
-Just getting it ready for action!
+A euclidian rhythm generator

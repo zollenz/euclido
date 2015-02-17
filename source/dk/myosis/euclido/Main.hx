@@ -1,4 +1,4 @@
-package dk.myosis.ngj2015;
+package dk.myosis.euclido;
 
 import openfl.display.Sprite;
 import openfl.display.StageAlign;
@@ -7,7 +7,7 @@ import openfl.events.Event;
 import openfl.Lib;
 import flixel.FlxGame;
 import flixel.FlxState;
-import dk.myosis.ngj2015.states.PlayState;
+import dk.myosis.euclido.states.PlayState;
 
 class Main extends Sprite 
 {

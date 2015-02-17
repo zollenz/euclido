@@ -1,4 +1,4 @@
-package dk.myosis.ngj2015.euclidrhythm;
+package dk.myosis.euclido.rhythm;
 
 import haxe.ds.Vector;
 import openfl.geom.Point;
@@ -7,11 +7,11 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.util.FlxColor;
 import flixel.util.FlxDestroyUtil;
-import dk.myosis.ngj2015.euclidrhythm.EuclidRhythmManager;
+import dk.myosis.euclido.rhythm.RhythmManager;
 
 using flixel.util.FlxSpriteUtil;
 
-class EuclidRhythmVisualizer extends FlxSprite
+class RhythmVisualizer extends FlxSprite
 {
 	/////////////////////
     // Class variables //
@@ -26,7 +26,7 @@ class EuclidRhythmVisualizer extends FlxSprite
 	private var _origin:Point;
 	private var _tempPoint:Point;	
 	private var _points:Vector<Point>;
-	private var _manager:EuclidRhythmManager;
+	private var _manager:RhythmManager;
 	private var _sweepLineStyle:LineStyle;
 	private var _gridLineStyle:LineStyle;
 	private var _baseDeltaAngle:Float;
@@ -36,7 +36,7 @@ class EuclidRhythmVisualizer extends FlxSprite
     // Constructor //
     /////////////////
 
-    public function new(manager:EuclidRhythmManager, layerDistance:Float, pointRadius:Float) 
+    public function new(manager:RhythmManager, layerDistance:Float, pointRadius:Float) 
     {
         super(0, 0);
         _counter = 0.0;

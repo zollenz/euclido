@@ -1,9 +1,9 @@
-package dk.myosis.ngj2015.euclidrhythm;
+package dk.myosis.euclido.rhythm;
 
 import haxe.ds.Vector;
 import flixel.FlxBasic;
 
-class EuclidRhythmManager extends FlxBasic
+class RhythmManager extends FlxBasic
 {
 	/////////////////////
     // Class variables //

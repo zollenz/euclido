@@ -1,4 +1,4 @@
-package dk.myosis.ngj2015.states;
+package dk.myosis.euclido.states;
 
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -9,8 +9,8 @@ import flixel.util.FlxColor;
 import flixel.util.FlxMath;
 import flixel.util.FlxDestroyUtil;
 import flixel.system.FlxSound;
-import dk.myosis.ngj2015.euclidrhythm.EuclidRhythmManager;
-import dk.myosis.ngj2015.euclidrhythm.EuclidRhythmVisualizer;
+import dk.myosis.euclido.rhythm.RhythmManager;
+import dk.myosis.euclido.rhythm.RhythmVisualizer;
 
 class PlayState extends FlxState
 {
@@ -23,8 +23,8 @@ class PlayState extends FlxState
 	private var _sound2:FlxSound;
 	private var _sound3:FlxSound;
 	private var _sound4:FlxSound;
-	private var _visualizer:EuclidRhythmVisualizer;
-	private var _noteManager:EuclidRhythmManager;
+	private var _visualizer:RhythmVisualizer;
+	private var _noteManager:RhythmManager;
 
 	//////////////////////
     // Public functions //
@@ -38,8 +38,8 @@ class PlayState extends FlxState
 		_sound3 = FlxG.sound.load("assets/sounds/808_cl_hh.wav", 1.0);
 		_sound4 = FlxG.sound.load("assets/sounds/808_op_hh.wav", 1.0);
 		FlxG.sound.volume = 1.0;
-		_noteManager = new EuclidRhythmManager(4, 16);
-		_visualizer = new EuclidRhythmVisualizer(_noteManager, 50.0, 8.0);
+		_noteManager = new RhythmManager(4, 16);
+		_visualizer = new RhythmVisualizer(_noteManager, 50.0, 8.0);
 		add(_visualizer);
 		super.create();
 	}
