@@ -17,20 +17,20 @@ class RhythmVisualizer extends FlxSprite
     // Class variables //
     /////////////////////
 
-	private var _counter:Float; 
-	private var _layerCount:Int;
-	private var _layerDistance:Float;
-	private var _radiusAngle:Float;	
-	private var _radiusLength:Float;
-	private var _pointRadius:Float;
-	private var _origin:Point;
-	private var _tempPoint:Point;	
-	private var _points:Vector<Point>;
-	private var _manager:RhythmManager;
-	private var _sweepLineStyle:LineStyle;
-	private var _gridLineStyle:LineStyle;
-	private var _baseDeltaAngle:Float;
-	private var _palette:Vector<Int>;
+	var _layerCount:Int;
+	var _layerDistance:Float;
+	var _radiusLength:Float;
+	var _pointRadius:Float;
+	var _origin:Point;
+	var _tempPoint:Point;	
+	var _points:Vector<Point>;
+	var _manager:RhythmManager;
+	var _sweepLineStyle:LineStyle;
+	var _gridLineStyle:LineStyle;
+	var _baseDeltaAngle:Float;
+	var _baseDeltaHalfAngle:Float;
+	var _palette:Vector<Int>;
+	var _angles:Vector<Float>;
 
   	/////////////////
     // Constructor //
@@ -39,14 +39,14 @@ class RhythmVisualizer extends FlxSprite
     public function new(manager:RhythmManager, layerDistance:Float, pointRadius:Float) 
     {
         super(0, 0);
-        _counter = 0.0;
         _manager = manager;
-        _layerCount = _manager.getInstrumentCount();
-        _baseDeltaAngle = 2 * Math.PI / _manager.notesPerBar;
+        _layerCount = _manager.getSoundCount();
+        _baseDeltaAngle = 2 * Math.PI / (_manager.notesPerBeat * 4);
+        _baseDeltaHalfAngle = 0.5 * _baseDeltaAngle;
        	_layerDistance = layerDistance;
         _pointRadius = pointRadius;
-		_radiusAngle = 0;        
 		_radiusLength = _layerCount * _layerDistance;
+		trace("radiuslength: " + _radiusLength);
         _origin = new Point(0.5 * FlxG.width, 0.5 * FlxG.height);
 		_tempPoint = new Point();
    		makeGraphic(FlxG.width, FlxG.height, FlxColor.TRANSPARENT, true);
@@ -58,7 +58,15 @@ class RhythmVisualizer extends FlxSprite
 		_palette[3] = 0xffffca00;
 		_palette[4] = 0xfff26547;
 		_sweepLineStyle = { color: _palette[4], thickness: 3.0 };
-		_gridLineStyle = { color: 0xAA555555, thickness: 1.0 };		
+		_gridLineStyle = { color: 0xAA555555, thickness: 1.0 };
+
+		_angles = new Vector<Float>(_manager.notesPerBeat * 4);
+
+		for (i in 0..._angles.length)
+		{
+			_angles[i] = i * _baseDeltaAngle;
+		}
+
     }
 
   	//////////////////////
@@ -68,53 +76,41 @@ class RhythmVisualizer extends FlxSprite
     override public function update():Void 
 	{
 		fill(FlxColor.TRANSPARENT);
-		// TODO: precompute
-		var fractionalPart = _radiusAngle / _baseDeltaAngle;
+		var currentAngle = 2 * Math.PI * _manager.getCurrentCycleRatio();
+		var fractionalPart = currentAngle / _baseDeltaAngle;
 		var integerPart = Std.int(fractionalPart);
 		fractionalPart -= integerPart;
-		var radiusHalfAngle = 0.5 * _baseDeltaAngle;
 
-		for (i in 0..._layerCount)
+		for (i in 0..._angles.length)
 		{
-			var distanceFromOrigin:Float = (i + 1) * _layerDistance;
+			_tempPoint.x = _origin.x + _radiusLength * Math.cos(_angles[i] + _baseDeltaHalfAngle);
+			_tempPoint.y = _origin.y + _radiusLength * Math.sin(_angles[i] + _baseDeltaHalfAngle);
+			drawLine(_origin.x, _origin.y, _tempPoint.x, _tempPoint.y, _gridLineStyle);
 
-			for (j in 0..._manager.notesPerBar)
+			for (j in 0..._layerCount)
 			{
-				_tempPoint.x = _origin.x + distanceFromOrigin * Math.cos(j * _baseDeltaAngle);
-				_tempPoint.y = _origin.y + distanceFromOrigin * Math.sin(j * _baseDeltaAngle);
+				var distanceFromOrigin:Float = (j + 1) * _layerDistance;	
+				_tempPoint.x = _origin.x + distanceFromOrigin * Math.cos(_angles[i]);
+				_tempPoint.y = _origin.y + distanceFromOrigin * Math.sin(_angles[i]);
 
-				if (_manager.getNoteStatus(i,j))
+				if (_manager.isSoundNoteOn(i,j))
 				{
-					if (fractionalPart < 0.5 && integerPart == j)
+					if (integerPart == i && fractionalPart < 0.5)
 					{
-						drawCircle(_tempPoint.x, _tempPoint.y, _pointRadius * 1.5, _palette[i]);
+						drawCircle(_tempPoint.x, _tempPoint.y, _pointRadius * 1.5, _palette[j]);
 					}
 					else
 					{
-						drawCircle(_tempPoint.x, _tempPoint.y, _pointRadius, _palette[i]);
+						drawCircle(_tempPoint.x, _tempPoint.y, _pointRadius, _palette[j]);
 					}					
-				}
-
-				if (i == 0) 
-				{
-					_tempPoint.x = _origin.x + _radiusLength * Math.cos(j * _baseDeltaAngle + radiusHalfAngle);
-					_tempPoint.y = _origin.y + _radiusLength * Math.sin(j * _baseDeltaAngle + radiusHalfAngle);
-					drawLine(_origin.x, _origin.y, _tempPoint.x, _tempPoint.y, _gridLineStyle);
 				}
 			}
 		}
 
-		_tempPoint.x = _origin.x + _radiusLength * Math.cos(_radiusAngle);
-		_tempPoint.y = _origin.y + _radiusLength * Math.sin(_radiusAngle);
+		_tempPoint.x = _origin.x + _radiusLength * Math.cos(currentAngle);
+		_tempPoint.y = _origin.y + _radiusLength * Math.sin(currentAngle);
 		drawLine(_origin.x, _origin.y, _tempPoint.x, _tempPoint.y, _sweepLineStyle);
 		super.update();
-		_radiusAngle += FlxG.elapsed;
-
-		if (_radiusAngle >= 2 * Math.PI)
-		{
-			_radiusAngle = 0;
-		}
-		// trace(_counter);
 	}
 	
 	override public function destroy():Void 
@@ -128,7 +124,9 @@ class RhythmVisualizer extends FlxSprite
 		}
 
 		_points = null;
+		_angles = null;
 		_sweepLineStyle = null;
+		_gridLineStyle = null;
 		_manager = null;
 		super.destroy();
 	}
