@@ -54,6 +54,8 @@ class Main extends Sprite
 		
 		var stageWidth:Int = Lib.current.stage.stageWidth;
 		var stageHeight:Int = Lib.current.stage.stageHeight;
+		trace("Stage width: " + stageWidth);
+		trace("Stage height: " + stageHeight);
 
 		if (_zoom == -1)
 		{
@@ -64,10 +66,10 @@ class Main extends Sprite
 			_gameHeight = Math.ceil(stageHeight / _zoom);
 		}
 
-        trace ("Before " + _framerate);
+        trace("Before " + _framerate);
 		addChild(new FlxGame(_gameWidth, _gameHeight, _initialState, _zoom, _framerate, _framerate, _skipSplash, _startFullscreen));	
-		        trace ("Update " + flixel.FlxG.updateFramerate);
-        trace ("Draw " + flixel.FlxG.drawFramerate);
+        trace("Update " + flixel.FlxG.updateFramerate);
+        trace("Draw " + flixel.FlxG.drawFramerate);
 	}
 
 	/////////////////

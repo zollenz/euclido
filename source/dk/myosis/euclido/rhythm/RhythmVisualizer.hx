@@ -41,7 +41,7 @@ class RhythmVisualizer extends FlxSprite
         super(0, 0);
         _manager = manager;
         _layerCount = _manager.getSoundCount();
-        _baseDeltaAngle = 2 * Math.PI / (_manager.notesPerBeat * 4);
+        _baseDeltaAngle = 2 * Math.PI / (_manager.notesPerBar);
         _baseDeltaHalfAngle = 0.5 * _baseDeltaAngle;
        	_layerDistance = layerDistance;
         _pointRadius = pointRadius;
@@ -58,9 +58,9 @@ class RhythmVisualizer extends FlxSprite
 		_palette[3] = 0xffffca00;
 		_palette[4] = 0xfff26547;
 		_sweepLineStyle = { color: _palette[4], thickness: 3.0 };
-		_gridLineStyle = { color: 0xAA555555, thickness: 1.0 };
+		_gridLineStyle = { color: 0x99555555, thickness: 1.0 };
 
-		_angles = new Vector<Float>(_manager.notesPerBeat * 4);
+		_angles = new Vector<Float>(_manager.notesPerBar);
 
 		for (i in 0..._angles.length)
 		{
@@ -89,7 +89,10 @@ class RhythmVisualizer extends FlxSprite
 
 			for (j in 0..._layerCount)
 			{
-				var distanceFromOrigin:Float = (j + 1) * _layerDistance;	
+				var distanceFromOrigin:Float = (j + 1) * _layerDistance;
+
+				// drawCircle(_origin.x, _origin.y, 500, 0xFF666666);
+
 				_tempPoint.x = _origin.x + distanceFromOrigin * Math.cos(_angles[i]);
 				_tempPoint.y = _origin.y + distanceFromOrigin * Math.sin(_angles[i]);
 

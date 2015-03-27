@@ -9,10 +9,11 @@ import flixel.ui.FlxButton;
 import flixel.util.FlxColor;
 import flixel.util.FlxDestroyUtil;
 import flixel.util.FlxMath;
+import flixel.addons.ui.FlxUIState;
 import dk.myosis.euclido.rhythm.RhythmManager;
 import dk.myosis.euclido.rhythm.RhythmVisualizer;
 
-class PlayState extends FlxState
+class PlayState extends FlxUIState
 {
 	/////////////////////
     // Class variables //
@@ -28,9 +29,11 @@ class PlayState extends FlxState
 	override public function create():Void
 	{
 		_manager = new RhythmManager(4, 100, 4);
-		_visualizer = new RhythmVisualizer(_manager, 50.0, 8.0);
+		_visualizer = new RhythmVisualizer(_manager, 50.0, 4.0);
 		add(_manager);
-		add(_visualizer);		
+		add(_visualizer);
+		_xml_id = "play_state";
+		FlxG.debugger.visible = true;	
         super.create();
     }
 	

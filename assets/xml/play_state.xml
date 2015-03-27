@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	
+	<!-- <include id="_ui_globals"/> -->
+    <button center_x="true" x="0" y="505" id="start" label="$TITLE_POPUP">		
+		<param type="string" value="popup"/>
+	</button>
+
+	<numeric_stepper center_x="true" x="0" y="505"></numeric_stepper>
+	
+</data>
