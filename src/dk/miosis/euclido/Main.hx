@@ -26,9 +26,7 @@ import dk.miosis.euclido.component.FadeOverlay;
 import dk.miosis.euclido.state.BaseState;
 import dk.miosis.euclido.state.Euclido;
 import dk.miosis.euclido.state.Load;
-import dk.miosis.euclido.state.Game;
 import dk.miosis.euclido.state.Splash;
-import dk.miosis.euclido.system.MiosisPhysicsEngine;
 import dk.miosis.euclido.ui.MiosisCanvas;
 
 class Main extends luxe.Game 
@@ -38,7 +36,6 @@ class Main extends luxe.Game
     public static var focus: Focus;
     public static var background_batcher: phoenix.Batcher;    
     public static var foreground_batcher: phoenix.Batcher;
-    public static var physics:MiosisPhysicsEngine; 
 
     public static var w:Int = -1;
     public static var h:Int = -1;
@@ -120,11 +117,6 @@ class Main extends luxe.Game
 
         focus = new Focus(canvas);
 
-        // Set up custom physics
-        physics = Luxe.physics.add_engine(MiosisPhysicsEngine);
-        physics.draw = false;
-        physics.player_collider = Polygon.rectangle(0,0,8,8);
-
         // Set up fade overlay
         fade_overlay_sprite = new Sprite({
             batcher: foreground_batcher,
@@ -144,7 +136,6 @@ class Main extends luxe.Game
         states = new States({ name:'states' });
         load_state = states.add(new Load());
         states.add(new Splash());
-        states.add(new Game());
         states.add(new Euclido());        
         next_state = "splash";
         states.set(next_state);
