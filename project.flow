@@ -1,0 +1,33 @@
+{
+  luxe:{
+    window: {
+      width:160,
+      height:144,
+      title:'Euclido',
+      fullscreen:false,
+      resizable:false,
+      borderless:false
+    }
+  },
+  project : {
+    name : 'euclido',
+    version : '1.0.0',
+    author : 'miosis',
+    app : {
+      main : 'dk.miosis.euclido.Main',
+      name : 'euclido',
+      package : 'dk.miosis.euclido'
+    },
+    build : {
+      defines:['MACOSX_VER=10.9'],
+      flags:['--macro luxe.Log.level(0)'],
+      dependencies : {
+        luxe : '*',
+        mint : '*'
+      }
+    },   
+    files : {
+      assets : 'assets/'
+    }
+  }
+}

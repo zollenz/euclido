@@ -1,0 +1,16 @@
+{
+    "textures" : [
+    ],
+    "fonts" : [
+    ],            
+    "sounds" : [
+        { "id" : "assets/audio/euclido/sound_0.wav", "name" : "sound_0", "is_stream" : false },
+        { "id" : "assets/audio/euclido/sound_1.wav", "name" : "sound_1", "is_stream" : false },
+        { "id" : "assets/audio/euclido/sound_2.wav", "name" : "sound_2", "is_stream" : false },    
+        { "id" : "assets/audio/euclido/sound_3.wav", "name" : "sound_3", "is_stream" : false }
+    ],
+    "text" : [
+    ],
+    "json" : [
+    ]    
+}

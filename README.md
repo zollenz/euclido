@@ -1,4 +1,2 @@
-Euclido
-=========================
-
-A euclidian rhythm generator
+# euclido
+My Luxe template
