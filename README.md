@@ -1,2 +1,2 @@
 # euclido
-My Luxe template
+Euclidian rhythm toy
