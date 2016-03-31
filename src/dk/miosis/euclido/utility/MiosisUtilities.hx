@@ -14,7 +14,7 @@ class MiosisUtilities
     }
 
     public static function bitmask_int_to_string(value:Int, size:Int = 64, spaced:Bool = false):String
-    {
+    { // NOT TESTED
         var str = "";
         var i = size;
 
@@ -41,14 +41,16 @@ class MiosisUtilities
     public static function bitmask_string_to_int(str:String):Int
     {
         var value = 0;
-        var i = str.length;
+        var i = 0;
 
-        while (--i > -1)
+        while (i < str.length)
         {
             if (str.charAt(i) == "1")
-            {
-                value |= (1 << i);              
+            {               
+                value = value | (1 << (str.length - i - 1));              
             }
+
+            ++i;
         }
 
         return value;

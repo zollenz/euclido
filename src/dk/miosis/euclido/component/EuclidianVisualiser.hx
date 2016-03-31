@@ -3,6 +3,7 @@ package dk.miosis.euclido.component;
 import luxe.Color;
 import luxe.Component;
 import luxe.Log.*;
+import luxe.Quaternion;
 import luxe.Vector;
 import luxe.Visual;
 
@@ -108,78 +109,41 @@ class EuclidianVisualiser extends Component
                 });
 
             _circle_visuals.push(circle_visual);
-
-            var current_angle = 2 * Math.PI * 0.75;
-
-            var sweep_line_end_pos = new Vector();
-
-            sweep_line_end_pos.x = _origin.x + total_radius * Math.cos(current_angle);
-            sweep_line_end_pos.y = _origin.y + total_radius * Math.sin(current_angle);
-
-            var sweep_line_geometry = Luxe.draw.line({
-                p0 : _origin,
-                p1 : sweep_line_end_pos
-                });
-
-            _sweep_line_visual = new Visual({ 
-                name : entity.name + '.sweep_line_visual',
-                parent : entity,
-                geometry : sweep_line_geometry,
-                color : new Color(0.0, 0.0, 1.0, 1),
-                // visible : false
-                });
         }
-    }
 
-    override public function update(dt:Float):Void 
-    {
-        // // _debug("---------- EuclidianVisualiser.update ----------");
+        var current_angle = 2 * Math.PI * 0.75;
 
-        // if (_sequencer == null)
-        // {
-        //     super.update(dt);
-        //     return;
-        // }
+        var sweep_line_end_pos = new Vector();
 
-        // var currentAngle = 2 * Math.PI * _progress;
-        // var fractionalPart = currentAngle / _base_delta_angle;
-        // var integerPart = Std.int(fractionalPart);
-        // fractionalPart -= integerPart;
+        sweep_line_end_pos.x = _origin.x + total_radius * Math.cos(current_angle);
+        sweep_line_end_pos.y = _origin.y + total_radius * Math.sin(current_angle);
 
-        // for (i in 0..._angles.length)
-        // {
-        //     for (j in 0..._layer_count)
-        //     {
-        //         var distance_from_origin:Float = (j + 1) * _layer_distance;
+        var sweep_line_geometry = Luxe.draw.line({
+            p0 : new Vector(0, 0, 0),
+            p1 : new Vector(total_radius, 0, 0)
+            });
 
-        //         _temp_point.x = _origin.x + distance_from_origin * Math.cos(_angles[i]);
-        //         _temp_point.y = _origin.y + distance_from_origin * Math.sin(_angles[i]);
+        _sweep_line_visual = new Visual({ 
+            name : entity.name + '.sweep_line_visual',
+            parent : entity,
+            geometry : sweep_line_geometry,
+            color : new Color(0.0, 1.0, 1.0, 1),
+            });
 
-        //         if (_sequencer.is_note_on(i, j))
-        //         {
-        //             if (integerPart == i && fractionalPart < 0.5)
-        //             {
-        //                 // _pointGeometries[i * _angles.length + j].
-        //             }
-        //             else
-        //             {
-        //                 // Luxe.draw.ring({
-        //                 //     x : _temp_point.x,
-        //                 //     y : _temp_point.y,
-        //                 //     r : point_radius * 1.5,
-        //                 //     color : new Color().rgb(_palette[j])
-        //                 //     });
-        //             }                   
-        //         }
-        //     }
-        // }
-
-        super.update(dt);
+        _sweep_line_visual.pos = _origin;      
     }
 
     public function set_progress(sound_id:Int, value:Float):Void
     {
-        _sweep_line_visual.rotation_z = value;
+        _debug("---------- EuclidianVisualiser.set_progress ----------" + value);
+
+        var currentAngle = 2 * Math.PI * value;
+        var fractionalPart = currentAngle / _angles[1];
+        var integerPart = Std.int(fractionalPart);
+        fractionalPart -= integerPart;
+
+        var rotation = value * 360;
+        _sweep_line_visual.rotation_z = rotation;
     }
 
     override public function onremoved():Void 

@@ -45,6 +45,8 @@ class EuclidianSequencer extends luxe.Component
         _note_masks = new Array<Int>();
         _note_time = 60 / (tempo * notes_per_beat);
 
+        _time_per_bar = _note_time * notes_per_bar;
+
         var min_note_time = 1 / 60;
 
         _debug("min_note_time = " + min_note_time);
@@ -92,16 +94,17 @@ class EuclidianSequencer extends luxe.Component
 
     override public function update(dt:Float):Void 
     {
-        // trace("Current time: " + _current_time);
+        trace("Current time: " + dt);
 
         if (_current_time >= _note_offsets[_next_note] - 0.0001 && _current_time <= _note_offsets[_next_note] + 0.0001)
         {
             for (i in 0..._sounds.length)
             {
-                if (_note_masks[i] != 0 && is_note_on(_next_note, i))
+                _debug(_note_masks[i]);
+                if (_note_masks[i] != 0 && is_note_on(i, _next_note))
                 {
                     // _sounds[i].play(true);
-                    // _debug("BOOM");
+                    _debug("BOOM");
                 }
             }
 
@@ -143,7 +146,7 @@ class EuclidianSequencer extends luxe.Component
         return _sounds.length;
     }
 
-    public function get_current_cycle_ratio():Float
+    public function get_current_cycle_ratio(sound_id):Float
     {
         return _current_time / _time_per_bar;
     }

@@ -24,8 +24,8 @@ import snow.api.Promise;
 
 import dk.miosis.euclido.component.FadeOverlay;
 import dk.miosis.euclido.state.BaseState;
-import dk.miosis.euclido.state.Euclido;
 import dk.miosis.euclido.state.Load;
+import dk.miosis.euclido.state.Play;
 import dk.miosis.euclido.state.Splash;
 import dk.miosis.euclido.ui.MiosisCanvas;
 
@@ -82,13 +82,13 @@ class Main extends luxe.Game
         // Set up rendering
         var background_camera = new Camera({
             name: 'background_camera'
-        });
+            });
         background_camera.size = new phoenix.Vector(w, h);
         background_camera.size_mode = luxe.Camera.SizeMode.fit;
 
         var foreground_camera = new Camera({
             name: 'foreground_camera'
-        });
+            });
         foreground_camera.size = new phoenix.Vector(w, h);
         foreground_camera.size_mode = luxe.Camera.SizeMode.fit;
 
@@ -96,13 +96,13 @@ class Main extends luxe.Game
             layer: -1,
             name:'background_batcher',
             camera: background_camera.view
-        });
+            });
 
         foreground_batcher = Luxe.renderer.create_batcher({
             layer: 3,
             name:'foreground_batcher',
             camera: foreground_camera.view
-        });
+            });
 
         mint_renderer = new LuxeMintRender({ batcher:foreground_batcher });
         
@@ -112,7 +112,7 @@ class Main extends luxe.Game
             rendering: mint_renderer,
             options: { color:new Color(1, 1, 1, 0) },
             x: 0, y:0, w: 100, h: 100
-        });
+            });
         canvas.auto_listen();
 
         focus = new Focus(canvas);
@@ -126,7 +126,7 @@ class Main extends luxe.Game
             color: new Color().rgb(Constants.COLOR_GB_2_DARK),
             centered: false,
             depth:990
-        });     
+            });     
         fade_overlay = fade_overlay_sprite.add(new FadeOverlay());
         
         // Subscribe to state change events
@@ -135,8 +135,8 @@ class Main extends luxe.Game
         // Go to first state
         states = new States({ name:'states' });
         load_state = states.add(new Load());
+        states.add(new Play());
         states.add(new Splash());
-        states.add(new Euclido());        
         next_state = "splash";
         states.set(next_state);
 

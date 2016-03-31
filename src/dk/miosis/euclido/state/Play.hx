@@ -8,10 +8,10 @@ import luxe.Visual;
 import dk.miosis.euclido.component.EuclidianSequencer;
 import dk.miosis.euclido.component.EuclidianVisualiser;
 
-class Euclido extends BaseState
+class Play extends BaseState
 {
-    var sequencer:EuclidianSequencer;
-    var pattern_visualisers:Array<EuclidianVisualiser>;
+    var _sequencer:EuclidianSequencer;
+    var _pattern_visualisers:Array<EuclidianVisualiser>;
 
     public function new() 
     {
@@ -30,10 +30,10 @@ class Euclido extends BaseState
 
         var sound_count = 1;
 
-        sequencer = new EuclidianSequencer(sound_count, 110, 4);
-        root.add(sequencer);
+        _sequencer = new EuclidianSequencer(sound_count, 110, 4);
+        root.add(_sequencer);
 
-        pattern_visualisers = new Array<EuclidianVisualiser>();
+        _pattern_visualisers = new Array<EuclidianVisualiser>();
 
         for (i in 0...sound_count)
         {
@@ -42,7 +42,7 @@ class Euclido extends BaseState
                 
                 });
 
-            pattern_visualisers.push(root.add(pattern_visualiser));
+            _pattern_visualisers.push(root.add(pattern_visualiser));
         }
 
         super.onenter(_);       
@@ -59,7 +59,9 @@ class Euclido extends BaseState
 
     override function update(dt:Float)
     {
-
-
+        for (i in 0..._pattern_visualisers.length)
+        {
+            _pattern_visualisers[i].set_progress(0, _sequencer.get_current_cycle_ratio(0));
+        }
     }   
 }
