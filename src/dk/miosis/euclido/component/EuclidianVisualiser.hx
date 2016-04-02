@@ -111,16 +111,9 @@ class EuclidianVisualiser extends Component
             _circle_visuals.push(circle_visual);
         }
 
-        var current_angle = 2 * Math.PI * 0.75;
-
-        var sweep_line_end_pos = new Vector();
-
-        sweep_line_end_pos.x = _origin.x + total_radius * Math.cos(current_angle);
-        sweep_line_end_pos.y = _origin.y + total_radius * Math.sin(current_angle);
-
         var sweep_line_geometry = Luxe.draw.line({
             p0 : new Vector(0, 0, 0),
-            p1 : new Vector(total_radius, 0, 0)
+            p1 : new Vector(0, -1 * total_radius, 0)
             });
 
         _sweep_line_visual = new Visual({ 

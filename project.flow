@@ -6,7 +6,7 @@
       title:'Euclido',
       fullscreen:false,
       resizable:false,
-      borderless:false
+      borderless:false,
     }
   },
   project : {
@@ -20,7 +20,7 @@
     },
     build : {
       defines:['MACOSX_VER=10.9'],
-      flags:['--macro luxe.Log.level(2)'],
+      flags:['--macro luxe.Log.level(1)'],
       dependencies : {
         luxe : '*',
         mint : '*'
