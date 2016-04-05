@@ -47,12 +47,10 @@ class EuclidianSequencer extends luxe.Component
 
         _time_per_bar = _note_time * note_count;
 
-        var min_note_time = 1 / 60;
+        log("min_note_time = " + Luxe.core.update_rate);
+        log("_note_time = " + _note_time);        
 
-        _debug("min_note_time = " + min_note_time);
-        _debug("_note_time = " + _note_time);        
-
-        if (_note_time < min_note_time)
+        if (_note_time < Luxe.core.update_rate)
         {
             _debug("Framerate too low for tempo");
         }
@@ -84,7 +82,7 @@ class EuclidianSequencer extends luxe.Component
         rhythm_generator.generate(16, 2);
         _note_masks.push(rhythm_generator.get_bitmask());
 
-        rhythm_generator.generate(16, 8);
+        rhythm_generator.generate(16, 16);
         _note_masks.push(rhythm_generator.get_bitmask());
 
         rhythm_generator.generate(16, 3);
@@ -97,11 +95,28 @@ class EuclidianSequencer extends luxe.Component
 
     override public function update(dt:Float):Void 
     {
-        var epsilon = 0.1;
+        var epsilon = 0.5 * Luxe.core.update_rate;
 
-        if (_current_time >= _note_offsets[_next_note] - epsilon && _current_time <= _note_offsets[_next_note] + epsilon)
+        var min:Float;
+        var max:Float;
+        var tick:Bool;
+
+        max = _note_offsets[_next_note] + epsilon;
+
+        if (_next_note == 0)
         {
-            log("TICK " + _next_note);
+            min = _time_per_bar - epsilon;
+            tick = _current_time >= min || _current_time <= max;
+        }
+        else
+        {
+            min = _note_offsets[_next_note] - epsilon;
+            tick = _current_time >= min && _current_time <= max;            
+        }
+
+        if (tick)
+        {
+            _debug("---------- Sequencer.update.tick ---------- : " + _next_note); 
 
             for (i in 0..._sounds.length)
             {
@@ -158,7 +173,6 @@ class EuclidianSequencer extends luxe.Component
 
     function should_play_note(soundIndex:Int, note:Int):Bool
     {
-        log(_note_masks[soundIndex]);
         return (_note_masks[soundIndex] & (32768 >> note)) > 0;
     }
 }

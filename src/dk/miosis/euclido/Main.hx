@@ -72,6 +72,9 @@ class Main extends luxe.Game
         // Set background color
         Luxe.renderer.clear_color = new Color().rgb(Constants.COLOR_GB_2_DARK);
 
+        Luxe.core.update_rate = 1/240;
+        Luxe.core.frame_max_delta = 1/240;
+
         // Fit camera viewport to window size
         Luxe.camera.size = new Vector(w, h);
         Luxe.camera.size_mode = luxe.Camera.SizeMode.fit;
@@ -223,6 +226,11 @@ class Main extends luxe.Game
     {
         Luxe.camera.viewport = new luxe.Rectangle(0, 0, e.x, e.y);
     }
+
+    // override function onrender()
+    // {
+    //     log("Render");
+    // }
 
     override function ondestroy() 
     {

@@ -128,7 +128,7 @@ class EuclidianVisualiser extends Component
 
     public function set_progress(sound_id:Int, value:Float):Void
     {
-        _debug("---------- EuclidianVisualiser.set_progress ----------" + value);
+        // _debug("---------- EuclidianVisualiser.set_progress ----------" + value);
 
         var currentAngle = 2 * Math.PI * value;
         var fractionalPart = currentAngle / _angles[1];
