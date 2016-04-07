@@ -25,43 +25,51 @@ class Play extends BaseState
     {
         _debug("---------- Euclido.onenter ----------");
 
-        Luxe.renderer.clear_color = new Color().rgb(Constants.COLOR_BLUE);
+        Luxe.renderer.clear_color = new Color().rgb(Constants.COLOR_GB_2_DARK);
 
         var root = new Entity({ name: 'root'});
 
         var sound_count = 4;
 
-        _sequencer = new EuclidianSequencer(sound_count, 120, 16);
+        _sequencer = new EuclidianSequencer(sound_count, 180, 16);
         root.add(_sequencer);
 
         _visualisers = new Array<EuclidianVisualiser>();
 
         for (i in 0...sound_count)
         {
-            var entity_x:Int;
-            var entity_y:Int;
+            var pos:Vector = new Vector();
 
             if (i < 2)
             {
-                entity_x = Math.floor((1 / 3) * Main.w * (i + 1));
-                entity_y = Math.floor((1 / 3) * Main.h);
+                pos.x = Math.floor((1 / 3) * Main.w * (i + 1));
+                pos.y = Math.floor((1 / 3) * Main.h);
+                // _debug("BOOM : " + pos);                
             }
-            else 
+            else
             {
-                entity_x = Math.floor((1 / 3) * Main.w * (i - 2 + 1));
-                entity_y = Math.floor((2 / 3) * Main.h);
+                pos.x = Math.floor((1 / 3) * Main.w * (i - 2 + 1));
+                pos.y = Math.floor((2 / 3) * Main.h);
+                // _debug("BAP : " + pos);                                
             }
 
             var visualiser_entity = new Entity({ 
                 name : 'visualiser_entity_' + i, 
                 parent : root, 
-                // pos : new Vector(entity_x, entity_y)
+                // pos : pos
                 });
-            var visualiser = new EuclidianVisualiser({
+            var visualiser = new EuclidianVisualiser(
+                _sequencer.note_count,
+                {
                 name : 'visualiser_component_' + i
                 });
+            visualiser.note_mask = _sequencer.get_note_mask(i);
+            // visualiser_entity.rotation = new Quaternion.fro
             _visualisers.push(visualiser_entity.add(visualiser));
+            // _debug("BING : " + visualiser_entity.pos);                                
         }
+
+        // _debug("BAM : " + root.pos);                                
 
         super.onenter(_);       
     }

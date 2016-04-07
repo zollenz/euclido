@@ -72,8 +72,8 @@ class Main extends luxe.Game
         // Set background color
         Luxe.renderer.clear_color = new Color().rgb(Constants.COLOR_GB_2_DARK);
 
-        Luxe.core.update_rate = 1/240;
-        Luxe.core.frame_max_delta = 1/240;
+        // Luxe.core.update_rate = 1/240;
+        // Luxe.core.frame_max_delta = 1/240;
 
         // Fit camera viewport to window size
         Luxe.camera.size = new Vector(w, h);

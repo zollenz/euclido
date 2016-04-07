@@ -95,7 +95,9 @@ class EuclidianSequencer extends luxe.Component
 
     override public function update(dt:Float):Void 
     {
-        var epsilon = 0.5 * Luxe.core.update_rate;
+        // log("---------- Sequencer.update.dt ---------- : " + dt); 
+
+        var epsilon = 0.01;
 
         var min:Float;
         var max:Float;
@@ -116,13 +118,13 @@ class EuclidianSequencer extends luxe.Component
 
         if (tick)
         {
-            _debug("---------- Sequencer.update.tick ---------- : " + _next_note); 
+            // _debug("---------- Sequencer.update.tick ---------- : " + _next_note); 
 
             for (i in 0..._sounds.length)
             {
                 if (_note_masks[i] != 0 && should_play_note(i, _next_note))
                 {
-                    _debug("Playing sound " + i);
+                    // _debug("Playing sound " + i);
 
                     var handle = Luxe.audio.play(_sounds[i].source);
 
@@ -169,6 +171,11 @@ class EuclidianSequencer extends luxe.Component
     public function get_current_cycle_ratio(sound_id):Float
     {
         return _current_time / _time_per_bar;
+    }
+
+    public function get_note_mask(index:Int):Int
+    {
+        return _note_masks[index];
     }
 
     function should_play_note(soundIndex:Int, note:Int):Bool
