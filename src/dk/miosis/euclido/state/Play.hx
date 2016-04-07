@@ -31,7 +31,7 @@ class Play extends BaseState
 
         var sound_count = 4;
 
-        _sequencer = new EuclidianSequencer(sound_count, 180, 16);
+        _sequencer = new EuclidianSequencer(sound_count, 120, 16);
         root.add(_sequencer);
 
         _visualisers = new Array<EuclidianVisualiser>();
@@ -44,19 +44,17 @@ class Play extends BaseState
             {
                 pos.x = Math.floor((1 / 3) * Main.w * (i + 1));
                 pos.y = Math.floor((1 / 3) * Main.h);
-                // _debug("BOOM : " + pos);                
             }
             else
             {
                 pos.x = Math.floor((1 / 3) * Main.w * (i - 2 + 1));
                 pos.y = Math.floor((2 / 3) * Main.h);
-                // _debug("BAP : " + pos);                                
             }
 
             var visualiser_entity = new Entity({ 
                 name : 'visualiser_entity_' + i, 
                 parent : root, 
-                // pos : pos
+                pos : pos
                 });
             var visualiser = new EuclidianVisualiser(
                 _sequencer.note_count,
@@ -66,10 +64,7 @@ class Play extends BaseState
             visualiser.note_mask = _sequencer.get_note_mask(i);
             // visualiser_entity.rotation = new Quaternion.fro
             _visualisers.push(visualiser_entity.add(visualiser));
-            // _debug("BING : " + visualiser_entity.pos);                                
         }
-
-        // _debug("BAM : " + root.pos);                                
 
         super.onenter(_);       
     }

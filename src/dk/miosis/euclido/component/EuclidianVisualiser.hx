@@ -53,7 +53,8 @@ class EuclidianVisualiser extends Component
         _circles = new Array<Visual>();
         _grid = new Array<Visual>();
 
-        _origin = new Vector(Main.w * 0.5, Main.h * 0.5);
+        // _origin = new Vector(Main.w * 0.5, Main.h * 0.5);
+        _origin = new Vector(0, 0, 0);
 
         super(options);
     }
@@ -140,7 +141,7 @@ class EuclidianVisualiser extends Component
         var rotation = value * 360;
         _sweep_line.rotation_z = rotation;
 
-        var _current_angle = 1.5 * Math.PI * value;
+        var _current_angle = 2 * Math.PI * value;
 
         var epsilon = 0.1 * (2 * Math.PI / _note_count);
 
@@ -182,8 +183,8 @@ class EuclidianVisualiser extends Component
             {
                 // if (!circleIsExpanded)
                 // {
-                    _circles[i].geometry.transform.scale.x = 1.2;
-                    _circles[i].geometry.transform.scale.y = 1.2;
+                    _circles[i].geometry.transform.scale.x = 1.5;
+                    _circles[i].geometry.transform.scale.y = 1.5;
                     _circles_expanded |= test_mask;                                  
                 // }
             }
