@@ -18,14 +18,16 @@ import dk.miosis.euclido.utility.MiosisUtilities;
 class EuclidianVisualiser extends Component
 {
     var _note_count:Int;
-    var _origin:Vector;
+    var _note_test_mask:Int;
     var _point_radius:Float;
-    var _circles:Array<Visual>;
-    var _grid:Array<Visual>;    
-    var _sweep_line:Visual;
-    var _angles:Array<Float>;
 
     var _circles_expanded:Int; // bitmask
+
+    var _angles:Array<Float>;
+    var _circles:Array<Visual>;
+    var _grid:Array<Visual>;
+
+    var _sweep_line:Visual;
 
     public var note_mask(default, default):Int; // bitmask
 
@@ -49,12 +51,10 @@ class EuclidianVisualiser extends Component
         note_mask = 0;
         _circles_expanded = 0;
         _note_count = note_count;
+        _note_test_mask = 1 << _note_count - 1;
         _angles = new Array<Float>();
         _circles = new Array<Visual>();
         _grid = new Array<Visual>();
-
-        // _origin = new Vector(Main.w * 0.5, Main.h * 0.5);
-        _origin = new Vector(0, 0, 0);
 
         super(options);
     }
@@ -74,14 +74,13 @@ class EuclidianVisualiser extends Component
             // Init grid
             var grid_line_end_pos:Vector = new Vector();
 
-            grid_line_end_pos.x = _origin.x + total_radius * Math.cos(_angles[i] + base_delta_half_angle);
-            grid_line_end_pos.y = _origin.y + total_radius * Math.sin(_angles[i] + base_delta_half_angle);
+            grid_line_end_pos.x = total_radius * Math.cos(_angles[i] + base_delta_half_angle);
+            grid_line_end_pos.y = total_radius * Math.sin(_angles[i] + base_delta_half_angle);
 
             var grid_line_geometry = Luxe.draw.line({
-                p0 : new Vector(_origin.x, _origin.y),
+                p0 : new Vector(0, 0, 0),
                 p1 : grid_line_end_pos
                 });
-            // grid_line_geometry.color.a = 0.0;
 
             var grid_line_visual = new Visual({
                 name : entity.name + '.grid_visual_' + i,
@@ -94,8 +93,8 @@ class EuclidianVisualiser extends Component
             _grid.push(grid_line_visual);
 
             // Init circles
-            var circle_pos_x = _origin.x + 0.75 * total_radius * Math.cos(_angles[i]);
-            var circle_pos_y = _origin.y + 0.75 * total_radius * Math.sin(_angles[i]);
+            var circle_pos_x = 0.75 * total_radius * Math.cos(_angles[i]);
+            var circle_pos_y = 0.75 * total_radius * Math.sin(_angles[i]);
 
             var circle_geometry = Luxe.draw.circle({
                 x : circle_pos_x,
@@ -104,7 +103,7 @@ class EuclidianVisualiser extends Component
                 steps : 10
                 });
 
-            var circle_color = (note_mask & (1 << i)) == 0 ? 
+            var circle_color = (note_mask & (_note_test_mask >> i)) == 0 ? 
                                 new Color().rgb(Constants.COLOR_GB_2_MEDIUM) : 
                                 new Color().rgb(Constants.COLOR_GB_2_OFF);
             
@@ -128,10 +127,9 @@ class EuclidianVisualiser extends Component
             name : entity.name + '.sweep_line_visual',
             parent : entity,
             geometry : sweep_line_geometry,
+            pos : new Vector(0, 0, 0),
             color : new Color().rgb(Constants.COLOR_GB_2_LIGHT),
             });
-
-        _sweep_line.pos = _origin;
     }
 
     public function set_progress(sound_id:Int, value:Float):Void
@@ -157,7 +155,7 @@ class EuclidianVisualiser extends Component
         {
             test_mask = (1 <<  i);
 
-            circleIsHighlighted = (note_mask & test_mask) > 0;          
+            circleIsHighlighted = (note_mask & (_note_test_mask >> i)) > 0;          
 
             if (!circleIsHighlighted)
             {
@@ -204,8 +202,15 @@ class EuclidianVisualiser extends Component
     {
         _debug("---------- EuclidianVisualiser.onremoved ----------");
 
-        // MiosisUtilities.clear(_note_offsets);
-        // _note_offsets = null;
+        MiosisUtilities.clear(_angles);
+        _angles = null;
 
+        MiosisUtilities.clear(_circles);
+        _circles = null;
+
+        MiosisUtilities.clear(_grid);
+        _grid = null;
+
+        _sweep_line = null;
     }
 }

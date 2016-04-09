@@ -88,7 +88,7 @@ class EuclidianSequencer extends luxe.Component
         rhythm_generator.generate(16, 3);
         _note_masks.push(rhythm_generator.get_bitmask());
 
-        _debug(_note_masks);
+        log(_note_masks);
 
         super(_options);
     }
@@ -157,11 +157,12 @@ class EuclidianSequencer extends luxe.Component
         _note_offsets = null;
         
         MiosisUtilities.clear(_note_masks);
-        _note_masks = null;        
+        _note_masks = null;       
 
         for (i in 0..._sounds.length)
         {
-            _sounds[i];
+            // TODO: Clean up sounds
+            // _sounds[i];
         }
 
         MiosisUtilities.clear(_sounds);
