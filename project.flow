@@ -19,7 +19,7 @@
       package : 'dk.miosis.euclido'
     },
     build : {
-      defines:['MACOSX_VER=10.9'],
+      defines:['MACOSX_VER=10.11'],
       flags:['--macro luxe.Log.level(2)'],
       dependencies : {
         luxe : '*',

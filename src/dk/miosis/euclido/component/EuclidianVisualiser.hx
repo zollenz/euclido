@@ -139,7 +139,7 @@ class EuclidianVisualiser extends Component
         var rotation = value * 360;
         _sweep_line.rotation_z = rotation;
 
-        var _current_angle = 2 * Math.PI * value;
+        var current_angle = 2 * Math.PI * value;
 
         var epsilon = 0.1 * (2 * Math.PI / _note_count);
 
@@ -167,12 +167,12 @@ class EuclidianVisualiser extends Component
             if (i == 0)
             {
                 min = 2 * Math.PI - epsilon;
-                sweepLineIsWithinDelta = _current_angle >= min || _current_angle <= max;                
+                sweepLineIsWithinDelta = current_angle >= min || current_angle <= max;                
             }
             else
             {
                 min = _angles[i] - epsilon;
-                sweepLineIsWithinDelta = _current_angle >= min && _current_angle <= max;
+                sweepLineIsWithinDelta = current_angle >= min && current_angle <= max;
             }
 
             circleIsExpanded = (_circles_expanded & test_mask) > 0;
@@ -181,8 +181,8 @@ class EuclidianVisualiser extends Component
             {
                 // if (!circleIsExpanded)
                 // {
-                    _circles[i].geometry.transform.scale.x = 1.5;
-                    _circles[i].geometry.transform.scale.y = 1.5;
+                    _circles[i].geometry.transform.scale.x = 2.0;
+                    _circles[i].geometry.transform.scale.y = 2.0;
                     _circles_expanded |= test_mask;                                  
                 // }
             }
