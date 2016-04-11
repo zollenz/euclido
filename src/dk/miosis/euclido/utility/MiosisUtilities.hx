@@ -13,8 +13,26 @@ class MiosisUtilities
         #end
     }
 
+    public static function bitwise_right_circular_shift(value:Int, shift:Int, bit_count:Int):Int
+    {
+        assert(bit_count <= 64, 'The bit count (${bit_count}) can not be higher than 64');
+        assert(shift < bit_count, 'shift (${shift}) can not be higher than the bit count (${bit_count})');
+
+        // TODO: Replace conversions and string mangling with bitwise ops
+        var result_string = bitmask_int_to_string(value, bit_count);
+        var split_index = result_string.length - shift;
+        var overflow_string = result_string.substr(0, split_index);
+
+        result_string = result_string.substr(split_index);
+        result_string += overflow_string;
+
+        log(result_string);
+
+        return bitmask_string_to_int(result_string);
+    }
+
     public static function bitmask_int_to_string(value:Int, size:Int = 64, spaced:Bool = false):String
-    { // NOT TESTED
+    {
         var str = "";
         var i = size;
 

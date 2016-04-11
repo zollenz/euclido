@@ -11,7 +11,8 @@ import dk.miosis.euclido.utility.MiosisUtilities;
 class EuclidianSequencer extends luxe.Component
 {
     var _note_masks:Array<Int>;
-    var _note_offsets:Array<Float>;
+    var _note_masks_shift_amounts:Array<Int>;
+    var _note_time_offsets:Array<Float>;
     var _sounds:Array<AudioResource>;
 
     var _current_time:Float;
@@ -19,6 +20,7 @@ class EuclidianSequencer extends luxe.Component
     var _time_per_bar:Float;
     var _next_note:Int;
     var _test_note_mask:Int;
+    var _shift:Int;
     
     public var note_count(default, null):Int;
 
@@ -37,9 +39,11 @@ class EuclidianSequencer extends luxe.Component
 
         _next_note = 0;
         _current_time = 0.0;
+        _shift = 0;
         
-        _note_offsets = new Array<Float>();
+        _note_time_offsets = new Array<Float>();
         _note_masks = new Array<Int>();
+        _note_masks_shift_amounts = new Array<Int>();        
 
         this.note_count = note_count;
 
@@ -57,10 +61,10 @@ class EuclidianSequencer extends luxe.Component
 
         for (i in 0...note_count)
         {
-            _note_offsets.push(i * _note_time);
+            _note_time_offsets.push(i * _note_time);
         }
 
-        log(_note_offsets);
+        log(_note_time_offsets);
 
         // Init sounds
 
@@ -68,8 +72,13 @@ class EuclidianSequencer extends luxe.Component
 
         for (i in 0...sound_count)
         {
+            // Set default sounds
             var resource = Luxe.resources.audio('assets/audio/sound_' + i + '.wav');
             _sounds.push(resource);
+
+            // Init note data
+            _note_masks.push(0);
+            _note_masks_shift_amounts.push(0);
         }
 
         log(_sounds);
@@ -77,17 +86,18 @@ class EuclidianSequencer extends luxe.Component
         var rhythm_generator = new EuclidianRhythmGenerator();
 
         rhythm_generator.generate(16, 4);
-        _note_masks.push(rhythm_generator.get_bitmask());
+        _note_masks[0] = rhythm_generator.get_bitmask();
 
         rhythm_generator.generate(16, 2);
-        _note_masks.push(rhythm_generator.get_bitmask());
+        _note_masks[1] = rhythm_generator.get_bitmask();
 
         rhythm_generator.generate(16, 16);
-        _note_masks.push(rhythm_generator.get_bitmask());
+        _note_masks[2] = rhythm_generator.get_bitmask();
 
         rhythm_generator.generate(16, 3);
-        _note_masks.push(rhythm_generator.get_bitmask());
+        _note_masks[3] = rhythm_generator.get_bitmask();
 
+        shift(1, 2);
         log(_note_masks);
 
         super(_options);
@@ -103,7 +113,7 @@ class EuclidianSequencer extends luxe.Component
         var max:Float;
         var tick:Bool;
 
-        max = _note_offsets[_next_note] + epsilon;
+        max = _note_time_offsets[_next_note] + epsilon;
 
         if (_next_note == 0)
         {
@@ -112,7 +122,7 @@ class EuclidianSequencer extends luxe.Component
         }
         else
         {
-            min = _note_offsets[_next_note] - epsilon;
+            min = _note_time_offsets[_next_note] - epsilon;
             tick = _current_time >= min && _current_time <= max;            
         }
 
@@ -153,8 +163,8 @@ class EuclidianSequencer extends luxe.Component
 
     override public function onremoved():Void 
     {
-        MiosisUtilities.clear(_note_offsets);
-        _note_offsets = null;
+        MiosisUtilities.clear(_note_time_offsets);
+        _note_time_offsets = null;
         
         MiosisUtilities.clear(_note_masks);
         _note_masks = null;       
@@ -167,6 +177,11 @@ class EuclidianSequencer extends luxe.Component
 
         MiosisUtilities.clear(_sounds);
         _sounds = null;
+    }
+
+    public function shift(sound_id:Int, amount:Int):Void
+    {
+        _note_masks[sound_id] = MiosisUtilities.bitwise_right_circular_shift(_note_masks[sound_id], 2, 16);
     }
 
     public function get_current_cycle_ratio(sound_id):Float
