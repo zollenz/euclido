@@ -3,6 +3,7 @@ package dk.miosis.euclido.state;
 import luxe.Color;
 import luxe.Entity;
 import luxe.Log.*;
+import luxe.Quaternion;
 import luxe.Vector;
 import luxe.Visual;
 
@@ -18,7 +19,7 @@ class Play extends BaseState
     {
         _debug("---------- Euclido.new ----------");
 
-        super({ name : 'euclido', fade_in_time : 4.5, fade_out_time : 0.5 });
+        super({ name : 'euclido', fade_in_time : 0.5, fade_out_time : 0.5 });
     }
 
     override function onenter<T>(_:T) 
@@ -31,7 +32,7 @@ class Play extends BaseState
 
         var sound_count = 4;
 
-        _sequencer = new EuclidianSequencer(sound_count, 120, 16);
+        _sequencer = new EuclidianSequencer(sound_count, 120, 8);
         root.add(_sequencer);
 
         _visualisers = new Array<EuclidianVisualiser>();
@@ -62,7 +63,8 @@ class Play extends BaseState
                 name : 'visualiser_component_' + i
                 });
             visualiser.note_mask = _sequencer.get_note_mask(i);
-            // visualiser_entity.rotation = new Quaternion.fro
+            var z_normal = new Vector(0, 0, 1);
+            visualiser_entity.rotation = new Quaternion().setFromAxisAngle(z_normal, -0.5 * Math.PI);
             _visualisers.push(visualiser_entity.add(visualiser));
         }
 

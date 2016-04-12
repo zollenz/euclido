@@ -85,16 +85,16 @@ class EuclidianSequencer extends luxe.Component
 
         var rhythm_generator = new EuclidianRhythmGenerator();
 
-        rhythm_generator.generate(16, 4);
+        rhythm_generator.generate(this.note_count, 4);
         _note_masks[0] = rhythm_generator.get_bitmask();
 
-        rhythm_generator.generate(16, 2);
+        rhythm_generator.generate(this.note_count, 2);
         _note_masks[1] = rhythm_generator.get_bitmask();
 
-        rhythm_generator.generate(16, 16);
+        rhythm_generator.generate(this.note_count, 8);
         _note_masks[2] = rhythm_generator.get_bitmask();
 
-        rhythm_generator.generate(16, 3);
+        rhythm_generator.generate(this.note_count, 3);
         _note_masks[3] = rhythm_generator.get_bitmask();
 
         shift(1, 2);
@@ -181,7 +181,7 @@ class EuclidianSequencer extends luxe.Component
 
     public function shift(sound_id:Int, amount:Int):Void
     {
-        _note_masks[sound_id] = MiosisUtilities.bitwise_right_circular_shift(_note_masks[sound_id], 2, 16);
+        _note_masks[sound_id] = MiosisUtilities.bitwise_right_circular_shift(_note_masks[sound_id], amount, note_count);
     }
 
     public function get_current_cycle_ratio(sound_id):Float
@@ -196,6 +196,7 @@ class EuclidianSequencer extends luxe.Component
 
     function should_play_note(soundIndex:Int, note:Int):Bool
     {
-        return (_note_masks[soundIndex] & (32768 >> note)) > 0;
+        var msb_mask = 1 << note_count - 1;
+        return (_note_masks[soundIndex] & (msb_mask >> note)) > 0;
     }
 }

@@ -153,7 +153,7 @@ class EuclidianVisualiser extends Component
 
         for (i in 0..._note_count)
         {
-            test_mask = (1 <<  i);
+            test_mask = (1 << i);
 
             circleIsHighlighted = (note_mask & (_note_test_mask >> i)) > 0;          
 
