@@ -8,12 +8,14 @@ import luxe.Vector;
 import luxe.Visual;
 
 import dk.miosis.euclido.component.EuclidianSequencer;
+import dk.miosis.euclido.component.EuclidianUI;
 import dk.miosis.euclido.component.EuclidianVisualiser;
 
 class Play extends BaseState
 {
     var _sequencer:EuclidianSequencer;
     var _visualisers:Array<EuclidianVisualiser>;
+    var _ui:EuclidianUI;
 
     public function new() 
     {
