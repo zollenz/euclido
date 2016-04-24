@@ -9,6 +9,7 @@ import dk.miosis.euclido.Constants;
 import dk.miosis.euclido.component.EuclidianVisualiser;
 import dk.miosis.euclido.utility.EuclidianRhythmGenerator;
 import dk.miosis.euclido.utility.MiosisUtilities;
+import dk.miosis.euclido.ui.MiosisSliderControl;
 
 typedef EuclidianUIOptions = {
     > ComponentOptions,
@@ -17,7 +18,7 @@ typedef EuclidianUIOptions = {
 
 class EuclidianUI extends luxe.Component
 {
-    public function new(sound_count:Int, tempo:Int, note_count:Int, ?_options:EuclidianUIOptions) 
+    public function new(?_options:EuclidianUIOptions) 
     {
         _debug("---------- Sequencer.new ----------");
 
@@ -31,18 +32,23 @@ class EuclidianUI extends luxe.Component
         }
 
         super(_options);
+
+        make_slider("slider", 0, 0, 50, 10);
     }
 
     inline function make_slider(n, x, y, w, h) 
     {
-        var _s = new mint.Slider({
+        var _s = new MiosisSliderControl({
             parent: Main.canvas, 
             name : n, 
             x : x,
             y : y, 
             w : w, 
             h : h,
-            options : { color_bar : new Color().rgb(Constants.COLOR_GB_1_LIGHT) },
+            options : { 
+                color : new Color().rgb(Constants.COLOR_GB_2_OFF), 
+                color_bar : new Color().rgb(Constants.COLOR_GB_2_LIGHT) 
+                },
             min : 0, 
             max : 10, 
             step : 1, 

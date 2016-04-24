@@ -18,7 +18,6 @@ import phoenix.Texture.FilterType;
 
 import mint.Canvas;
 import mint.focus.Focus;
-import mint.render.luxe.LuxeMintRender;
 
 import snow.api.Promise;
 
@@ -28,10 +27,11 @@ import dk.miosis.euclido.state.Load;
 import dk.miosis.euclido.state.Play;
 import dk.miosis.euclido.state.Splash;
 import dk.miosis.euclido.ui.MiosisCanvas;
+import dk.miosis.euclido.ui.MiosisMintRendering;
 
 class Main extends luxe.Game 
 {
-    public static var mint_renderer:LuxeMintRender;
+    public static var mint_renderer:MiosisMintRendering;
     public static var canvas:MiosisCanvas;
     public static var focus: Focus;
     public static var background_batcher: phoenix.Batcher;    
@@ -107,7 +107,7 @@ class Main extends luxe.Game
             camera: foreground_camera.view
             });
 
-        mint_renderer = new LuxeMintRender({ batcher:foreground_batcher });
+        mint_renderer = new MiosisMintRendering({ batcher:foreground_batcher });
         
         // Set up Mint canvas
         canvas = new MiosisCanvas({

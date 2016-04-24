@@ -64,6 +64,7 @@ class Play extends BaseState
                 {
                 name : 'visualiser_component_' + i
                 });
+            visualiser_entity.add(new EuclidianUI());
             visualiser.note_mask = _sequencer.get_note_mask(i);
             var z_normal = new Vector(0, 0, 1);
             visualiser_entity.rotation = new Quaternion().setFromAxisAngle(z_normal, -0.5 * Math.PI);
