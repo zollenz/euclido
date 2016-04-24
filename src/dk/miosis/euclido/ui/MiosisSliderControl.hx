@@ -1,5 +1,7 @@
 package dk.miosis.euclido.ui;
 
+import luxe.Log.*;
+
 import mint.Control;
 import mint.Panel;
 
@@ -15,6 +17,7 @@ class MiosisSliderControl extends mint.Control
 {
     var options: SliderOptions;
 
+    public var bar_margin : Float = 1;
     public var min : Float = 0;
     public var max : Float = 1;
     public var value  (default, set): Float = 1;
@@ -30,19 +33,23 @@ class MiosisSliderControl extends mint.Control
 
     public var onchange: Signal<Float->Float->Void>;
 
-    public function new( _options:SliderOptions ) {
+    public function new(_options:SliderOptions, _bar_margin:Float = 1) {
 
         options = _options;
 
         def(options.name, 'slider');
         def(options.mouse_input, true);
 
+        bar_margin = _bar_margin;
         max = def(options.max, 1);
         min = def(options.min, 0);
         value = def(options.value, max);
         vertical = def(options.vertical, false);
         invert = def(options.invert, false);
         step = options.step;
+
+        bar_x = x + bar_margin;
+        bar_y = y + bar_margin;        
 
         super(options);
 
@@ -55,6 +62,12 @@ class MiosisSliderControl extends mint.Control
         update_value(value);
 
     } //new
+
+    public function refresh():Void
+    {
+        update_value(value);
+    }
+
 
     var dragging = false;
 
@@ -69,37 +82,45 @@ class MiosisSliderControl extends mint.Control
     } //mousedown
 
     inline function get_range() return max-min;
-        
+
     var ignore_set = true;
 
-    inline function update_value(_value:Float) {
+    public inline function update_value(_value:Float) {
 
         _value = Helper.clamp(_value, min, max);
 
-        if(step != null) {
+        if(step != null) 
+        {
             _value = Math.round(_value/step) * step;
         }
 
-        if(vertical) {
+        var bar_max_w = w - 2 * bar_margin;
+        var bar_max_h = h - 2 * bar_margin;        
 
+        if(vertical) 
+        {
             bar_w = w - 4;
             bar_h = (h - 4) * (_value - min) / (max - min);
-            bar_y = (!invert) ? ((h - ((h - 4) * (_value - min) / (max - min))) - 2) : 2;
+            bar_y = (!invert) ? ((h - ((h - 4) * (_value - min) / get_range())) - 2) : 2;
             bar_h = Helper.clamp(bar_h, 1, h - 4);
+        } 
+        else 
+        {
+            bar_w = bar_max_w * (_value - min) / get_range();
+            bar_w = Helper.clamp(bar_w, 0, bar_max_w);
+            bar_h = bar_max_h;
+            bar_x = bar_margin;
 
-        } else {
-
-            bar_w = (w - 4) * (_value - min) / (max - min);
-            bar_w = Helper.clamp(bar_w, 1, w-4);
-            bar_h = h - 4;
-            bar_x = (!invert) ? 2 : ((w - ((w - 4) * (_value - min) / (max - min))) - 2);
-
+            // if (invert)
+            // {
+            // ((w - ((w - 4) * (_value - min) / get_range())) - 2);
+            // }
         }
 
-        percent = _value/get_range();
+        percent = _value / get_range();
 
         ignore_set = true;
-            value = _value;
+        value = _value;
         ignore_set = false;
 
         onchange.emit(value, percent);
@@ -120,25 +141,29 @@ class MiosisSliderControl extends mint.Control
 
         if(!vertical) {
 
-            var _dx = (!invert) ? e.x - x : (w) - (e.x - x);
+            var _dx = e.x - x;
 
-            if(_dx < 1) _dx = 1;
-            if(_dx >= w-4) _dx = w-4;
+            if (invert)
+            {
+                _dx = w - _dx;
+            }
 
-            var _v:Float = ((_dx - 1) / (w - 5)) * get_range() + min;
+            _dx = Helper.clamp(_dx, 0, w);
+
+            var _v:Float = (_dx / w) * get_range() + min;
 
             update_value(_v);
 
-        } else {
+            } else {
 
-            var _dy = (!invert) ? (h) - (e.y - y) : e.y - y;
+                var _dy = (!invert) ? (h) - (e.y - y) : e.y - y;
 
-            if(_dy < 1) _dy = 1;
-            if(_dy >= h-4) _dy = h-4;
+                if(_dy < 1) _dy = 1;
+                if(_dy >= h-4) _dy = h-4;
 
-            var _v:Float = ((_dy - 1) / (h - 5)) * get_range() + min;
+                var _v:Float = ((_dy - 1) / (h - 5)) * get_range() + min;
                 
-            update_value(_v);
+                update_value(_v);
 
         } //vertical
 

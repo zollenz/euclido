@@ -63,7 +63,7 @@ class MiosisSliderRender extends mint.render.Render {
             w:slider.bar_w,
             h:slider.bar_h,
             color: color_bar,
-            depth: render.options.depth + control.depth + 0.001,
+            depth: render.options.depth + control.depth + 1,
             visible: control.visible,
             clip_rect: Convert.bounds(control.clip_with)
         });
