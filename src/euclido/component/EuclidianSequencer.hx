@@ -101,7 +101,21 @@ class EuclidianSequencer extends luxe.Component
         shift(1, 2);
         log(_note_masks);
 
+        // Events
+        Luxe.events.listen('pulses_changed', on_pulses_changed);
+        Luxe.events.listen('shift_changed', on_shift_changed);        
+
         super(_options);
+    }
+
+    private function on_pulses_changed(e):Void
+    {
+        log("EuclidianSequencer.on_pulses_changed (" + e.id + ", " + e.value + ")");
+    }
+
+    private function on_shift_changed(e):Void
+    {
+        log("EuclidianSequencer.on_shift_changed (" + e.id + ", " + e.value + ")");
     }
 
     override public function update(dt:Float):Void 

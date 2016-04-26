@@ -57,6 +57,10 @@ class EuclidianVisualiser extends Component
         _circles = new Array<Visual>();
         _grid = new Array<Visual>();
 
+        // Events
+        // Luxe.events.listen('pulses_changed', on_pulses_changed);
+        // Luxe.events.listen('shift_changed', on_shift_changed);        
+
         super(options);
     }
 
