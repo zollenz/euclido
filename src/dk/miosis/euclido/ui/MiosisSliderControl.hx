@@ -91,7 +91,7 @@ class MiosisSliderControl extends mint.Control
 
         if(step != null) 
         {
-            _value = Math.round(_value/step) * step;
+            _value = Math.round(_value / step) * step;
         }
 
         var bar_max_w = w - 2 * bar_margin;
@@ -99,22 +99,33 @@ class MiosisSliderControl extends mint.Control
 
         if(vertical) 
         {
-            bar_w = w - 4;
-            bar_h = (h - 4) * (_value - min) / (max - min);
-            bar_y = (!invert) ? ((h - ((h - 4) * (_value - min) / get_range())) - 2) : 2;
-            bar_h = Helper.clamp(bar_h, 1, h - 4);
+            bar_w = bar_max_w;
+            bar_h = bar_max_h * (_value - min) / get_range();
+            bar_h = Helper.clamp(bar_h, 0, bar_max_h);
+
+            if (invert)
+            {
+                bar_y = bar_margin;
+            }
+            else
+            {
+                bar_y = (h - (bar_max_h * (_value - min) / get_range())) - bar_margin;
+            }
         } 
         else 
         {
+            bar_h = bar_max_h;
             bar_w = bar_max_w * (_value - min) / get_range();
             bar_w = Helper.clamp(bar_w, 0, bar_max_w);
-            bar_h = bar_max_h;
-            bar_x = bar_margin;
 
-            // if (invert)
-            // {
-            // ((w - ((w - 4) * (_value - min) / get_range())) - 2);
-            // }
+            if (invert)
+            {
+               bar_x = (w - (bar_max_w * (_value - min) / get_range())) - bar_margin;
+            }
+            else
+            {
+                bar_x = bar_margin;
+            }
         }
 
         percent = _value / get_range();
@@ -137,37 +148,25 @@ class MiosisSliderControl extends mint.Control
 
     } // set_value
 
-    inline function update_value_from_mouse(e:MouseEvent) {
-
-        if(!vertical) {
-
-            var _dx = e.x - x;
-
-            if (invert)
-            {
-                _dx = w - _dx;
-            }
-
-            _dx = Helper.clamp(_dx, 0, w);
-
-            var _v:Float = (_dx / w) * get_range() + min;
+    inline function update_value_from_mouse(e:MouseEvent) 
+    {
+        if(vertical) 
+        {
+            var _dy = invert ? e.y - y : h - e.y + y;
+            _dy = Helper.clamp(_dy, 0, h);
+            var _v:Float = (_dy / h) * get_range() + min;
 
             update_value(_v);
+        } 
+        else 
+        {
+            var _dx = invert ? w - e.x + x : e.x - x;
+            _dx = Helper.clamp(_dx, 0, w);
+            var _v:Float = (_dx / w) * get_range() + min;
 
-            } else {
-
-                var _dy = (!invert) ? (h) - (e.y - y) : e.y - y;
-
-                if(_dy < 1) _dy = 1;
-                if(_dy >= h-4) _dy = h-4;
-
-                var _v:Float = ((_dy - 1) / (h - 5)) * get_range() + min;
-                
-                update_value(_v);
-
-        } //vertical
-
-    } //update_value
+            update_value(_v);            
+        }
+    }
 
     override function mousemove(e:MouseEvent) {
 
