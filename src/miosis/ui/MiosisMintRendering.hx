@@ -1,4 +1,4 @@
-package dk.miosis.euclido.ui;
+package miosis.ui;
 
 import luxe.Log.*;
 
@@ -9,8 +9,8 @@ import mint.Control;
 
 import mint.render.luxe.LuxeMintRender;
 
-import dk.miosis.euclido.ui.MiosisSliderControl;
-import dk.miosis.euclido.ui.MiosisSliderRender;
+import miosis.ui.MiosisSliderControl;
+import miosis.ui.MiosisSliderRender;
 
 class MiosisMintRendering extends LuxeMintRender 
 {

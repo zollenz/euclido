@@ -1,4 +1,4 @@
-package dk.miosis.euclido.ui;
+package miosis.ui;
 
 import luxe.Vector;
 import mint.types.Types;
@@ -11,7 +11,7 @@ import phoenix.geometry.QuadGeometry;
 import luxe.Color;
 import luxe.Log.*;
 
-import dk.miosis.euclido.ui.MiosisSliderControl;
+import miosis.ui.MiosisSliderControl;
 
 private typedef LuxeMintSliderOptions = {
     var color: Color;

@@ -1,4 +1,4 @@
-package dk.miosis.euclido.state;
+package euclido.state;
 
 import luxe.Color;
 import luxe.Log.*;
@@ -11,7 +11,7 @@ import luxe.resource.Resource;
 
 import snow.api.Promise;
 
-import dk.miosis.euclido.state.BaseState;
+import euclido.state.BaseState;
 
 typedef LoadStateOptions = 
 {

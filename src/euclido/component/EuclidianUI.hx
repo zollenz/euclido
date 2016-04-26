@@ -1,4 +1,4 @@
-package dk.miosis.euclido.component;
+package euclido.component;
 
 import luxe.Color;
 import luxe.Log.*;
@@ -6,16 +6,17 @@ import luxe.Vector;
 import luxe.options.ComponentOptions;
 import luxe.resource.Resource.AudioResource;
 
-import dk.miosis.euclido.Constants;
-import dk.miosis.euclido.component.EuclidianVisualiser;
-import dk.miosis.euclido.utility.EuclidianRhythmGenerator;
-import dk.miosis.euclido.utility.MiosisUtilities;
-import dk.miosis.euclido.ui.MiosisSliderControl;
-import dk.miosis.euclido.ui.MiosisSliderRender;
+import miosis.ui.MiosisSliderControl;
+import miosis.ui.MiosisSliderRender;
+import miosis.utility.MiosisUtilities;
+
+import euclido.Constants;
+import euclido.component.EuclidianVisualiser;
+import euclido.utility.EuclidianRhythmGenerator;
 
 typedef EuclidianUIOptions = {
     > ComponentOptions,
-    @:optional var shift : String;    
+    @:optional var shift : Int;   
 }
 
 class EuclidianUI extends luxe.Component
@@ -33,16 +34,15 @@ class EuclidianUI extends luxe.Component
             _options.name = "euclidian_sequencer_ui";
         }
 
+        def(_options.shift, 0);
+
         super(_options);
-
-        make_slider("slider", 20, 20, 16, 80);
-
+        make_slider("slider", 20, 20, 20 * Constants.GAME_SCALE, 4 * Constants.GAME_SCALE);
     }
 
     inline function make_slider(n, x, y, w, h) 
     {
         var margin = 1;
-
         var slider = new MiosisSliderControl({
             parent: Main.canvas, 
             name : n, 
@@ -57,8 +57,6 @@ class EuclidianUI extends luxe.Component
             min : 0, 
             max : 10, 
             step : 1, 
-            vertical : true,
-            invert : false,
             value : 5 
             }, margin / Constants.GAME_SCALE);
         var render:MiosisSliderRender = cast slider.renderer;
@@ -67,4 +65,3 @@ class EuclidianUI extends luxe.Component
         slider.refresh();      
     }
 }
-

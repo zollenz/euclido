@@ -1,12 +1,13 @@
-package dk.miosis.euclido.component;
+package euclido.component;
 
 import luxe.Log.*;
 import luxe.options.ComponentOptions;
 import luxe.resource.Resource.AudioResource;
 
-import dk.miosis.euclido.component.EuclidianVisualiser;
-import dk.miosis.euclido.utility.EuclidianRhythmGenerator;
-import dk.miosis.euclido.utility.MiosisUtilities;
+import miosis.utility.MiosisUtilities;
+
+import euclido.component.EuclidianVisualiser;
+import euclido.utility.EuclidianRhythmGenerator;
 
 class EuclidianSequencer extends luxe.Component
 {

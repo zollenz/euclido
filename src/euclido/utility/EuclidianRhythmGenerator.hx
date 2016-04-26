@@ -1,8 +1,8 @@
-    package dk.miosis.euclido.utility;
+    package euclido.utility;
 
     import luxe.Log.*;
 
-    import dk.miosis.euclido.utility.MiosisUtilities;
+    import miosis.utility.MiosisUtilities;
 
     class EuclidianRhythmGenerator
     {

@@ -1,4 +1,4 @@
-package dk.miosis.euclido.component;
+package euclido.component;
 
 import luxe.Color;
 import luxe.Component;
@@ -12,8 +12,9 @@ import luxe.utils.Maths;
 
 import phoenix.geometry.CircleGeometry;
 
-import dk.miosis.euclido.component.EuclidianSequencer;
-import dk.miosis.euclido.utility.MiosisUtilities;
+import miosis.utility.MiosisUtilities;
+
+import euclido.component.EuclidianSequencer;
 
 class EuclidianVisualiser extends Component
 {

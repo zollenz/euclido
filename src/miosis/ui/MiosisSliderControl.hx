@@ -1,16 +1,15 @@
-package dk.miosis.euclido.ui;
+package miosis.ui;
 
 import luxe.Log.*;
 
 import mint.Control;
 import mint.Panel;
+import mint.Slider;
 
 import mint.types.Types;
 import mint.core.Signal;
 import mint.types.Types.Helper;
 import mint.core.Macros.*;
-
-import mint.Slider;
 
 @:allow(mint.render.Renderer)
 class MiosisSliderControl extends mint.Control 

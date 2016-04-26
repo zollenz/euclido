@@ -1,4 +1,4 @@
-package dk.miosis.euclido.ui;
+package miosis.ui;
 
 import mint.render.luxe.Convert;
 

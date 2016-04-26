@@ -1,4 +1,4 @@
-package dk.miosis.euclido;
+package euclido;
 
 import luxe.Camera;
 import luxe.Color;
@@ -21,13 +21,14 @@ import mint.focus.Focus;
 
 import snow.api.Promise;
 
-import dk.miosis.euclido.component.FadeOverlay;
-import dk.miosis.euclido.state.BaseState;
-import dk.miosis.euclido.state.Load;
-import dk.miosis.euclido.state.Play;
-import dk.miosis.euclido.state.Splash;
-import dk.miosis.euclido.ui.MiosisCanvas;
-import dk.miosis.euclido.ui.MiosisMintRendering;
+import miosis.ui.MiosisCanvas;
+import miosis.ui.MiosisMintRendering;
+
+import euclido.component.FadeOverlay;
+import euclido.state.BaseState;
+import euclido.state.Load;
+import euclido.state.Play;
+import euclido.state.Splash;
 
 class Main extends luxe.Game 
 {
