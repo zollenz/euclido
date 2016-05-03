@@ -1,4 +1,4 @@
-package dk.miosis.euclido.utility;
+package miosis.utility;
 
 #if neko
 	import neko.vm.Thread;

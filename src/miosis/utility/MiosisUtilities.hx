@@ -1,4 +1,4 @@
-package dk.miosis.euclido.utility;
+package miosis.utility;
 
 import luxe.Log.*;
 

@@ -1,4 +1,4 @@
-package dk.miosis.euclido.state;
+package euclido.state;
 
 import luxe.Color;
 import luxe.Entity;
@@ -7,9 +7,9 @@ import luxe.Quaternion;
 import luxe.Vector;
 import luxe.Visual;
 
-import dk.miosis.euclido.component.EuclidianSequencer;
-import dk.miosis.euclido.component.EuclidianUI;
-import dk.miosis.euclido.component.EuclidianVisualiser;
+import euclido.component.EuclidianSequencer;
+import euclido.component.EuclidianUI;
+import euclido.component.EuclidianVisualiser;
 
 class Play extends BaseState
 {
@@ -64,6 +64,7 @@ class Play extends BaseState
                 {
                 name : 'visualiser_component_' + i
                 });
+            visualiser_entity.add(new EuclidianUI());
             visualiser.note_mask = _sequencer.get_note_mask(i);
             var z_normal = new Vector(0, 0, 1);
             visualiser_entity.rotation = new Quaternion().setFromAxisAngle(z_normal, -0.5 * Math.PI);

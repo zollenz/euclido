@@ -1,4 +1,4 @@
-package dk.miosis.euclido.component;
+package euclido.component;
 
 import luxe.Color;
 import luxe.Component;
@@ -12,8 +12,9 @@ import luxe.utils.Maths;
 
 import phoenix.geometry.CircleGeometry;
 
-import dk.miosis.euclido.component.EuclidianSequencer;
-import dk.miosis.euclido.utility.MiosisUtilities;
+import miosis.utility.MiosisUtilities;
+
+import euclido.component.EuclidianSequencer;
 
 class EuclidianVisualiser extends Component
 {
@@ -55,6 +56,10 @@ class EuclidianVisualiser extends Component
         _angles = new Array<Float>();
         _circles = new Array<Visual>();
         _grid = new Array<Visual>();
+
+        // Events
+        // Luxe.events.listen('pulses_changed', on_pulses_changed);
+        // Luxe.events.listen('shift_changed', on_shift_changed);        
 
         super(options);
     }

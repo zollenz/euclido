@@ -1,4 +1,4 @@
-package dk.miosis.euclido.ui;
+package miosis.ui;
 
 import luxe.Color;
 import luxe.Log.*;
@@ -12,8 +12,8 @@ import mint.render.Render;
 import mint.render.Rendering;
 import mint.types.Types.MouseEvent;
 
-import dk.miosis.euclido.Constants;
-import dk.miosis.euclido.ui.MiosisMintRendering;
+import euclido.Constants;
+import miosis.ui.MiosisMintRendering;
 
 class MiosisButtonRender extends Render 
 {

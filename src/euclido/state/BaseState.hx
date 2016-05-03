@@ -1,11 +1,11 @@
-package dk.miosis.euclido.state;
+package euclido.state;
 
 import luxe.Log.*;
 import luxe.options.StateOptions;
 import luxe.Sprite;
 import luxe.States;
 
-import dk.miosis.euclido.component.FadeOverlay;
+import euclido.component.FadeOverlay;
 
 typedef BaseStateOptions = 
 {

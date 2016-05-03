@@ -14,9 +14,9 @@
     version : '1.0.0',
     author : 'miosis',
     app : {
-      main : 'dk.miosis.euclido.Main',
+      main : 'euclido.Main',
       name : 'euclido',
-      package : 'dk.miosis.euclido'
+      package : 'euclido'
     },
     build : {
       defines:['MACOSX_VER=10.11', 'no-traces'],

@@ -1,10 +1,9 @@
-package dk.miosis.euclido;
+package euclido;
 
 import luxe.Color;
 
 class Constants
 {
-
 	public static function clear(arr:Array<Dynamic>)
 	{
 #if (cpp||php)
