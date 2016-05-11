@@ -41,20 +41,26 @@ class Main extends luxe.Game
     public static var w:Int = -1;
     public static var h:Int = -1;
 
+    public static var game_scale:Float = 1.0;
+
     var load_state:Load;
     var next_state:String;
     var current_parcel:Parcel;
     var states:States;
     var fade_overlay_sprite:Sprite;
-    var fade_overlay:FadeOverlay;  
+    var fade_overlay:FadeOverlay;
 
     override function config(config:luxe.GameConfig) 
     {
-        w = config.window.width;
-        h = config.window.height;
+        log('config loaded as ' + Luxe.snow.config.user);
 
-        config.window.width *= Constants.GAME_SCALE;
-        config.window.height *= Constants.GAME_SCALE;
+        game_scale = Luxe.snow.config.user.game_scale;
+
+        w = Luxe.snow.config.user.window.width;
+        h = Luxe.snow.config.user.window.height;
+
+        config.window.width = w * cast Luxe.snow.config.user.game_scale;
+        config.window.height = h * cast Luxe.snow.config.user.game_scale;
 
         // Just load assets for the splash screen
         config.preload.textures.push({ id : "assets/img/logo/miosis_m.png", filter_min:nearest, filter_mag:nearest });

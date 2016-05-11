@@ -1,12 +1,7 @@
 {
-  luxe:{
-    window: {
-      width:160,
-      height:144,
-      title:'Euclido',
-      fullscreen:false,
-      resizable:false,
-      borderless:false,
+  snow : {
+    config: {
+      config_path: 'assets/json/config/config.json'
     }
   },
   project : {
@@ -19,7 +14,7 @@
       package : 'euclido'
     },
     build : {
-      defines:['MACOSX_VER=10.11', 'no-traces'],
+      defines:['MACOSX_VER=10.11'],
       flags:['--macro luxe.Log.level(2)'],
       dependencies : {
         luxe : '*',
@@ -27,6 +22,7 @@
       }
     },   
     files : {
+      config : 'config.json',      
       assets : 'assets/'
     }
   }

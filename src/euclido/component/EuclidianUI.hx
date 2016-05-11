@@ -43,9 +43,9 @@ class EuclidianUI extends luxe.Component
 
         super(_options);
 
-        var slider_w = 20 * Constants.GAME_SCALE;
-        var slider_h = 4 * Constants.GAME_SCALE;
-        var scale = 1 / Constants.GAME_SCALE;        
+        var slider_w = 20 * Main.game_scale;
+        var slider_h = 4 * Main.game_scale;
+        var scale = 1 / Main.game_scale;       
 
         // Init pulses slider
         var pulses_slider = make_slider("pulses_slider", 10, 10, slider_w, slider_h);
@@ -103,6 +103,6 @@ class EuclidianUI extends luxe.Component
             max : 10, 
             step : 1, 
             value : 5 
-            }, margin / Constants.GAME_SCALE);
+            }, margin / Main.game_scale);
     }
 }
