@@ -99,8 +99,7 @@ class Main extends luxe.Game
         var foreground_camera = new Camera({
             name: 'foreground_camera'
             });
-        foreground_camera.size = new phoenix.Vector(w, h);
-        foreground_camera.size_mode = luxe.Camera.SizeMode.fit;
+        foreground_camera.size = new phoenix.Vector(Luxe.screen.w, Luxe.screen.h);
 
         background_batcher = Luxe.renderer.create_batcher({
             layer: -1,
