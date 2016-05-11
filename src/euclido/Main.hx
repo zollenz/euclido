@@ -48,7 +48,7 @@ class Main extends luxe.Game
     var fade_overlay_sprite:Sprite;
     var fade_overlay:FadeOverlay;  
 
-    override function config(config:luxe.AppConfig) 
+    override function config(config:luxe.GameConfig) 
     {
         w = config.window.width;
         h = config.window.height;

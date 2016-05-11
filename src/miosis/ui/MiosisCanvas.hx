@@ -15,9 +15,10 @@ class MiosisCanvas extends mint.Canvas
         Luxe.on(luxe.Ev.keyup,      conv_keyup);
         Luxe.on(luxe.Ev.keydown,    conv_keydown);
         Luxe.on(luxe.Ev.textinput,  conv_textinput);
-
+            //make sure we clean up
         ondestroy.listen(auto_unlisten);
-    }
+
+    } //listen
 
     public function auto_unlisten() 
     {
@@ -30,39 +31,18 @@ class MiosisCanvas extends mint.Canvas
         Luxe.off(luxe.Ev.keyup,      conv_keyup);
         Luxe.off(luxe.Ev.keydown,    conv_keydown);
         Luxe.off(luxe.Ev.textinput,  conv_textinput);
-
+            //no longer try to clean up
         ondestroy.remove(auto_unlisten);
-    }
+
+    } //
 
     function conv_update(dt:Float)  update(dt);
     function conv_render(_)         render();
     function conv_mousewheel(e)     mousewheel(Convert.mouse_event(e));
+    function conv_mousedown(e)      mousedown(Convert.mouse_event(e));
+    function conv_mouseup(e)        mouseup(Convert.mouse_event(e));
+    function conv_mousemove(e)      mousemove(Convert.mouse_event(e));
     function conv_keyup(e)          keyup(Convert.key_event(e));
     function conv_keydown(e)        keydown(Convert.key_event(e));
     function conv_textinput(e)      textinput(Convert.text_event(e));
-
-    function conv_mouseup(e:luxe.Input.MouseEvent) 
-    {
-        mouseEventToWorld(e);
-        mouseup(Convert.mouse_event(e));  
-    }    
-
-    function conv_mousedown(e:luxe.Input.MouseEvent) 
-    {
-        mouseEventToWorld(e);
-        mousedown(Convert.mouse_event(e));  
-    }    
-
-    function conv_mousemove(e:luxe.Input.MouseEvent) 
-    {
-        mouseEventToWorld(e);
-        mousemove(Convert.mouse_event(e));  
-    }
-
-    function mouseEventToWorld(e:luxe.Input.MouseEvent) 
-    {
-        e.pos = Luxe.camera.screen_point_to_world(e.pos);
-        e.x = Std.int(e.pos.x);
-        e.y = Std.int(e.pos.y);
-    }
 }
