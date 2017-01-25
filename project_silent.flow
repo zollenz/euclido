@@ -1,9 +1,4 @@
 {
-  snow : {
-    config: {
-      config_path: 'config.json'
-    }
-  },
   luxe:{
     window: {
       width:160,
@@ -24,16 +19,15 @@
       package : 'euclido'
     },
     build : {
-      defines:['MACOSX_VER=10.11'],
-      flags:['--macro luxe.Log.level(1)'],
+      defines:['MACOSX_VER=10.11', 'no-traces'],
+      flags:['--macro luxe.Log.level(2)'],
       dependencies : {
         luxe : '*',
         mint : '*'
       }
     },   
     files : {
-      assets : 'assets/',
-      config : 'config.json'
+      assets : 'assets/'
     }
   }
 }

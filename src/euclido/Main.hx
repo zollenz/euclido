@@ -50,6 +50,9 @@ class Main extends luxe.Game
 
     override function config(config:luxe.GameConfig) 
     {
+        config.window.width = 160;
+        config.window.height = 144;
+
         w = config.window.width;
         h = config.window.height;
 
@@ -62,6 +65,8 @@ class Main extends luxe.Game
         config.preload.textures.push({ id : "assets/img/logo/miosis_s.png", filter_min:nearest, filter_mag:nearest });
         config.preload.textures.push({ id : "assets/img/logo/miosis_o.png", filter_min:nearest, filter_mag:nearest });
         config.preload.jsons.push({ id : "assets/json/animation/miosis_anim.json" });
+
+        log ("window org width : " + w + ", window org h : " + h + ", window width : " + w + ", window height : " + h);
 
         return config;
     }
@@ -77,7 +82,7 @@ class Main extends luxe.Game
         // Luxe.core.frame_max_delta = 1/60;
 
         // Fit camera viewport to window size
-        Luxe.camera.size = new Vector(w, h);
+        Luxe.camera.size = new Vector(w / Luxe.screen.device_pixel_ratio, h / Luxe.screen.device_pixel_ratio);
         Luxe.camera.size_mode = luxe.Camera.SizeMode.fit;
 
         log('Screen width: ${Luxe.screen.w}');
