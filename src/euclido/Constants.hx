@@ -13,8 +13,6 @@ class Constants
 #end
 	}
 
-	public static var GAME_SCALE(default, never):Int = 4;
-
 	// Basic colors
 	public static inline var COLOR_BLACK:Int = 0x000000;
 	public static inline var COLOR_WHITE:Int = 0xffffff;

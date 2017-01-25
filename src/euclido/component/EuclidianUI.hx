@@ -43,23 +43,18 @@ class EuclidianUI extends luxe.Component
 
         super(_options);
 
-        var slider_w = 20 * Constants.GAME_SCALE;
-        var slider_h = 4 * Constants.GAME_SCALE;
-        var scale = 1 / Constants.GAME_SCALE;        
+        var slider_w = Math.floor(0.1 * Luxe.screen.width);
+        var slider_h = Math.floor(0.02 * Luxe.screen.height);   
 
         // Init pulses slider
         var pulses_slider = make_slider("pulses_slider", 10, 10, slider_w, slider_h);
 
-        pulses_slider.w *= scale;
-        pulses_slider.h *= scale;
         pulses_slider.refresh();
         pulses_slider.onchange.listen(on_pulses_slider_changed);        
                 
         // Init shift slider
         var shift_slider = make_slider("shift_slider", 10, 30, slider_w, slider_h);
 
-        shift_slider.w *= scale;
-        shift_slider.h *= scale;
         shift_slider.refresh();        
         shift_slider.onchange.listen(on_shift_slider_changed);
     }
@@ -103,6 +98,6 @@ class EuclidianUI extends luxe.Component
             max : 10, 
             step : 1, 
             value : 5 
-            }, margin / Constants.GAME_SCALE);
+            }, margin);
     }
 }
